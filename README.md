@@ -23,6 +23,7 @@
 | [`saher-chat`](saher-chat) | Text chat with Saher's Arabic persona (Saudi dialect), with versioned persona prompts |
 | [`saher-voice`](saher-voice) | Push-to-talk voice chat: Saher starts speaking **~2.3 s** after you let go |
 | [`saher-app`](saher-app) | Text and voice in one conversation |
+| [`saher-fasee7-live`](saher-fasee7-live) | Hands-free voice trial: detects when you start and stop talking, and lets you switch between Saudi voices (Fasee7 Najdi, NAMAA) and Piper |
 | [`saher-agent`](saher-agent) | **Tool-using agent**: reads PDF / Word / Excel files, calculates, creates new Word and Excel reports, reads unread email |
 | [`saher-manager`](saher-manager) | Inbox assistant for managers: fetches the last 5 unread emails (Outlook / Gmail via n8n), summarises them and suggests replies, **read-only** |
 | [`saher-eval`](saher-eval) | Evaluation harness for persona, dialect and chat quality |
