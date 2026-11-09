@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:10:27.3693681Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبين أسوي لك الحين؟ أو كلميني عن أي موضوع تبينه. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1625803300,
+  "load_duration": 24370500,
+  "prompt_eval_count": 546,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 296042000,
+  "eval_count": 18,
+  "eval_duration": 1296613000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:10:31.9022345Z",
+  "message": {
+   "role": "assistant",
+   "content": " كيف عن تقرأ كتاب أو تشوف فيلم تحبه؟ أو ترتب درجك أو تشوف صورك القديمة؟ أو تجرب تطبخ أكلة جديدة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2468491100,
+  "load_duration": 25757700,
+  "prompt_eval_count": 581,
+  "prompt_eval_cached_count": 546,
+  "prompt_eval_duration": 362346000,
+  "eval_count": 29,
+  "eval_duration": 2071005000
+ }
+]

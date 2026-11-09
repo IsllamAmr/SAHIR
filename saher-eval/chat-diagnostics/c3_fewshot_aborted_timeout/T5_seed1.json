@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:16:56.751119Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا ما أعمل شي، بس لو تبي اقتراح، تمشي في الحديقة أو تروح السينما."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1809393500,
+  "load_duration": 11379400,
+  "prompt_eval_count": 453,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 157299000,
+  "eval_count": 32,
+  "eval_duration": 1636095000
+ }
+]

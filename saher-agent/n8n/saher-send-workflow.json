@@ -1,0 +1,249 @@
+{
+  "id": "saherGmailSend001",
+  "name": "Saher - send approved Gmail",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "saher-send-gmail",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "7b5e0001-0000-4000-8000-000000000001",
+      "name": "Saher asks",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "7b5e0001-bbbb-4000-8000-000000000001"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Only Saher (which knows the local key) may send. The message arrives fully built and approved.\nconst j = $input.first().json;\nconst h = j.headers || {};\nconst raw = (j.body && typeof j.body.raw === 'string') ? j.body.raw : '';\nreturn [{ json: { allowed: h['x-saher-key'] === '7cee95018be367a1b631029fccd2e017aeedfe508be7f0d4' && raw.length > 0, raw } }];"
+      },
+      "id": "7b5e0002-0000-4000-8000-000000000002",
+      "name": "Check Saher key",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c3",
+              "leftValue": "={{ $json.allowed }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7b5e0003-0000-4000-8000-000000000003",
+      "name": "Key OK?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googleOAuth2Api",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ raw: $json.raw }) }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "7b5e0004-0000-4000-8000-000000000004",
+      "name": "Send ONE approved message",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        -100
+      ],
+      "credentials": {
+        "googleOAuth2Api": {
+          "id": "saherGmailSend01",
+          "name": "Gmail - Saher (send only)"
+        }
+      },
+      "onError": "continueErrorOutput",
+      "retryOnFail": false,
+      "notes": "gmail.send only. No retry: a timeout is checked in Sent by Saher before anything else happens."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Gmail's own answer: the message id and thread id are the proof that it was sent.\nconst r = $input.first().json;\nreturn [{ json: { ok: true, id: r.id || '', threadId: r.threadId || '', labelIds: r.labelIds || [] } }];"
+      },
+      "id": "7b5e0005-0000-4000-8000-000000000005",
+      "name": "Sent: Gmail ids",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// definitive = Gmail refused, so nothing was sent. Otherwise the outcome is unknown and Saher checks Sent first.\nconst e = $input.first().json;\nconst msg = JSON.stringify(e.error || e).slice(0, 400);\nlet error = 'unknown', definitive = false;\nif (/invalid_grant|refresh|credential|No credentials|access token|401|Unauthorized/i.test(msg)) { error = 'not_connected'; definitive = true; }\nelse if (/403|insufficient|scope|PERMISSION_DENIED|forbidden/i.test(msg)) { error = 'no_permission'; definitive = true; }\nelse if (/\\b400\\b|Invalid To|invalidArgument|Recipient address required|bad request/i.test(msg)) { error = 'bad_request'; definitive = true; }\nelse if (/\\b429\\b|rateLimit|quota/i.test(msg)) { error = 'rate_limited'; definitive = true; }\nreturn [{ json: { ok: false, error, definitive, detail: msg } }];"
+      },
+      "id": "7b5e0006-0000-4000-8000-000000000006",
+      "name": "Not sent or unknown",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "7b5e0007-0000-4000-8000-000000000007",
+      "name": "Reply to Saher",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1100,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\"ok\": false, \"error\": \"forbidden\", \"definitive\": true}",
+        "options": {
+          "responseCode": 403
+        }
+      },
+      "id": "7b5e0008-0000-4000-8000-000000000008",
+      "name": "Refuse",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        150
+      ]
+    }
+  ],
+  "connections": {
+    "Saher asks": {
+      "main": [
+        [
+          {
+            "node": "Check Saher key",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Saher key": {
+      "main": [
+        [
+          {
+            "node": "Key OK?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Key OK?": {
+      "main": [
+        [
+          {
+            "node": "Send ONE approved message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Refuse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send ONE approved message": {
+      "main": [
+        [
+          {
+            "node": "Sent: Gmail ids",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Not sent or unknown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sent: Gmail ids": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Not sent or unknown": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {}
+}

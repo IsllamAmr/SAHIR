@@ -1,0 +1,53 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:08.645058Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا إسلام، أنا ساهر، شرفت وسولف معي. وش تبي تعرف أو تتكلم عنه؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1585554000,
+  "load_duration": 23215000,
+  "prompt_eval_count": 559,
+  "prompt_eval_cached_count": 558,
+  "prompt_eval_duration": 74200000,
+  "eval_count": 21,
+  "eval_duration": 1475904000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:09.7958961Z",
+  "message": {
+   "role": "assistant",
+   "content": " اسمك إسلام، قلته لك. وش تبي تعرف بعد؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1132640500,
+  "load_duration": 23312400,
+  "prompt_eval_count": 592,
+  "prompt_eval_cached_count": 579,
+  "prompt_eval_duration": 258298000,
+  "eval_count": 13,
+  "eval_duration": 842425000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:11.5746895Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما أقدر أتذكر أسئلتك السابقة، لأني ما عندي ذاكرة طويلة الأمد. وش كان سؤالك الأخير؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1777143300,
+  "load_duration": 21306000,
+  "prompt_eval_count": 620,
+  "prompt_eval_cached_count": 604,
+  "prompt_eval_duration": 255784000,
+  "eval_count": 22,
+  "eval_duration": 1491037000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:13:30.4423701Z",
+  "message": {
+   "role": "assistant",
+   "content": "أبشر، خطة جيدة. في الأسبوع الأول، ابدأ بالقراءة والفهم للمادة. استخدم ملخصات أو نقاط مهمة لتسهيل الذاكرة. في الأسبوع الثاني، اركض على المادة بالتمارين والأسئلة السابقة. اضمن تناول قسط كاف من النوم والطعام الصحي. الله يوفقك."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4403493200,
+  "load_duration": 9057900,
+  "prompt_eval_count": 618,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 238506000,
+  "eval_count": 81,
+  "eval_duration": 4151015000
+ }
+]

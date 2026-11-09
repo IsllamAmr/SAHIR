@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:55:16.9463079Z",
+  "message": {
+   "role": "assistant",
+   "content": " فكرة ممتازة، الدرعية فيها أماكن تاريخية وثقافية كثيرة. تقدر تزور حي الطريف والبجيري والواجهة الجديدة. بس تأكد من الطقس واحجز مسبقًا. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7306379300,
+  "load_duration": 749393600,
+  "prompt_eval_count": 669,
+  "prompt_eval_cached_count": 656,
+  "prompt_eval_duration": 730064000,
+  "eval_count": 35,
+  "eval_duration": 5664730000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:55:37.3156129Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطاعم كثيرة بالدرعية تقدر تختار منها. عندك مطعم \"أنات\" في حي الطريف، ومطعم \"الدرعية\" في حي الطريف، ومطعم \"الدرعية 1700\" في حي الطريف. بس تأكد من الحجز قبل ما تروح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 19491798100,
+  "load_duration": 6694274200,
+  "prompt_eval_count": 719,
+  "prompt_eval_cached_count": 703,
+  "prompt_eval_duration": 974266000,
+  "eval_count": 60,
+  "eval_duration": 9575213000
+ }
+]

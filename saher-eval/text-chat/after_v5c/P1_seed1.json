@@ -1,0 +1,70 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:02:30.127875Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، أنا ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1113559900,
+  "load_duration": 36970900,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 375975000,
+  "eval_count": 8,
+  "eval_duration": 664312000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:02:31.9647935Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطماطم والتوابل. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1833585000,
+  "load_duration": 46411900,
+  "prompt_eval_count": 731,
+  "prompt_eval_cached_count": 716,
+  "prompt_eval_duration": 441655000,
+  "eval_count": 14,
+  "eval_duration": 1314597000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:02:35.4558814Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطماطم والتوابل مع خبز التورتيلا أو البيغل. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3487599900,
+  "load_duration": 71625800,
+  "prompt_eval_count": 762,
+  "prompt_eval_cached_count": 744,
+  "prompt_eval_duration": 729144000,
+  "eval_count": 22,
+  "eval_duration": 2644536000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:02:38.9102102Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي سندويش دجاج مشوي مع الخضار والمايونيز أو سندويش جبن وطماطم مع خبز طازج. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3450481200,
+  "load_duration": 67917500,
+  "prompt_eval_count": 799,
+  "prompt_eval_cached_count": 783,
+  "prompt_eval_duration": 520797000,
+  "eval_count": 25,
+  "eval_duration": 2765632000
+ }
+]

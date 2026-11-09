@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:34.8251274Z",
+  "message": {
+   "role": "assistant",
+   "content": " أبشر، الدرعية فيها أماكن تاريخية حلوة. بس تأكد من الطقس واحجز مسبقًا عشان تضمن مكان. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2230495500,
+  "load_duration": 32885000,
+  "prompt_eval_count": 607,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 310192000,
+  "eval_count": 24,
+  "eval_duration": 1875551000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:37.5493292Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطاعم كثيرة بالدرعية. ممكن تجرب مطعم مراحب اليمنية أو مطعم نينو الإيطالي. بس تأكد تحجز قبل ما تروح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2723067300,
+  "load_duration": 26481000,
+  "prompt_eval_count": 646,
+  "prompt_eval_cached_count": 630,
+  "prompt_eval_duration": 324687000,
+  "eval_count": 29,
+  "eval_duration": 2361267000
+ }
+]

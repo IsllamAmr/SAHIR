@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:04:59.6923321Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما أدري، أنا ذكاء اصطناعي وما عندي نت. لكن دور لك في قوقل عن نتيجة مباراة الهلال أمس. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2016485700,
+  "load_duration": 23286600,
+  "prompt_eval_count": 386,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 289515000,
+  "eval_count": 25,
+  "eval_duration": 1696339000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:05:04.0010423Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، ما عندي ذاكرة طويلة الأمد وأحفظ اللي تكتبه الحين فقط لجل أرد عليك. بعد ما تخلص المحادثة، المعلومات تروح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2238874400,
+  "load_duration": 23282400,
+  "prompt_eval_count": 430,
+  "prompt_eval_cached_count": 386,
+  "prompt_eval_duration": 357915000,
+  "eval_count": 28,
+  "eval_duration": 1849766000
+ }
+]

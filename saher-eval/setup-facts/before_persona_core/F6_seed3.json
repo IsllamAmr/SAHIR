@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:04:52.2718529Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي معلومات حديثة الحين، لكن آخر تصنيف في نوفمبر 2023 كان الأخضر في المركز 11 آسيويًا و67 عالميًّا. تابع موقع الفيفا الرسمي للحصول على آخر التحديثات. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3447231500,
+  "load_duration": 21059500,
+  "prompt_eval_count": 384,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 221189000,
+  "eval_count": 44,
+  "eval_duration": 3197213000
+ }
+]

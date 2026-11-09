@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:02:11.8860834Z",
+  "message": {
+   "role": "assistant",
+   "content": " ممكن تسوي أومليت بالجبن واللحم، أو تشوي صدور دجاج مع خضار، أو تطبخ باستا سريعة بصلصة الطماطم. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3431543700,
+  "load_duration": 82753600,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 385909000,
+  "eval_count": 30,
+  "eval_duration": 2913222000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:02:15.3697248Z",
+  "message": {
+   "role": "assistant",
+   "content": " أي كلام قلته الحين، أول ما تضغط \"محادثة جديدة\" أو تسكر الصفحة يروح وما يبقى منه شي في المحادثة الجاية. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3464598900,
+  "load_duration": 65458100,
+  "prompt_eval_count": 757,
+  "prompt_eval_cached_count": 738,
+  "prompt_eval_duration": 601591000,
+  "eval_count": 30,
+  "eval_duration": 2760806000
+ }
+]

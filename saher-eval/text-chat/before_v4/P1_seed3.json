@@ -1,0 +1,70 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:40.9865887Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، اسمي ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 789337000,
+  "load_duration": 28915100,
+  "prompt_eval_count": 559,
+  "prompt_eval_cached_count": 558,
+  "prompt_eval_duration": 91856000,
+  "eval_count": 8,
+  "eval_duration": 657383000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:42.6925947Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطحينة أو كبسة دجاج. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1703843700,
+  "load_duration": 28762200,
+  "prompt_eval_count": 581,
+  "prompt_eval_cached_count": 566,
+  "prompt_eval_duration": 349276000,
+  "eval_count": 17,
+  "eval_duration": 1315648000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:44.5596052Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطحينة أو مقلوبة خضار. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1840930400,
+  "load_duration": 23723900,
+  "prompt_eval_count": 615,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 446239000,
+  "eval_count": 18,
+  "eval_duration": 1360851000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:46.2355028Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي ساندويشات مثل فلافل أو شاورما أو جبن ولحم. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1674111000,
+  "load_duration": 22130800,
+  "prompt_eval_count": 648,
+  "prompt_eval_cached_count": 632,
+  "prompt_eval_duration": 309299000,
+  "eval_count": 18,
+  "eval_duration": 1332992000
+ }
+]

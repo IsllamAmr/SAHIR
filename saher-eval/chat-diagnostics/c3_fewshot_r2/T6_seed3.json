@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:31:05.5350828Z",
+  "message": {
+   "role": "assistant",
+   "content": "خذي لها فكرة عن在家办公的工作，比如用电脑在家办公，或者做些手工艺品卖。得看她喜欢干啥，找份适合自己在家做的活儿。"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2219912900,
+  "load_duration": 10791400,
+  "prompt_eval_count": 462,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 349375000,
+  "eval_count": 38,
+  "eval_duration": 1853991000
+ }
+]

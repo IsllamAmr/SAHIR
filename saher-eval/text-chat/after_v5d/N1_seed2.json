@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:42.4044351Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه أماكن كثيرة حلوة في الرياض. ممكن تزور حديقة الملك عبدالله، أو تلفريك عالة أبوجبل، أو سوق الزل في البطحاء. هذي كلها خيارات ممتازة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2915945100,
+  "load_duration": 39425700,
+  "prompt_eval_count": 721,
+  "prompt_eval_cached_count": 720,
+  "prompt_eval_duration": 80906000,
+  "eval_count": 36,
+  "eval_duration": 2764353000
+ }
+]

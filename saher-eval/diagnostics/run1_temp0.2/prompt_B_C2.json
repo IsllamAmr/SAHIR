@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:42:00.3302693Z",
+ "message": {
+  "role": "assistant",
+  "content": "أبشر، أول شي ا divid يومك في أجزاء. تبدأ بالأشياء المهمة أولاً، كوجبات العائلة ورعاية الأطفال. بعد كده، اضعي وقت للراحة قليلاً، كأنك تقرأ كتاب أو تشرب قهوة. وأخير، اشغلي نفسك في هوايتك أو تابعي شغفك. إن شاء الله تجدي الوقت كله."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 5593770400,
+ "load_duration": 5946400,
+ "prompt_eval_count": 664,
+ "prompt_eval_cached_count": 637,
+ "prompt_eval_duration": 277611000,
+ "eval_count": 97,
+ "eval_duration": 5304931000
+}

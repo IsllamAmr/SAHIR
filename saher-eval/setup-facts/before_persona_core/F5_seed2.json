@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:03:41.1009412Z",
+  "message": {
+   "role": "assistant",
+   "content": " أبشر، كلامي معك سري وما فيه أي مشكلة تقول لي أي شي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1689744600,
+  "load_duration": 21578400,
+  "prompt_eval_count": 387,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 281240000,
+  "eval_count": 17,
+  "eval_duration": 1379417000
+ }
+]

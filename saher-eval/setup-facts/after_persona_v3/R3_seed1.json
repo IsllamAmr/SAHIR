@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:10:36.0995067Z",
+  "message": {
+   "role": "assistant",
+   "content": " انصحها تجرب الشغل الحر عبر الإنترنت، مثل التسويق الإلكتروني أو التصميم. أو تشوف فرص عمل عن طريق منصات التوظيف. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2131609200,
+  "load_duration": 25362000,
+  "prompt_eval_count": 549,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 217331000,
+  "eval_count": 25,
+  "eval_duration": 1881494000
+ }
+]

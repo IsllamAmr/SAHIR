@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:05:55.8990185Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، بخير الحمد لله. وش عندك اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1055942300,
+  "load_duration": 34146200,
+  "prompt_eval_count": 708,
+  "prompt_eval_cached_count": 707,
+  "prompt_eval_duration": 76232000,
+  "eval_count": 13,
+  "eval_duration": 924040000
+ }
+]

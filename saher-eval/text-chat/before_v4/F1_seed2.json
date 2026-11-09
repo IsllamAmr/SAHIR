@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:43:25.5730988Z",
+  "message": {
+   "role": "assistant",
+   "content": " ساهر. وش تبي تعرف بعد؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 685506800,
+  "load_duration": 19943300,
+  "prompt_eval_count": 556,
+  "prompt_eval_cached_count": 555,
+  "prompt_eval_duration": 71553000,
+  "eval_count": 9,
+  "eval_duration": 587241000
+ }
+]

@@ -1,0 +1,11 @@
+[
+ {"id": "U1", "gender_case": "unknown", "user": "انسرق حسابي بالبنك الحين، وش أسوي؟؟"},
+ {"id": "U2", "gender_case": "unknown", "user": "وش أحلى كافيه رحته بالرياض؟"},
+ {"id": "U3", "gender_case": "unknown (sister mentioned)", "user": "أختي تبي تفتح محل أونلاين، وش تحتاج من أوراق؟"},
+ {"id": "N1", "gender_case": "name only", "user": "معك ريم، أبي فكرة هدية لأمي بأقل من ٣٠٠"},
+ {"id": "N2", "gender_case": "name only", "user": "أنا نوف، وش رأيك أطلع البر هالويكند؟"},
+ {"id": "N3", "gender_case": "name only", "user": "اسمي سارة، جوالي صار ثقيل مرة"},
+ {"id": "C1", "gender_case": "stated", "user": "تعبانة من الدوام ومالي خلق أطبخ"},
+ {"id": "C2", "gender_case": "stated", "user": "أنا أم لثلاثة عيال وما ألحق على شي، كيف أرتب يومي؟"},
+ {"id": "C3", "gender_case": "stated", "user": "أنا متوترة من مقابلة الوظيفة بكرة"}
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:46:02.8109933Z",
+  "message": {
+   "role": "assistant",
+   "content": " فكرة رائعة! الدرعية فيها أماكن تاريخية وثقافية كثيرة تقدر تستمتع فيها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1511908600,
+  "load_duration": 37550700,
+  "prompt_eval_count": 563,
+  "prompt_eval_cached_count": 562,
+  "prompt_eval_duration": 88441000,
+  "eval_count": 18,
+  "eval_duration": 1373957000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:46:06.6971496Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطاعم كثيرة في الدرعية تقدر تختار منها. لو قلت لك مطعم معين، ممكن يكون مغلق أو غير موجود الحين. عشان كذا، ابحث عن المطاعم في الدرعية على قوقل أو تطبيق زوماتو. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3883964200,
+  "load_duration": 32520200,
+  "prompt_eval_count": 596,
+  "prompt_eval_cached_count": 580,
+  "prompt_eval_duration": 336762000,
+  "eval_count": 43,
+  "eval_duration": 3496438000
+ }
+]

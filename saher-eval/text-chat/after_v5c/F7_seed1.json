@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:00:16.5025023Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي خلفية عن مين صنعني، وشغال على جهازك بدون سيرفرات. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2564150200,
+  "load_duration": 213850500,
+  "prompt_eval_count": 713,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 461576000,
+  "eval_count": 17,
+  "eval_duration": 1846611000
+ }
+]

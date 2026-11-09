@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:12:37.1197678Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تشتغل من البيت عن طريق التجارة الإلكترونية أو التدريس عن بعد أو خدمة العملاء. وش تبي بالضبط؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1948870700,
+  "load_duration": 23769400,
+  "prompt_eval_count": 549,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 237210000,
+  "eval_count": 22,
+  "eval_duration": 1679014000
+ }
+]

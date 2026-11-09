@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" role="img" aria-label="ساهر">
+  <style>
+    .lid { animation: droop 5s ease-in-out infinite; }
+    @keyframes droop { 0%, 30% { transform: translateY(-3.03px); } 55%, 85% { transform: translateY(1.35px); } 92% { transform: translateY(-5.05px); } 100% { transform: translateY(-3.03px); } }
+    @media (prefers-reduced-motion: reduce) { .lid { animation: none; transform: translateY(-3.03px); } }
+  </style>
+  <defs><clipPath id="eye"><circle cx="22" cy="22" r="11"/></clipPath></defs>
+  <circle cx="22" cy="22" r="21.25" fill="#2a2238" stroke="#e2c27a" stroke-width="1.5"/>
+  <circle cx="22" cy="22" r="11" fill="#2a2238"/>
+  <g clip-path="url(#eye)">
+    <circle cx="22" cy="22" r="10" fill="#f3ead8"/>
+    <circle cx="22" cy="24.5" r="4.5" fill="#1b1626"/>
+    <g class="lid">
+      <rect x="9" y="8" width="26" height="15.32" fill="#2a2238"/>
+      <rect x="9" y="23.32" width="26" height="1.5" fill="#e2c27a"/>
+    </g>
+  </g>
+</svg>

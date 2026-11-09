@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:04.4321497Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبين تسوين؟ أو خلينا نتكلم عن شي تحبه. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1161370800,
+  "load_duration": 33694200,
+  "prompt_eval_count": 712,
+  "prompt_eval_cached_count": 711,
+  "prompt_eval_duration": 82548000,
+  "eval_count": 14,
+  "eval_duration": 1026765000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:06.8384885Z",
+  "message": {
+   "role": "assistant",
+   "content": " كيف لو قلت لك تقرين كتاب أو تشوفين فلم؟ أو ممكن تسوين عصير بارد وتستمتعين بالظل. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2404503700,
+  "load_duration": 35893300,
+  "prompt_eval_count": 741,
+  "prompt_eval_cached_count": 725,
+  "prompt_eval_duration": 358101000,
+  "eval_count": 26,
+  "eval_duration": 1992396000
+ }
+]

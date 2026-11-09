@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "source": "mock",
+  "note": "MOCK DATA. Invented people and companies for testing only. Not from any real mailbox.",
+  "emails": [
+    {
+      "id": "mock-1",
+      "from_name": "نورة العتيبي",
+      "from_address": "noura.mock@example.com",
+      "subject": "تأخير تسليم تقرير الربع الثالث",
+      "received": "2026-10-18T07:42:00Z",
+      "is_read": false,
+      "has_attachments": false,
+      "importance": "high",
+      "body": "صباح الخير،\n\nأعتذر، تقرير الربع الثالث بيتأخر يومين لأن أرقام فرع جدة ما وصلتني كاملة. أنا متأكدة إني أقدر أسلمه يوم الثلاثاء الساعة ١٢ الظهر إذا وصلتني الأرقام بكرة.\n\nهل يناسبك هالموعد، أو تفضل أسلم نسخة أولية الأحد بدون أرقام جدة؟\n\nتحياتي\nنورة"
+    },
+    {
+      "id": "mock-2",
+      "from_name": "Daniel Weber",
+      "from_address": "d.weber.mock@example.org",
+      "subject": "Contract renewal - pricing proposal",
+      "received": "2026-10-18T06:15:00Z",
+      "is_read": false,
+      "has_attachments": true,
+      "importance": "normal",
+      "body": "Hi,\n\nAttached is our renewal proposal for the support contract. The new annual price is 8% higher because we added weekend coverage. If you sign before 31 October we can keep last year's price for the first quarter.\n\nCould we have a 20-minute call this week to go through it?\n\nBest regards,\nDaniel"
+    },
+    {
+      "id": "mock-3",
+      "from_name": "فريق الموارد البشرية",
+      "from_address": "hr.mock@example.com",
+      "subject": "تذكير: اعتماد إجازات فريقك قبل الخميس",
+      "received": "2026-10-17T13:05:00Z",
+      "is_read": false,
+      "has_attachments": false,
+      "importance": "normal",
+      "body": "السلام عليكم،\n\nنذكركم بأن طلبات الإجازة المعلقة لفريقكم (٣ طلبات) تحتاج اعتماد في النظام قبل نهاية دوام الخميس، وبعدها تُرفض تلقائياً.\n\nشاكرين تعاونكم\nإدارة الموارد البشرية"
+    },
+    {
+      "id": "mock-4",
+      "from_name": "سامي الحربي",
+      "from_address": "sami.mock@example.com",
+      "subject": "طلب اجتماع بخصوص ميزانية التسويق",
+      "received": "2026-10-17T10:20:00Z",
+      "is_read": false,
+      "has_attachments": false,
+      "importance": "normal",
+      "body": "هلا،\n\nأنا مستعد أعرض عليك خطة ميزانية التسويق للربع الجاي، وأحتاج ٣٠ دقيقة. عندي وقت الأحد بعد الساعة ١٠ أو الإثنين قبل الظهر.\n\nوش يناسبك؟\nسامي"
+    },
+    {
+      "id": "mock-5",
+      "from_name": "IT Service Desk",
+      "from_address": "it.mock@example.com",
+      "subject": "Planned maintenance Saturday 02:00-04:00",
+      "received": "2026-10-16T18:30:00Z",
+      "is_read": false,
+      "has_attachments": false,
+      "importance": "low",
+      "body": "Hello,\n\nThe VPN and the internal file server will be unavailable on Saturday from 02:00 to 04:00 (Riyadh time) for planned maintenance. No action is needed from you.\n\nIT Service Desk"
+    }
+  ]
+}

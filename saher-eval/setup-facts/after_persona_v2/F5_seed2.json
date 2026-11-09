@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:07:02.9927705Z",
+  "message": {
+   "role": "assistant",
+   "content": " أقدر أكون سري معك، بس ما أقدر أوعد بسرية مطلقة. أي أحد يستخدم الجهاز ممكن يشوف الصفحة وهي مفتوحة. تقدر تقول اللي تبيه وأنا أحتفظ بسرية المحادثة لين تسكرها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3345642400,
+  "load_duration": 23585000,
+  "prompt_eval_count": 560,
+  "prompt_eval_cached_count": 546,
+  "prompt_eval_duration": 230660000,
+  "eval_count": 42,
+  "eval_duration": 3082449000
+ }
+]

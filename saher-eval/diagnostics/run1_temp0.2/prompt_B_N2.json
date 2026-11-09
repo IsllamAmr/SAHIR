@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:41:41.6689419Z",
+ "message": {
+  "role": "assistant",
+  "content": "أبشر، البر هالويكند حلو. تعبت قليلاً؟ يارب تجدوا حاجة ترضيكي."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 1886488500,
+ "load_duration": 5294300,
+ "prompt_eval_count": 660,
+ "prompt_eval_cached_count": 637,
+ "prompt_eval_duration": 240951000,
+ "eval_count": 33,
+ "eval_duration": 1634629000
+}

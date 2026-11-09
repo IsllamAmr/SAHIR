@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:43:11.0501479Z",
+ "message": {
+  "role": "assistant",
+  "content": "أبشر، اتصل بالبنك فوراً وأخبرهم بالمشكلة. طلب منهم إيقاف العمليات على الحساب وطلب تغيير كلمة المرور. وش حظك، حاول تقدر تعرف من أخاف الحساب."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 4463112900,
+ "load_duration": 6378100,
+ "prompt_eval_count": 555,
+ "prompt_eval_cached_count": 3,
+ "prompt_eval_duration": 912032000,
+ "eval_count": 64,
+ "eval_duration": 3480583000
+}

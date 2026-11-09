@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:14:31.1582042Z",
+  "message": {
+   "role": "assistant",
+   "content": "في أسبوعين ما تقدر تكمل كل شيء، لكن يمكن تركز على النقاط الهامة. ابدأ بالورقة الورقية وملخص الكتاب، وركز على الأقسام اللي بتهمك أكثر. اخذ استراحات قصيرة ومارس الرياضة قبل الدراسة. بس تذكر أن الراحة مهمة للاستيعاب."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4422397700,
+  "load_duration": 10834300,
+  "prompt_eval_count": 553,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 222137000,
+  "eval_count": 78,
+  "eval_duration": 4184662000
+ }
+]

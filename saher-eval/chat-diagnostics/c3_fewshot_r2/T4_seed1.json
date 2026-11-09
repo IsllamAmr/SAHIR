@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:28:57.252282Z",
+  "message": {
+   "role": "assistant",
+   "content": "يا أخي، الهمسات تروح بالهم. حاولي تشتري لنفسك حاجة تهديها نفسك، زي كتاب أو فستان صغير. كل شي بس يكون من قلبك."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2755283100,
+  "load_duration": 11060700,
+  "prompt_eval_count": 455,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 217316000,
+  "eval_count": 48,
+  "eval_duration": 2521666000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:29:02.3145332Z",
+  "message": {
+   "role": "assistant",
+   "content": "تقدر تجرب وصفة جديدة في الطبخ، أو تبدأ مشروع حديقتك المنزلية، أو تشاهد سلسلة تلفزيونية جديدة. كلها أفكار تساعدك على الترفيه عن نفسك."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2999156900,
+  "load_duration": 5995700,
+  "prompt_eval_count": 523,
+  "prompt_eval_cached_count": 502,
+  "prompt_eval_duration": 220024000,
+  "eval_count": 55,
+  "eval_duration": 2768973000
+ }
+]

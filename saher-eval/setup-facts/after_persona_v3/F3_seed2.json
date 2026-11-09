@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:10:53.8093238Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي قاعدة بيانات. كلامي معاك مفتوح ويروح أول ما تسكر الصفحة. ما ينحفظ بأي ملف. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2077820900,
+  "load_duration": 24886700,
+  "prompt_eval_count": 547,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 331730000,
+  "eval_count": 24,
+  "eval_duration": 1711221000
+ }
+]

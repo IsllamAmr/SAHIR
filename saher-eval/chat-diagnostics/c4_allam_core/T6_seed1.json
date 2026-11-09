@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:41:20.8609144Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تخصصها وقدراتها؟ فيه شغل عن بعد يناسبها. ابدى لها عن العمل الحر لو تعرف تسوي شي معين. وش عندها خلفية عن الكمبيوتر والبرامج؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3071566600,
+  "load_duration": 21968400,
+  "prompt_eval_count": 388,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 304260000,
+  "eval_count": 34,
+  "eval_duration": 2738655000
+ }
+]

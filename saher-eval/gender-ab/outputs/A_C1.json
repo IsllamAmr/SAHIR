@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:35:19.6830089Z",
+ "message": {
+  "role": "assistant",
+  "content": "أفهم شعورك. يمكن تشرب كوب من 차شوشا أو تناول شي سهل كالمكسرات أو البطاطا الهشة. بعد كده تحس بالراحة قليلة."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 2766761700,
+ "load_duration": 6067100,
+ "prompt_eval_count": 616,
+ "prompt_eval_cached_count": 597,
+ "prompt_eval_duration": 239655000,
+ "eval_count": 49,
+ "eval_duration": 2515675000
+}

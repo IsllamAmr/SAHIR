@@ -1,0 +1,53 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:42.8789281Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا إسلام، أنا ساهر، كيف أقدر أساعدك اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1901054100,
+  "load_duration": 152231800,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 708,
+  "prompt_eval_duration": 121282000,
+  "eval_count": 14,
+  "eval_duration": 1560025000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:44.8942067Z",
+  "message": {
+   "role": "assistant",
+   "content": " اسمك إسلام، وأنا ساهر. كيف أقدر أساعدك اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2003155900,
+  "load_duration": 153778400,
+  "prompt_eval_count": 735,
+  "prompt_eval_cached_count": 722,
+  "prompt_eval_duration": 449410000,
+  "eval_count": 14,
+  "eval_duration": 1366418000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:47.2868347Z",
+  "message": {
+   "role": "assistant",
+   "content": " سؤالك اللي قبل كان \"هلا إسلام، أنا اسمي إسلام\" وش تبي أساعدك فيه الحين؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2390168800,
+  "load_duration": 45869200,
+  "prompt_eval_count": 764,
+  "prompt_eval_cached_count": 748,
+  "prompt_eval_duration": 462681000,
+  "eval_count": 21,
+  "eval_duration": 1848157000
+ }
+]

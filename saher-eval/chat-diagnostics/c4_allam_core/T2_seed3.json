@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:42:38.6323898Z",
+  "message": {
+   "role": "assistant",
+   "content": " زين، الدرعية فيها أماكن تاريخية حلوة. تأكد من الطقس قبل ما تروح البس ملابس مناسبة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1664770100,
+  "load_duration": 25176500,
+  "prompt_eval_count": 386,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 215576000,
+  "eval_count": 21,
+  "eval_duration": 1417378000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:42:42.2914885Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطاعم كثيرة في الدرعية. ممكن تجرب مطعم الليوان أو مطعم تنور. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1624078100,
+  "load_duration": 21962300,
+  "prompt_eval_count": 424,
+  "prompt_eval_cached_count": 386,
+  "prompt_eval_duration": 397181000,
+  "eval_count": 19,
+  "eval_duration": 1197158000
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:51:50.8319551Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت عشان أبحث عن نتيجة مباراة الهلال أمس. لكن تقدر تشوفها من تطبيق الهلال أو المواقع الرياضية الرسمية. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2555553500,
+  "load_duration": 31310800,
+  "prompt_eval_count": 669,
+  "prompt_eval_cached_count": 656,
+  "prompt_eval_duration": 365280000,
+  "eval_count": 25,
+  "eval_duration": 2147542000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:51:53.4413086Z",
+  "message": {
+   "role": "assistant",
+   "content": " أي شي تكتبه الحين يروح أول ما تسكر الصفحة وما يبقى عندي ولا عندي قاعدة بيانات أحفظ فيها شي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2606366500,
+  "load_duration": 29019800,
+  "prompt_eval_count": 711,
+  "prompt_eval_cached_count": 693,
+  "prompt_eval_duration": 542928000,
+  "eval_count": 25,
+  "eval_duration": 2018026000
+ }
+]

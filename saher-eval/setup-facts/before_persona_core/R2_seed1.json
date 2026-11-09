@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:03:06.1765526Z",
+  "message": {
+   "role": "assistant",
+   "content": " زين، وش رأيك تسوين لك شيء خفيف؟ تقرين كتاب خفيف أو تشاهدين لك فيديو ممتع. أو حتى تسوين شيء بسيط مثل ترتيب أغراضك. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3125393500,
+  "load_duration": 24975700,
+  "prompt_eval_count": 385,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 269205000,
+  "eval_count": 34,
+  "eval_duration": 2822590000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:03:10.9624666Z",
+  "message": {
+   "role": "assistant",
+   "content": " زين، سوي لك شيء من الأكلات اللي تحبينها. أو جربي تسوين شيء جديد. أو سوي لك شيء من الفنون الخفيفة مثل الرسم أو التلوين. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2735005000,
+  "load_duration": 22837500,
+  "prompt_eval_count": 436,
+  "prompt_eval_cached_count": 385,
+  "prompt_eval_duration": 406192000,
+  "eval_count": 36,
+  "eval_duration": 2297250000
+ }
+]

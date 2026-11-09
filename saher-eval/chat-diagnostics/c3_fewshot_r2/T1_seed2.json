@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:29:30.6408273Z",
+  "message": {
+   "role": "assistant",
+   "content": "هلا وسهلا، كيفك وبيك؟ ما عندناش مشاكل، كل يوم وبيك خير."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1608730700,
+  "load_duration": 9057500,
+  "prompt_eval_count": 451,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 169309000,
+  "eval_count": 29,
+  "eval_duration": 1425341000
+ }
+]

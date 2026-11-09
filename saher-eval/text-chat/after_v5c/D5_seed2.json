@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:03:34.0259345Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا برنامج إلكتروني، ما عندي عطلة ولا حياة شخصية. بس أقدر أساعدك بأي موضوع تحتاجه. وش تبي تسوي أنت بالويكند؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3636351500,
+  "load_duration": 161486900,
+  "prompt_eval_count": 710,
+  "prompt_eval_cached_count": 709,
+  "prompt_eval_duration": 114076000,
+  "eval_count": 29,
+  "eval_duration": 3319439000
+ }
+]

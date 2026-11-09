@@ -1,0 +1,70 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:35.2721767Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، أنا ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4885289900,
+  "load_duration": 3250144100,
+  "prompt_eval_count": 665,
+  "prompt_eval_cached_count": 656,
+  "prompt_eval_duration": 553501000,
+  "eval_count": 8,
+  "eval_duration": 790009000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:44.6502477Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطماطم والتوابل. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8584884500,
+  "load_duration": 5450220800,
+  "prompt_eval_count": 687,
+  "prompt_eval_cached_count": 672,
+  "prompt_eval_duration": 712483000,
+  "eval_count": 14,
+  "eval_duration": 1174297000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:48.7265455Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطماطم والتوابل مع خبز التورتيلا أو البيغل. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4036795800,
+  "load_duration": 793746400,
+  "prompt_eval_count": 718,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 703074000,
+  "eval_count": 22,
+  "eval_duration": 1919667000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:55.7294333Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي سندويشة فلافل أو مسخن بالخبز العربي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6988909200,
+  "load_duration": 3632984000,
+  "prompt_eval_count": 755,
+  "prompt_eval_cached_count": 739,
+  "prompt_eval_duration": 844411000,
+  "eval_count": 16,
+  "eval_duration": 2207045000
+ }
+]

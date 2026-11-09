@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:43:38.9775748Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي قاعدة بيانات. كلامي معك محفوظ في الصفحة اللي تشوفها الحين، ويروح أول ما تقفلها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1822452700,
+  "load_duration": 26291600,
+  "prompt_eval_count": 563,
+  "prompt_eval_cached_count": 562,
+  "prompt_eval_duration": 75093000,
+  "eval_count": 25,
+  "eval_duration": 1712433000
+ }
+]

@@ -1,0 +1,70 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:30.704566Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، اسمي ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 692845800,
+  "load_duration": 34188900,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 708,
+  "prompt_eval_duration": 81335000,
+  "eval_count": 8,
+  "eval_duration": 554250000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:32.533879Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطحينة أو صينية خضار بالفرن. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1809956800,
+  "load_duration": 42129100,
+  "prompt_eval_count": 731,
+  "prompt_eval_cached_count": 716,
+  "prompt_eval_duration": 359233000,
+  "eval_count": 19,
+  "eval_duration": 1387476000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:34.5809301Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطحينة أو صينية دجاج بالفرن. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2045113500,
+  "load_duration": 51087800,
+  "prompt_eval_count": 767,
+  "prompt_eval_cached_count": 749,
+  "prompt_eval_duration": 543169000,
+  "eval_count": 18,
+  "eval_duration": 1422688000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:36.4114455Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي مقلوبة خضار أو دجاج أو قدر كبسة بدون أرز. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1810201000,
+  "load_duration": 53188800,
+  "prompt_eval_count": 800,
+  "prompt_eval_cached_count": 784,
+  "prompt_eval_duration": 370693000,
+  "eval_count": 17,
+  "eval_duration": 1352466000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:44:07.7095017Z",
+  "message": {
+   "role": "assistant",
+   "content": " أقول لها تبدأ بمشاريع صغيرة مثل التصميم أو الكتابة أو حتى التجارة الإلكترونية. كمان تقدر تتواصل مع شركات تقدم خدمات عن بعد مثل خدمة العملاء أو البرمجة. إن شاء الله تلاقي فرصة مناسبة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3014815100,
+  "load_duration": 21189000,
+  "prompt_eval_count": 657,
+  "prompt_eval_cached_count": 642,
+  "prompt_eval_duration": 300733000,
+  "eval_count": 39,
+  "eval_duration": 2684533000
+ }
+]

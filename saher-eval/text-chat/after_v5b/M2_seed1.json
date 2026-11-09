@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:14.148686Z",
+  "message": {
+   "role": "assistant",
+   "content": " ممكن تسوي أومليت بالخضار أو شي ساندويشات مرتديلا. أو تقدر تسوي سلطة فواكه أو سلطة خضار. أو إذا عندك دجاج، تقدر تشوي صدور دجاج أو تسويه مقلوب. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4385953600,
+  "load_duration": 39584600,
+  "prompt_eval_count": 665,
+  "prompt_eval_cached_count": 656,
+  "prompt_eval_duration": 401910000,
+  "eval_count": 44,
+  "eval_duration": 3930262000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:18.9583152Z",
+  "message": {
+   "role": "assistant",
+   "content": " نعم، أتذكرك الكلام هذا لو فتحت محادثة جديدة بكرة. أنا ذاكرة تخزين مؤقتة وما يحفظ شيء في قاعدة بيانات أو ملفات. بس أول ما تضغط \"محادثة جديدة\" أو تسكر الصفحة، كل شيء يروح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4785080700,
+  "load_duration": 93132100,
+  "prompt_eval_count": 727,
+  "prompt_eval_cached_count": 708,
+  "prompt_eval_duration": 675701000,
+  "eval_count": 47,
+  "eval_duration": 3979538000
+ }
+]

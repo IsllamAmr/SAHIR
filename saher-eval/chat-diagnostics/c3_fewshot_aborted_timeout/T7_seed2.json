@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:18:00.241879Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا ما أحس بالحرارة، بس لو فاتورة الكهرباء زادت، بس علشان تقدر تقدر تقدر تدبر، حاول تقلل من الإضاءة الزائدة واحتفظ بالثلاجة بعيدا عن الشمس."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3634209900,
+  "load_duration": 9734700,
+  "prompt_eval_count": 456,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 241106000,
+  "eval_count": 66,
+  "eval_duration": 3377485000
+ }
+]

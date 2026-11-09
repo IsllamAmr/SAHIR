@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:05:17.5132171Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي قاعدة بيانات ولا ينحفظ شي في أي ملف. كلامك يروح أول ما تسكر الصفحة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1684966200,
+  "load_duration": 27759300,
+  "prompt_eval_count": 713,
+  "prompt_eval_cached_count": 712,
+  "prompt_eval_duration": 76480000,
+  "eval_count": 22,
+  "eval_duration": 1565130000
+ }
+]

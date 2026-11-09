@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:00:35.9373451Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما أقدر أتصفح النت وأتأكد من نتيجة مباراة الهلال أمس. لكن تقدر تشوفها من تطبيق الدوري أو موقع النادي الرسمي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4381714300,
+  "load_duration": 601918800,
+  "prompt_eval_count": 713,
+  "prompt_eval_cached_count": 712,
+  "prompt_eval_duration": 148675000,
+  "eval_count": 27,
+  "eval_duration": 3125067000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:00:39.9961353Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، أول ما تضغط \"محادثة جديدة\" أو تسكر الصفحة، تروح كل المحادثة وما يبقى عندي منها شي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4000394200,
+  "load_duration": 95014200,
+  "prompt_eval_count": 757,
+  "prompt_eval_cached_count": 739,
+  "prompt_eval_duration": 686512000,
+  "eval_count": 27,
+  "eval_duration": 3157218000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:02:35.712008Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا ذكاء اصطناعي وما عندي اتصال بالإنترنت. وش تبي تعرف ثاني؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1506856800,
+  "load_duration": 20413800,
+  "prompt_eval_count": 382,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 240515000,
+  "eval_count": 18,
+  "eval_duration": 1239165000
+ }
+]

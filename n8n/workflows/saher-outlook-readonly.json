@@ -1,0 +1,79 @@
+{
+  "name": "Saher - Outlook read-only summary",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "name": "Run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 3,
+        "output": "simple",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "name": "Read 3 recent emails",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [220, 0],
+      "notes": "Read-only. Credential must use Custom Scopes: openid offline_access Mail.Read"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Take the newest email only and build a short prompt for Saher (ALLaM, 4k context).\nconst m = $input.first().json;\nconst from = m.from?.emailAddress ? `${m.from.emailAddress.name || ''} <${m.from.emailAddress.address || ''}>` : '';\nconst body = (m.bodyPreview || '').slice(0, 1200);\nconst prompt = `هذا إيميل وصلني. لخّصه في سطرين بلهجة سعودية بيضاء، وبعدها اقترح رد قصير مناسب (اقتراح فقط، لا ترسله).\\n\\nمن: ${from}\\nالعنوان: ${m.subject || ''}\\nالنص:\\n${body}`;\nreturn [{ json: {\n  subject: m.subject,\n  from,\n  ollamaBody: { model: 'allam-7b-saher', prompt, stream: false, options: { num_predict: 200 } }\n} }];"
+      },
+      "id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "name": "Build prompt (newest email)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [440, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.ollamaBody) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "name": "Ask Saher (local Ollama)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [660, 0]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            { "id": "f1", "name": "subject", "value": "={{ $('Build prompt (newest email)').item.json.subject }}", "type": "string" },
+            { "id": "f2", "name": "from", "value": "={{ $('Build prompt (newest email)').item.json.from }}", "type": "string" },
+            { "id": "f3", "name": "saher_summary_and_suggestion", "value": "={{ $json.response }}", "type": "string" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "name": "Show result",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [880, 0]
+    }
+  ],
+  "connections": {
+    "Run manually": { "main": [[{ "node": "Read 3 recent emails", "type": "main", "index": 0 }]] },
+    "Read 3 recent emails": { "main": [[{ "node": "Build prompt (newest email)", "type": "main", "index": 0 }]] },
+    "Build prompt (newest email)": { "main": [[{ "node": "Ask Saher (local Ollama)", "type": "main", "index": 0 }]] },
+    "Ask Saher (local Ollama)": { "main": [[{ "node": "Show result", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "pinData": {}
+}

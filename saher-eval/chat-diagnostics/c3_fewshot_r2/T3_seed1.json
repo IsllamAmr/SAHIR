@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:28:52.4415878Z",
+  "message": {
+   "role": "assistant",
+   "content": "أول ما تبدأ بالقائمة، اشتري المكونات اللي بتحتاجها. بعد كده اتبع وصفة طبخ، كده تقدر تعرف الخطوات. وأهم حاجة تأكد من توقيت الطهي، الكبسة بتحتاج وقت."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3923723500,
+  "load_duration": 9608600,
+  "prompt_eval_count": 460,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 269371000,
+  "eval_count": 66,
+  "eval_duration": 3638291000
+ }
+]

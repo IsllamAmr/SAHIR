@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:59.2618036Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبي تعرف عنه، أبشر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1283347700,
+  "load_duration": 41400400,
+  "prompt_eval_count": 710,
+  "prompt_eval_cached_count": 701,
+  "prompt_eval_duration": 362323000,
+  "eval_count": 10,
+  "eval_duration": 850343000
+ }
+]

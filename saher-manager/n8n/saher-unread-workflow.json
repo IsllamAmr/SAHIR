@@ -1,0 +1,255 @@
+{
+  "id": "saherUnread5RO01",
+  "name": "Saher - unread emails (read-only)",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "saher-unread",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "http://127.0.0.1:8768"
+        }
+      },
+      "id": "5a4e0001-0000-4000-8000-000000000001",
+      "name": "Saher asks",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "5a4e0001-aaaa-4000-8000-000000000001"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Only Saher (which knows the local key) may ask for email summaries.\nconst h = $input.first().json.headers || {};\nreturn [{ json: { allowed: h['x-saher-key'] === '7cee95018be367a1b631029fccd2e017aeedfe508be7f0d4' } }];"
+      },
+      "id": "5a4e0002-0000-4000-8000-000000000002",
+      "name": "Check Saher key",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.allowed }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5a4e0003-0000-4000-8000-000000000003",
+      "name": "Key OK?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messages?$filter=receivedDateTime ge 2000-01-01T00:00:00Z and isRead eq false&$orderby=receivedDateTime desc&$top=5&$select=id,subject,from,receivedDateTime,bodyPreview,body,isRead,hasAttachments,importance",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftOutlookOAuth2Api",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Prefer",
+              "value": "outlook.body-content-type=\"text\""
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "5a4e0004-0000-4000-8000-000000000004",
+      "name": "Read 5 unread (GET only)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        -100
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "saherOutlookRead1",
+          "name": "Outlook - Saher (read only)"
+        }
+      },
+      "onError": "continueErrorOutput",
+      "notes": "Read-only: one GET to Microsoft Graph. Reading this way does not mark mail as read."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Keep only what Saher needs. Bodies are cut to 2000 characters for the 4k-context model.\nconst res = $input.first().json;\nconst list = Array.isArray(res.value) ? res.value : [];\nconst emails = list.slice(0, 5).map(m => ({\n  id: m.id,\n  from_name: m.from?.emailAddress?.name || '',\n  from_address: m.from?.emailAddress?.address || '',\n  subject: m.subject || '',\n  received: m.receivedDateTime || '',\n  is_read: m.isRead === true,\n  has_attachments: m.hasAttachments === true,\n  importance: m.importance || 'normal',\n  body: String((m.body?.content) || m.bodyPreview || '').replace(/\\r/g, '').replace(/\\n{3,}/g, '\\n\\n').trim().slice(0, 2000),\n}));\nreturn [{ json: { ok: true, source: 'outlook', emails } }];"
+      },
+      "id": "5a4e0005-0000-4000-8000-000000000005",
+      "name": "Shape for Saher",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Outlook is not connected, the sign-in expired, or Graph refused the request.\nconst e = $input.first().json;\nconst msg = JSON.stringify(e.error || e).slice(0, 300);\nconst notConnected = /credential|token|auth|401|403|consent|refresh/i.test(msg);\nreturn [{ json: { ok: false, error: notConnected ? 'not_connected' : 'graph_error', detail: msg } }];"
+      },
+      "id": "5a4e0006-0000-4000-8000-000000000006",
+      "name": "Outlook problem",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "5a4e0007-0000-4000-8000-000000000007",
+      "name": "Reply to Saher",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1100,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\"ok\": false, \"error\": \"forbidden\"}",
+        "options": {
+          "responseCode": 403
+        }
+      },
+      "id": "5a4e0008-0000-4000-8000-000000000008",
+      "name": "Refuse",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        150
+      ]
+    }
+  ],
+  "connections": {
+    "Saher asks": {
+      "main": [
+        [
+          {
+            "node": "Check Saher key",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Saher key": {
+      "main": [
+        [
+          {
+            "node": "Key OK?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Key OK?": {
+      "main": [
+        [
+          {
+            "node": "Read 5 unread (GET only)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Refuse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read 5 unread (GET only)": {
+      "main": [
+        [
+          {
+            "node": "Shape for Saher",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Outlook problem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Shape for Saher": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Outlook problem": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {}
+}

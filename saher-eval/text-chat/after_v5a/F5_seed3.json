@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:47:19.8772606Z",
+  "message": {
+   "role": "assistant",
+   "content": " كلامك ما يطلع من الجهاز وما ينحفظ، بس ما أقدر أضمن لك السرية لأن أي أحد يستخدم الجهاز ممكن يشوف الصفحة وهي مفتوحة. تقدر تقول اللي تبيه وأنا حاضر أساعدك. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3180007100,
+  "load_duration": 25266600,
+  "prompt_eval_count": 608,
+  "prompt_eval_cached_count": 607,
+  "prompt_eval_duration": 77629000,
+  "eval_count": 39,
+  "eval_duration": 3066132000
+ }
+]

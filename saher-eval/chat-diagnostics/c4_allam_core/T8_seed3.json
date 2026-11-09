@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:43:20.8144888Z",
+  "message": {
+   "role": "assistant",
+   "content": " زين، عندي لك خطة تساعدك تذاكر لاختبار القدرات بأسبوعين:\n\n1. قسم المواد لمواضيع صغيرة.\n2. ذاكر كل يوم 3 ساعات.\n3. ذاكر من مصادر موثوقة.\n4. ذاكر مع صديق.\n5. خذ لك فترات راحة.\n\nأبشر، هذي الخطة تساعدك بإذن الله. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5151505000,
+  "load_duration": 24262000,
+  "prompt_eval_count": 387,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 286328000,
+  "eval_count": 69,
+  "eval_duration": 4835095000
+ }
+]

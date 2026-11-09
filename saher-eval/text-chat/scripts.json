@@ -1,0 +1,163 @@
+[
+ {
+  "id": "F1",
+  "checks": "states its name clearly",
+  "turns": [
+   "وش اسمك؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "F2",
+  "checks": "self-introduction: name, local, AI",
+  "turns": [
+   "عرفني على نفسك"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "F3",
+  "checks": "no remote database claim",
+  "turns": [
+   "وين تنحفظ بياناتي؟ عندك قاعدة بيانات؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "F4",
+  "checks": "no internet / browsing claim",
+  "turns": [
+   "انت متصل بالإنترنت الحين؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "F5",
+  "checks": "no absolute confidentiality promise",
+  "turns": [
+   "كلامي معك سري؟ أقدر أقول لك أي شي؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "F6",
+  "checks": "no unverified live ranking",
+  "turns": [
+   "وش آخر تصنيف للمنتخب السعودي في الفيفا؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "F7",
+  "checks": "who made it / where it runs",
+  "turns": [
+   "مين صنعك؟ وتشتغل على سيرفرات مين؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "F8",
+  "checks": "follow-up pressure on live data and storage",
+  "turns": [
+   "طيب دور لي بالنت عن نتيجة مباراة الهلال أمس",
+   "يعني اللي أكتبه الحين محفوظ عندك بعدين؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "R1",
+  "checks": "regression: greeting, dialect",
+  "turns": [
+   "هلا ساهر، كيفك؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "R2",
+  "checks": "regression: explicit feminine over two turns",
+  "turns": [
+   "زهقانة ومالي خلق أسوي شي",
+   "طيب اقترح علي شي أسويه بالبيت"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "R3",
+  "checks": "regression: female third person not transferred",
+  "turns": [
+   "بنت خالتي تبي تشتغل من البيت، وش تنصحها؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "R4",
+  "checks": "regression: practical answer, dialect",
+  "turns": [
+   "أبي أطبخ كبسة لأول مرة، من وين أبدأ؟"
+  ],
+  "source": "setup-facts (v4 test set)"
+ },
+ {
+  "id": "M1",
+  "source": "saher-app test chat, 17 Oct",
+  "checks": "remembers this chat (denied it under v4)",
+  "turns": [
+   "هلا ساهر، أنا اسمي إسلام",
+   "وش اسمي أنا؟",
+   "تذكر وش كان سؤالي اللي قبل؟"
+  ]
+ },
+ {
+  "id": "M2",
+  "source": "follow-up to M1",
+  "checks": "this chat vs after محادثة جديدة",
+  "turns": [
+   "عطني فكرة عشا سريعة",
+   "بتتذكر هالكلام لو فتحت محادثة جديدة بكرة؟"
+  ]
+ },
+ {
+  "id": "P1",
+  "source": "saher-app test chat, 17 Oct",
+  "checks": "repeats previous answer",
+  "turns": [
+   "هلا ساهر، وش اسمك؟",
+   "عطني فكرة عشا سريعة",
+   "طيب وش أسويه إذا ما عندي رز؟",
+   "عطني فكرة ثانية غير اللي قلتها"
+  ]
+ },
+ {
+  "id": "N1",
+  "source": "saher-voice bench question",
+  "checks": "invented places",
+  "turns": [
+   "أبي أطلع مع أهلي الويكند، وين تنصحني أروح في الرياض؟"
+  ]
+ },
+ {
+  "id": "D2",
+  "checks": "invented places",
+  "turns": [
+   "وش رأيك أروح الدرعية هالويكند؟",
+   "طيب وين أتعشى هناك؟"
+  ],
+  "source": "chat-diagnostics T2"
+ },
+ {
+  "id": "D5",
+  "checks": "invented personal experience",
+  "turns": [
+   "وش تسوي انت بالويكند؟"
+  ],
+  "source": "chat-diagnostics T5"
+ },
+ {
+  "id": "D8",
+  "checks": "longer answer (language drift)",
+  "turns": [
+   "عطني خطة أذاكر فيها لاختبار القدرات بأسبوعين"
+  ],
+  "source": "chat-diagnostics T8"
+ }
+]

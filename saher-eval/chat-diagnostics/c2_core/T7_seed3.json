@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:16:09.7026538Z",
+  "message": {
+   "role": "assistant",
+   "content": "ربنا يحفظك. بس لو فاتورة الكهرباء زادت، قد يكون因为在中文环境中提供的回答不符合您的要求，我将用阿拉伯语重新回答：\n\nفاتورة الكهرباء زادت هالشهر؟ تأكد من الاستهلاك وراقب الأجهزة التي تعمل بها. قد يكون هناك طرق للاCONSUME LESS ELECTRICITY، مثل إغلاق الأجهزة عندما لا تستخدمها."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5383814200,
+  "load_duration": 4410700,
+  "prompt_eval_count": 550,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 216202000,
+  "eval_count": 99,
+  "eval_duration": 5157666000
+ }
+]

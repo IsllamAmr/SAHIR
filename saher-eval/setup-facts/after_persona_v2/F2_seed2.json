@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:06:49.1960437Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا ساهر، ذكاء اصطناعي أسولف معك باللهجة السعودية. أقدر أساعدك في الأفكار والسوالف والنصايح. وش تبي تعرف أكثر؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2560205200,
+  "load_duration": 23356900,
+  "prompt_eval_count": 553,
+  "prompt_eval_cached_count": 546,
+  "prompt_eval_duration": 200929000,
+  "eval_count": 31,
+  "eval_duration": 2328655000
+ }
+]

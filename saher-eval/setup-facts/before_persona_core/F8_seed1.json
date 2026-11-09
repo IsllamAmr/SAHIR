@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:02:53.609222Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا ما عندي وصول للنت، لكن الهلال لعب ضد الباطن يوم 11 مايو 2023 وفاز 4-1. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2255216400,
+  "load_duration": 22760000,
+  "prompt_eval_count": 386,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 205472000,
+  "eval_count": 30,
+  "eval_duration": 2017561000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:02:57.9290284Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، ما عندي ذاكرة طويلة الأمد وأحفظ فقط للرد عليك في هالمحادثة. بعد ما تخلص المحادثة، المعلومات ما تحتفظ فيها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2257744100,
+  "load_duration": 21527200,
+  "prompt_eval_count": 435,
+  "prompt_eval_cached_count": 386,
+  "prompt_eval_duration": 380093000,
+  "eval_count": 29,
+  "eval_duration": 1846878000
+ }
+]

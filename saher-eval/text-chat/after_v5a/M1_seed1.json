@@ -1,0 +1,53 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:48:35.2229614Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا إسلام، تشرفنا. وش في بالك اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1327459200,
+  "load_duration": 26484700,
+  "prompt_eval_count": 603,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 290320000,
+  "eval_count": 13,
+  "eval_duration": 997158000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:48:36.7354077Z",
+  "message": {
+   "role": "assistant",
+   "content": " اسمك إسلام، وقلت لك قبل. وش في بالك اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1510244800,
+  "load_duration": 27160500,
+  "prompt_eval_count": 628,
+  "prompt_eval_cached_count": 615,
+  "prompt_eval_duration": 320547000,
+  "eval_count": 14,
+  "eval_duration": 1150005000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:48:38.4919963Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما أقدر أتذكر كل الأسئلة اللي راحت. وش كان سؤالك اللي قبل؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1753949400,
+  "load_duration": 28179000,
+  "prompt_eval_count": 657,
+  "prompt_eval_cached_count": 641,
+  "prompt_eval_duration": 377204000,
+  "eval_count": 16,
+  "eval_duration": 1336683000
+ }
+]

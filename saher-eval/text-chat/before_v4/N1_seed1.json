@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:47.7429149Z",
+  "message": {
+   "role": "assistant",
+   "content": " وين أنت ساكن بالرياض عشان أقدر أعطيك اقتراح مناسب؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1483219400,
+  "load_duration": 24978200,
+  "prompt_eval_count": 571,
+  "prompt_eval_cached_count": 550,
+  "prompt_eval_duration": 474929000,
+  "eval_count": 13,
+  "eval_duration": 971790000
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:00:43.9619681Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت عشان أشيك على النت. لكن تقدر تشوف نتيجة مباراة الهلال أمس من موقع الدوري الرسمي أو حسابات النادي على تويتر أو يوتيوب. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3935530400,
+  "load_duration": 263952700,
+  "prompt_eval_count": 713,
+  "prompt_eval_cached_count": 712,
+  "prompt_eval_duration": 124745000,
+  "eval_count": 30,
+  "eval_duration": 3468522000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:00:48.2662278Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، أول ما تضغط \"محادثة جديدة\" أو تسكر الصفحة، يروح كل شي وما يبقى عندي منه شي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4285665300,
+  "load_duration": 204835500,
+  "prompt_eval_count": 760,
+  "prompt_eval_cached_count": 742,
+  "prompt_eval_duration": 710801000,
+  "eval_count": 27,
+  "eval_duration": 3331304000
+ }
+]

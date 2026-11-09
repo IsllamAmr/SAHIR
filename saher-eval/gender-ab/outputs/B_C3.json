@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:36:15.0980904Z",
+ "message": {
+  "role": "assistant",
+  "content": "فهمت، القربة مهما كانت. ت bruk الوقت في النوم قليل و تشرب شاي الزنجبيل قبل النوم، يجنبك القلق."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 2202037400,
+ "load_duration": 5016200,
+ "prompt_eval_count": 655,
+ "prompt_eval_cached_count": 639,
+ "prompt_eval_duration": 172644000,
+ "eval_count": 40,
+ "eval_duration": 2019423000
+}

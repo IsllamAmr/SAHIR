@@ -1,0 +1,390 @@
+{
+  "id": "saherGmail5RO001",
+  "name": "Saher - unread Gmail (read-only)",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "saher-unread-gmail",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "http://127.0.0.1:8768"
+        }
+      },
+      "id": "6a4e0001-0000-4000-8000-000000000001",
+      "name": "Saher asks",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "6a4e0001-bbbb-4000-8000-000000000001"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Only Saher (which knows the local key) may ask for email summaries.\nconst h = $input.first().json.headers || {};\nreturn [{ json: { allowed: h['x-saher-key'] === '7cee95018be367a1b631029fccd2e017aeedfe508be7f0d4' } }];"
+      },
+      "id": "6a4e0002-0000-4000-8000-000000000002",
+      "name": "Check Saher key",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c3",
+              "leftValue": "={{ $json.allowed }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "6a4e0003-0000-4000-8000-000000000003",
+      "name": "Key OK?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://gmail.googleapis.com/gmail/v1/users/me/messages?q=is%3Aunread%20in%3Ainbox&maxResults=5",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googleOAuth2Api",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "6a4e0004-0000-4000-8000-000000000004",
+      "name": "List 5 unread (GET only)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        -100
+      ],
+      "credentials": {
+        "googleOAuth2Api": {
+          "id": "saherGmailRead01",
+          "name": "Gmail - Saher (read only)"
+        }
+      },
+      "onError": "continueErrorOutput",
+      "notes": "Read-only: lists ids of the 5 newest unread inbox messages."
+    },
+    {
+      "parameters": {
+        "jsCode": "// One item per unread message id (newest first, as Gmail lists them).\nconst list = $input.first().json.messages || [];\nif (!list.length) return [{ json: { any: false } }];\nreturn list.slice(0, 5).map(m => ({ json: { any: true, id: m.id } }));"
+      },
+      "id": "6a4e0005-0000-4000-8000-000000000005",
+      "name": "Message ids",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c6",
+              "leftValue": "={{ $json.any }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "6a4e0006-0000-4000-8000-000000000006",
+      "name": "Any unread?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1100,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://gmail.googleapis.com/gmail/v1/users/me/messages/{{ $json.id }}?format=full",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googleOAuth2Api",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "6a4e0007-0000-4000-8000-000000000007",
+      "name": "Read each message (GET only)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1320,
+        -300
+      ],
+      "credentials": {
+        "googleOAuth2Api": {
+          "id": "saherGmailRead01",
+          "name": "Gmail - Saher (read only)"
+        }
+      },
+      "onError": "continueErrorOutput",
+      "notes": "Read-only: reading this way does not mark mail as read."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Keep only what Saher needs. Bodies are cut to 2000 characters for the 4k-context model.\nfunction decode(data) {\n  const b64 = String(data).replace(/-/g, '+').replace(/_/g, '/');\n  if (typeof Buffer !== 'undefined') return Buffer.from(b64, 'base64').toString('utf8');\n  return new TextDecoder().decode(Uint8Array.from(atob(b64), c => c.charCodeAt(0)));\n}\nfunction walk(p, out) {\n  if (!p) return;\n  if (p.filename && p.body && p.body.attachmentId) out.attachments = true;\n  else if (p.mimeType === 'text/plain' && p.body && p.body.data) out.plain.push(decode(p.body.data));\n  else if (p.mimeType === 'text/html' && p.body && p.body.data) out.html.push(decode(p.body.data));\n  (p.parts || []).forEach(q => walk(q, out));\n}\nfunction htmlToText(h) {\n  return h.replace(/<(style|script|head)[\\s\\S]*?<\\/\\1>/gi, ' ').replace(/<br\\s*\\/?>|<\\/(p|div|tr|li|h\\d)>/gi, '\\n')\n    .replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"').replace(/&#39;/g, \"'\").replace(/[ \\t]+/g, ' ');\n}\nconst emails = $input.all().map(item => {\n  const m = item.json;\n  const headers = {};\n  (m.payload && m.payload.headers || []).forEach(h => { headers[h.name.toLowerCase()] = h.value; });\n  const from = headers['from'] || '';\n  const match = from.match(/^\\s*\"?([^\"<]*?)\"?\\s*<([^>]+)>\\s*$/);\n  const out = { plain: [], html: [], attachments: false };\n  walk(m.payload, out);\n  const body = out.plain.length ? out.plain.join('\\n') : out.html.length ? htmlToText(out.html.join('\\n')) : (m.snippet || '');\n  return {\n    id: m.id,\n    from_name: match ? match[1].trim() : '',\n    from_address: match ? match[2].trim() : from.trim(),\n    subject: headers['subject'] || '',\n    received: m.internalDate ? new Date(Number(m.internalDate)).toISOString() : '',\n    is_read: !(m.labelIds || []).includes('UNREAD'),\n    has_attachments: out.attachments,\n    importance: 'normal',\n    body: body.replace(/\\r/g, '').replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n').trim().slice(0, 2000),\n  };\n});\nreturn [{ json: { ok: true, source: 'gmail', emails } }];"
+      },
+      "id": "6a4e0008-0000-4000-8000-000000000008",
+      "name": "Shape for Saher",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1540,
+        -400
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { ok: true, source: 'gmail', emails: [] } }];"
+      },
+      "id": "6a4e0009-0000-4000-8000-000000000009",
+      "name": "No unread",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Gmail is not connected, the sign-in expired, or Google refused the request.\nconst e = $input.first().json;\nconst msg = JSON.stringify(e.error || e).slice(0, 300);\nconst notConnected = /credential|token|auth|401|403|consent|refresh|invalid_grant/i.test(msg);\nreturn [{ json: { ok: false, error: notConnected ? 'not_connected' : 'graph_error', detail: msg } }];"
+      },
+      "id": "6a4e0010-0000-4000-8000-000000000010",
+      "name": "Gmail problem",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1540,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "6a4e0011-0000-4000-8000-000000000011",
+      "name": "Reply to Saher",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1760,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\"ok\": false, \"error\": \"forbidden\"}",
+        "options": {
+          "responseCode": 403
+        }
+      },
+      "id": "6a4e0012-0000-4000-8000-000000000012",
+      "name": "Refuse",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        150
+      ]
+    }
+  ],
+  "connections": {
+    "Saher asks": {
+      "main": [
+        [
+          {
+            "node": "Check Saher key",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Saher key": {
+      "main": [
+        [
+          {
+            "node": "Key OK?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Key OK?": {
+      "main": [
+        [
+          {
+            "node": "List 5 unread (GET only)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Refuse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List 5 unread (GET only)": {
+      "main": [
+        [
+          {
+            "node": "Message ids",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail problem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message ids": {
+      "main": [
+        [
+          {
+            "node": "Any unread?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Any unread?": {
+      "main": [
+        [
+          {
+            "node": "Read each message (GET only)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No unread",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read each message (GET only)": {
+      "main": [
+        [
+          {
+            "node": "Shape for Saher",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail problem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Shape for Saher": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No unread": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail problem": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {}
+}

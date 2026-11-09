@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:52:15.7991762Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبين أسويلك؟ أو خلينا نسولف شوي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1296765700,
+  "load_duration": 33650700,
+  "prompt_eval_count": 668,
+  "prompt_eval_cached_count": 667,
+  "prompt_eval_duration": 84783000,
+  "eval_count": 14,
+  "eval_duration": 1164499000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:52:18.1562966Z",
+  "message": {
+   "role": "assistant",
+   "content": " كيف كان يومك؟ أو خلينا نختار لك شي تسوينه بالبيت، وش تحبين تسوين عادة؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2354359500,
+  "load_duration": 31522000,
+  "prompt_eval_count": 697,
+  "prompt_eval_cached_count": 681,
+  "prompt_eval_duration": 377074000,
+  "eval_count": 23,
+  "eval_duration": 1933021000
+ }
+]

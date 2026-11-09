@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:11:15.3321905Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت عشان أبحث عن نتيجة مباراة الهلال أمس. جرب تدخل على موقع الدوري أو حساب الهلال الرسمي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2005327600,
+  "load_duration": 25512500,
+  "prompt_eval_count": 547,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 297899000,
+  "eval_count": 23,
+  "eval_duration": 1672650000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:11:20.1912279Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، كلامك ما يحفظ عندي. الكلام اللي نسولف فيه الآن مفتوح وما ينحفظ. إذا سكرت الصفحة أو فتحت محادثة جديدة، كل الكلام يروح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2797733400,
+  "load_duration": 28535200,
+  "prompt_eval_count": 589,
+  "prompt_eval_cached_count": 547,
+  "prompt_eval_duration": 368769000,
+  "eval_count": 33,
+  "eval_duration": 2391560000
+ }
+]

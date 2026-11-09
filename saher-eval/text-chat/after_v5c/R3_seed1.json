@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:01:18.5909532Z",
+  "message": {
+   "role": "assistant",
+   "content": " يا هلا، فيه مجالات كثيرة تقدر تشتغل منها من البيت مثل التدريس عن بعد، الترجمة، التصميم، والكتابة. تقدر تبحث عن وظائف عن بعد في مواقع التوظيف أو تتواصل مع شركات تقدم خدمات عن بعد. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5382462800,
+  "load_duration": 214948900,
+  "prompt_eval_count": 715,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 462569000,
+  "eval_count": 42,
+  "eval_duration": 4636119000
+ }
+]

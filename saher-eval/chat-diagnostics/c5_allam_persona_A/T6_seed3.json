@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:45:48.5598106Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبي بالضبط تشتغل؟ فيه مجالات كثير ممكن تشتغل فيها من البيت مثل البرمجة، التصميم، الكتابة، الترجمة، التدريس عن بعد، التسويق الإلكتروني، وخدمة العملاء. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2639542100,
+  "load_duration": 26486000,
+  "prompt_eval_count": 657,
+  "prompt_eval_cached_count": 642,
+  "prompt_eval_duration": 296624000,
+  "eval_count": 34,
+  "eval_duration": 2304185000
+ }
+]

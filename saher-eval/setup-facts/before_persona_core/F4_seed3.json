@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:04:43.2016635Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي اتصال بالإنترنت ولا أقدر أتصل. أنا هنا عشان أساعدك بأي سؤال أو نصيحة تحتاجها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2035307500,
+  "load_duration": 22017600,
+  "prompt_eval_count": 382,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 286979000,
+  "eval_count": 23,
+  "eval_duration": 1719403000
+ }
+]

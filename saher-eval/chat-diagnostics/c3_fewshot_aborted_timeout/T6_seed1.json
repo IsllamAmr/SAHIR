@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:17:03.024144Z",
+  "message": {
+   "role": "assistant",
+   "content": "بنت خالتك محتاجة تشتغل من البيت؟ لو كانت بتحتاج لفرصة عمل، بس تبي تعمل من البيت، خلها تبحث عن شغل مناسب، زي العمل الحر على الإنترنت أو تدريس أو حتى كتابة محتوى. بس تأكلي من مصدرها صح قبل تقرري."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4209550200,
+  "load_duration": 7086400,
+  "prompt_eval_count": 462,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 239534000,
+  "eval_count": 77,
+  "eval_duration": 3956600000
+ }
+]

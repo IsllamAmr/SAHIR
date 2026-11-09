@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:44:02.6409904Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا هنا لمساعدتك بكل ما تحتاجه. وش تحتاج بالضبط؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1128031300,
+  "load_duration": 21340500,
+  "prompt_eval_count": 652,
+  "prompt_eval_cached_count": 642,
+  "prompt_eval_duration": 206536000,
+  "eval_count": 13,
+  "eval_duration": 891384000
+ }
+]

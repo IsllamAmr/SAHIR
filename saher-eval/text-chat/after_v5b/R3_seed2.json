@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:52:29.112425Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تشتغل من البيت في مجالات كثير مثل التجارة الإلكترونية، التدريس عن بعد، أو الكتابة والمحتوى. تحتاج جهاز كمبيوتر وخدمة إنترنت جيدة. كمان تقدر تبحث عن دورات تدريبية مجانية أو مدفوعة عشان تطور مهاراتها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3739118200,
+  "load_duration": 33875900,
+  "prompt_eval_count": 671,
+  "prompt_eval_cached_count": 670,
+  "prompt_eval_duration": 90787000,
+  "eval_count": 43,
+  "eval_duration": 3600297000
+ }
+]

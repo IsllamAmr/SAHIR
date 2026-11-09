@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:15:14.8878652Z",
+  "message": {
+   "role": "assistant",
+   "content": "ربنا يحفظك. تأكد من استهلاكك زياده هذا الشهر. ممكن تراجع الفاتورة تتأكد من المترات. إذا كانت زياده كبيرة، تواصل مع شركة الكهرباء للاستفسار."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3194688300,
+  "load_duration": 11106300,
+  "prompt_eval_count": 550,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 230919000,
+  "eval_count": 57,
+  "eval_duration": 2948124000
+ }
+]

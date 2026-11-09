@@ -1,0 +1,53 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:01:52.1809546Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا إسلام، تشرفنا فيك. وش تبي نناقش اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2319734200,
+  "load_duration": 143040500,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 475079000,
+  "eval_count": 15,
+  "eval_duration": 1664539000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:01:54.2853283Z",
+  "message": {
+   "role": "assistant",
+   "content": " اسمك إسلام، اللي قلته لي أول ما تكلمت معي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2097142200,
+  "load_duration": 177486400,
+  "prompt_eval_count": 736,
+  "prompt_eval_cached_count": 723,
+  "prompt_eval_duration": 472657000,
+  "eval_count": 13,
+  "eval_duration": 1398077000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:01:56.376596Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما أتذكر بالضبط. ممكن تسألني سؤال جديد؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2084618100,
+  "load_duration": 144605300,
+  "prompt_eval_count": 764,
+  "prompt_eval_cached_count": 748,
+  "prompt_eval_duration": 514712999,
+  "eval_count": 12,
+  "eval_duration": 1372852000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:03:09.9331298Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه أماكن كثيرة حلوة في الرياض، مثل الثمامة وحديقة الملك عبدالله. لو تحبون الطبيعة، الثمامة ممتازة. لو تحبون تسوق وترفيه، حديقة الملك عبدالله فيها كل شي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4337797900,
+  "load_duration": 44849600,
+  "prompt_eval_count": 721,
+  "prompt_eval_cached_count": 720,
+  "prompt_eval_duration": 107738000,
+  "eval_count": 40,
+  "eval_duration": 4159596999
+ }
+]

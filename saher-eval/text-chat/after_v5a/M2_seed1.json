@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:48:48.2299986Z",
+  "message": {
+   "role": "assistant",
+   "content": " ممكن تسوي أومليت بالخضار أو شي ساندويشات دجاج. أو تقدر تسلقي بيض مع توست وشرائح جبن. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2160743600,
+  "load_duration": 25357900,
+  "prompt_eval_count": 603,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 265987000,
+  "eval_count": 27,
+  "eval_duration": 1859997000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:48:50.1521098Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، أول ما تسكر الصفحة يروح كل شي وما يبقى عندي منه شي المرة الجاية. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1919997200,
+  "load_duration": 21924200,
+  "prompt_eval_count": 648,
+  "prompt_eval_cached_count": 629,
+  "prompt_eval_duration": 445006000,
+  "eval_count": 21,
+  "eval_duration": 1443362000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:51:43.2032135Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي فكرة من صنعني بالضبط، شغال على جهازك عن طريق برنامج Ollama وموديل ALLaM 7B. وما عندي معلومات عن السيرفرات اللي أشتغل عليها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4718199300,
+  "load_duration": 176864500,
+  "prompt_eval_count": 669,
+  "prompt_eval_cached_count": 656,
+  "prompt_eval_duration": 471311000,
+  "eval_count": 40,
+  "eval_duration": 4031433000
+ }
+]

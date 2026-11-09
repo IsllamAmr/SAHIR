@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:13:14.2506887Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا أعمل شوي من التمارين وأقرأ كتب جديدة. وش عنك؟ ما تسوين؟"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1598727400,
+  "load_duration": 9082800,
+  "prompt_eval_count": 612,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 175955000,
+  "eval_count": 27,
+  "eval_duration": 1407504000
+ }
+]

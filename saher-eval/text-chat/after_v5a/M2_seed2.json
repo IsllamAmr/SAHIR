@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:48:52.7111164Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة، فيها بيض مسلوق، طماطم، بصل، فلفل، وتوابل. تقدر تضيف لها خبز محمص أو خبز توست. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2537670600,
+  "load_duration": 23581700,
+  "prompt_eval_count": 603,
+  "prompt_eval_cached_count": 602,
+  "prompt_eval_duration": 73940000,
+  "eval_count": 34,
+  "eval_duration": 2430422000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:48:55.8654267Z",
+  "message": {
+   "role": "assistant",
+   "content": " أيوه، أتذكر كل الكلام اللي قلته في هالمحادثة، بس أول ما تسكر الصفحة وتفتح محادثة جديدة، كل شي يروح وما يبقى منه شي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3139001000,
+  "load_duration": 27624000,
+  "prompt_eval_count": 655,
+  "prompt_eval_cached_count": 636,
+  "prompt_eval_duration": 479490000,
+  "eval_count": 35,
+  "eval_duration": 2618522000
+ }
+]

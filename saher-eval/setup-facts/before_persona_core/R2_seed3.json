@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:05:12.625804Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبين تسوين؟ وشوفي، لو تغيرين جو شوي، ممكن تحسين براحة. ممكن تقرين كتاب خفيف، أو تشوفين فيلم ممتع، أو حتى تسوين شي بسيط مثل ترتيب الغرفة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3459519900,
+  "load_duration": 22116300,
+  "prompt_eval_count": 385,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 289345000,
+  "eval_count": 43,
+  "eval_duration": 3141292000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:05:17.625869Z",
+  "message": {
+   "role": "assistant",
+   "content": " زين، ممكن تسوين عشاء خفيف بالبيت؟ سوي شي سهل مثل مكرونة بالباشميل أو صينية بطاطس بالكريمة. أو ممكن تسوين عصير طازج أو سلطة فواكه. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2957876900,
+  "load_duration": 23524400,
+  "prompt_eval_count": 445,
+  "prompt_eval_cached_count": 385,
+  "prompt_eval_duration": 381232000,
+  "eval_count": 38,
+  "eval_duration": 2545351000
+ }
+]

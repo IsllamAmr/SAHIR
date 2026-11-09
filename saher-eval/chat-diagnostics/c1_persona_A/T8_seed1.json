@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:11:50.0609478Z",
+  "message": {
+   "role": "assistant",
+   "content": "حسناً، سأعطيك خطة بسيطة. ابدأ بتحديد المواضيع الهامة من الاختبار، ثم قس الوقت على كل موضوع. استخدم تمارين مكثفة لكن لا تتعب نفسك كثيراً. استخدم تطبيقات التذكير للبقاء على المسار. وعندما تنتهي، تدرب على أسئلة قديمة للتدريب العملي. الله يوفقك."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5284751500,
+  "load_duration": 8881600,
+  "prompt_eval_count": 618,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 210589000,
+  "eval_count": 100,
+  "eval_duration": 5058802000
+ }
+]

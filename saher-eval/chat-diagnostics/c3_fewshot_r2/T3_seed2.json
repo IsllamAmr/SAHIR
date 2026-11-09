@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:29:49.5322947Z",
+  "message": {
+   "role": "assistant",
+   "content": "أول ما تبدأ بالقائمة، اشتري المكونات اللي بتحتاجها. بعد كده اتبع وصفة طبخ بسيطة من الإنترنت، شوف الفيديوهات التوضيحية بتكون مفيدة. واحرص على تتبيلها جيد وتحميسك في الطبخ."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4324176200,
+  "load_duration": 6597400,
+  "prompt_eval_count": 460,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 286603000,
+  "eval_count": 75,
+  "eval_duration": 4026266000
+ }
+]

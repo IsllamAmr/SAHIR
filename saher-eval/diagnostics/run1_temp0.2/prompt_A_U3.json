@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:40:49.9367364Z",
+ "message": {
+  "role": "assistant",
+  "content": "لتحتاج لبعض الأوراق الأساسية كحد أدنى:\n\n1. ترخيص تجاري.\n2. شهادة ضريبية.\n3. بطاقة هوية صاحبة المحل.\n4. شهادة صحية للمحل إذا كان هناك طعام أو منتجات مخزنة.\n\nيمكنك تفقد المتطلبات الأخيرة من خلال موقع وزارة التجارة أو التواصل مع مكتب التجارة المحلي."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 4863629700,
+ "load_duration": 5084000,
+ "prompt_eval_count": 623,
+ "prompt_eval_cached_count": 597,
+ "prompt_eval_duration": 233953000,
+ "eval_count": 93,
+ "eval_duration": 4618512000
+}

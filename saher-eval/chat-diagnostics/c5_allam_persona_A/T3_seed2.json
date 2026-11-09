@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:44:34.8145267Z",
+  "message": {
+   "role": "assistant",
+   "content": " أجل، طيب. أول شيء، لازم تحدد نوع الكبسة اللي تبي تطبخها. فيه كبسة دجاج، لحم، أو حتى خضار. بعد ما تحدد النوع، ابحث عن وصفة موثوقة واتبع الخطوات بدقة. بالتوفيق! "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3758530500,
+  "load_duration": 21580200,
+  "prompt_eval_count": 659,
+  "prompt_eval_cached_count": 642,
+  "prompt_eval_duration": 383018000,
+  "eval_count": 47,
+  "eval_duration": 3345695000
+ }
+]

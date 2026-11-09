@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:14:15.3919292Z",
+  "message": {
+   "role": "assistant",
+   "content": " عشان تشتغل من البيت، تقدر تسوي مشروع صغير أو تشتغل عن طريق الإنترنت في مجالات مثل التصميم أو الترجمة أو التسويق. تعلم مهارات جديدة زي البرمجة أو إدارة الشبكات. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4841840200,
+  "load_duration": 24534500,
+  "prompt_eval_count": 565,
+  "prompt_eval_cached_count": 550,
+  "prompt_eval_duration": 428935000,
+  "eval_count": 34,
+  "eval_duration": 3230035000
+ }
+]

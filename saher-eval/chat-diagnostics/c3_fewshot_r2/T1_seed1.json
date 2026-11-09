@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:28:36.6828514Z",
+  "message": {
+   "role": "assistant",
+   "content": "هلا وسهلا، أنا بخير وش فيك؟ ما عنديش شغل إضافي اليوم."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2132536100,
+  "load_duration": 6662200,
+  "prompt_eval_count": 451,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 651519000,
+  "eval_count": 26,
+  "eval_duration": 1265643000
+ }
+]

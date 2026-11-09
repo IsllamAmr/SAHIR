@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:02:18.021968Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي بيتزا بالخضار أو شطائر الجبن. أو تقدر تطبخ بيض مقلي مع توست. هذي أفكار سهلة وسريعة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2646343600,
+  "load_duration": 44255000,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 708,
+  "prompt_eval_duration": 96958000,
+  "eval_count": 28,
+  "eval_duration": 2469235000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:02:21.8718983Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، أول ما تفتح محادثة جديدة أو تسكر الصفحة، تنسى كل شي. ما عندي قاعدة بيانات تحفظ الكلام. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3829167700,
+  "load_duration": 42980400,
+  "prompt_eval_count": 755,
+  "prompt_eval_cached_count": 736,
+  "prompt_eval_duration": 614558000,
+  "eval_count": 26,
+  "eval_duration": 3138604000
+ }
+]

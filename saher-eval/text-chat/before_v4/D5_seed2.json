@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:46:18.8089468Z",
+  "message": {
+   "role": "assistant",
+   "content": " الحين ما عندي ويكند، شغلي مستمر على مدار الساعة. بس لو كان عندي ويكند، ممكن أقضي وقتي أساعد الناس مثلك وأقدم نصايح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3458927600,
+  "load_duration": 67874300,
+  "prompt_eval_count": 560,
+  "prompt_eval_cached_count": 559,
+  "prompt_eval_duration": 95664000,
+  "eval_count": 35,
+  "eval_duration": 3272320000
+ }
+]

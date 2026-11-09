@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:30:52.2225807Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا فهمت. لو تبي تهدئ قلي ليا ما فيك، أقدر أشوف لك طريقة تريح نفسك."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2081497500,
+  "load_duration": 8009200,
+  "prompt_eval_count": 455,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 363657000,
+  "eval_count": 35,
+  "eval_duration": 1705534000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:30:57.2705281Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا بعرف شغل البيت ممل. لو تبي تجرب فن، ممكن تكتب وصفة جديدة للطعام أو تتعلم رسم صورة بسيطة. أو حتى ت Organize أشياء في البيت."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2985219800,
+  "load_duration": 9802500,
+  "prompt_eval_count": 510,
+  "prompt_eval_cached_count": 489,
+  "prompt_eval_duration": 297257000,
+  "eval_count": 53,
+  "eval_duration": 2674308000
+ }
+]

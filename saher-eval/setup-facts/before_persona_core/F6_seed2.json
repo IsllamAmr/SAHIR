@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:03:45.7117289Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي آخر تصنيف، لكن آخر تصنيف قبل كأس العالم كان في سبتمبر 2022، المنتخب السعودي في المركز 14 في العالم. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2556401500,
+  "load_duration": 22717500,
+  "prompt_eval_count": 384,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 280184000,
+  "eval_count": 32,
+  "eval_duration": 2245475000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:03:33.023385Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي قاعدة بيانات ولا أقدر أخزن بياناتك. كل اللي أسويه رد على أسئلتك بناءً على المعلومات اللي عندي. زين؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2229411700,
+  "load_duration": 22475900,
+  "prompt_eval_count": 386,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 207509000,
+  "eval_count": 29,
+  "eval_duration": 1990711000
+ }
+]

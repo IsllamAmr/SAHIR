@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:03:13.832762Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه أماكن كثيرة حلوة في الرياض. ممكن تزور حديقة الملك عبدالله، أو تلفريك عlang جبل أبو عقيقة، أو قرية العيينة التاريخية. هذي كلها خيارات ممتازة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3894300300,
+  "load_duration": 35645300,
+  "prompt_eval_count": 721,
+  "prompt_eval_cached_count": 720,
+  "prompt_eval_duration": 108573000,
+  "eval_count": 36,
+  "eval_duration": 3721937000
+ }
+]

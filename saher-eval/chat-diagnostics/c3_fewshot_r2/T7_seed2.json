@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:30:13.3670513Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا ما فيني نار، لك لكن تقدر تقدر تخفض الفاتورة لو استخدمت الأجهزة بتقشف، زي TURN OFF الأجهزة قبل ما تترك البيت."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2401401000,
+  "load_duration": 7938700,
+  "prompt_eval_count": 456,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 231917000,
+  "eval_count": 43,
+  "eval_duration": 2156585000
+ }
+]

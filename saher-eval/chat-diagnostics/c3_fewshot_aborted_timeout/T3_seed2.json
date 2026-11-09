@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:17:35.8029506Z",
+  "message": {
+   "role": "assistant",
+   "content": "أول ما تبدأ بالقائمة، اشتري المكونات اللي بتحتاجها. بعد كده اتبع وصفة طبخ على الإنترنت أو في كتاب، وشوفين الخطوات بس. ممكن تبدأ بالكبسة السعودية بس تبقي حذرة في الملح، ما تضيفي كتير."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4137198400,
+  "load_duration": 8789400,
+  "prompt_eval_count": 460,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 224697000,
+  "eval_count": 77,
+  "eval_duration": 3899621000
+ }
+]

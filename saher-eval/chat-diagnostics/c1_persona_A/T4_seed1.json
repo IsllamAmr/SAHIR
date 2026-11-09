@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:11:24.391697Z",
+  "message": {
+   "role": "assistant",
+   "content": "أفهم إنك متعب، لكن حاول تفكر في شيء بسيط ومباشر. ما قصرت، كل يوم فيه فرصة جديدة."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2125798100,
+  "load_duration": 9422200,
+  "prompt_eval_count": 614,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 271077000,
+  "eval_count": 35,
+  "eval_duration": 1837785000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:11:28.7411814Z",
+  "message": {
+   "role": "assistant",
+   "content": "تقدر تقرأ كتاب جديد أو تشاهد فيلم تLike. أو لو محتاج ترفيه، تقدر تلعب لعبة فيديو أو تطبيقuzzle."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2282816200,
+  "load_duration": 10540200,
+  "prompt_eval_count": 669,
+  "prompt_eval_cached_count": 648,
+  "prompt_eval_duration": 271341000,
+  "eval_count": 38,
+  "eval_duration": 1993667000
+ }
+]

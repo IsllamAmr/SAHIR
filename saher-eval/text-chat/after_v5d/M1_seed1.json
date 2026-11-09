@@ -1,0 +1,53 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:38.2748439Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا إسلام، أنا ساهر، كيف أقدر أساعدك اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1655453800,
+  "load_duration": 36651600,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 374046000,
+  "eval_count": 14,
+  "eval_duration": 1226381000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:39.1023285Z",
+  "message": {
+   "role": "assistant",
+   "content": " إسلام. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 824446800,
+  "load_duration": 46262100,
+  "prompt_eval_count": 735,
+  "prompt_eval_cached_count": 722,
+  "prompt_eval_duration": 437867000,
+  "eval_count": 4,
+  "eval_duration": 304843000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:40.9694345Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا آسف، ما أقدر أتذكر أسئلتك السابقة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1863518700,
+  "load_duration": 81779600,
+  "prompt_eval_count": 754,
+  "prompt_eval_cached_count": 738,
+  "prompt_eval_duration": 444985000,
+  "eval_count": 13,
+  "eval_duration": 1301084000
+ }
+]

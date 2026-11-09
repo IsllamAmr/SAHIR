@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:47:38.817636Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت عشان أشيك على النت. اسأل الهلاليين في تويتر أو تطبيق الدوري. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2037183500,
+  "load_duration": 42267800,
+  "prompt_eval_count": 607,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 355013000,
+  "eval_count": 20,
+  "eval_duration": 1624683000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:47:41.2194871Z",
+  "message": {
+   "role": "assistant",
+   "content": " كل اللي تقوله الحين يروح أول ما تسكر الصفحة، وما ينحفظ عندي في أي ملف ولا قاعدة بيانات. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2399733300,
+  "load_duration": 28564100,
+  "prompt_eval_count": 644,
+  "prompt_eval_cached_count": 626,
+  "prompt_eval_duration": 512217999,
+  "eval_count": 24,
+  "eval_duration": 1846912000
+ }
+]

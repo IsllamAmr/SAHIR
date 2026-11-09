@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:06.4569166Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي أومليت بالجبن واللحم، أو تشوي كوسا وبطاطا في الفرن، أو تطبخ فول وطعمية. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2944667000,
+  "load_duration": 44823000,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 708,
+  "prompt_eval_duration": 94354000,
+  "eval_count": 29,
+  "eval_duration": 2782361000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:09.0769844Z",
+  "message": {
+   "role": "assistant",
+   "content": " أيوه، أول ما تفتح محادثة جديدة بكرة يروح كل الكلام، وما أقدر أتذكر منه. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2618449700,
+  "load_duration": 47446200,
+  "prompt_eval_count": 756,
+  "prompt_eval_cached_count": 737,
+  "prompt_eval_duration": 660512000,
+  "eval_count": 21,
+  "eval_duration": 1878333000
+ }
+]

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ساهر بدون زر</title>
+<style>
+  :root { --bg:#f6f4ef; --fg:#1d1d1b; --muted:#6b6a64; --card:#fff; --line:#e3e0d8; --accent:#0f7b5f; --hot:#c0392b; --warn:#b7791f; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161614; --fg:#ecebe6; --muted:#9a998f; --card:#21211e; --line:#33332e; --accent:#3fbf95; --hot:#e0675a; --warn:#e0a84a; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, "Segoe UI", Tahoma, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:16px; min-height:100vh; display:flex; flex-direction:column; gap:12px; }
+  header { display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; }
+  h1 { font-size:20px; margin:0; }
+  small { color:var(--muted); }
+  #log { flex:1; display:flex; flex-direction:column; gap:8px; overflow-y:auto; }
+  .msg { padding:10px 14px; border-radius:14px; max-width:85%; background:var(--card); border:1px solid var(--line); white-space:pre-wrap; }
+  .user { align-self:flex-start; }
+  .assistant { align-self:flex-end; border-color:var(--accent); }
+  .times { font-size:12px; color:var(--muted); direction:ltr; text-align:left; align-self:flex-end; font-variant-numeric:tabular-nums; white-space:pre-wrap; }
+  #panel { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:12px 14px; display:flex; flex-direction:column; gap:8px; }
+  #state { font-size:18px; font-weight:600; }
+  #state.listening { color:var(--accent); } #state.recording { color:var(--hot); } #state.busy { color:var(--warn); }
+  #meter { position:relative; height:10px; background:var(--line); border-radius:6px; overflow:hidden; direction:ltr; }
+  #level { position:absolute; inset:0 auto 0 0; width:0; background:var(--accent); }
+  #thr { position:absolute; top:0; bottom:0; width:2px; background:var(--hot); }
+  .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  button { border-radius:12px; border:2px solid var(--accent); background:var(--card); color:var(--fg); padding:10px 18px; font-size:17px; cursor:pointer; }
+  button.quiet { border:1px solid var(--line); color:var(--muted); padding:4px 10px; font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>ساهر بدون زر (تجربة)</h1><small>{{SETUP}}</small></div>
+    <div><button class="quiet" id="reset">محادثة جديدة</button> <button class="quiet" id="quit">إنهاء</button></div>
+  </header>
+  <div id="log"></div>
+  <div id="panel">
+    <div class="row"><button id="go">ابدأ المحادثة</button><span id="state">متوقف</span></div>
+    <div id="meter"><div id="level"></div><div id="thr"></div></div>
+    <div class="row"><small>حساسية المايك</small><input id="sens" type="range" min="1.5" max="6" step="0.5" value="3"><small>كل ما قلّ الرقم صار أحسّ</small></div>
+    <small>تكلم عادي، ولما تسكت ثانية تقريباً يرسل كلامك. المايك ما يسمع وساهر يفكر أو يتكلم.{{NOTE}}</small>
+  </div>
+</main>
+<script>
+// Hands-free turn detection: an energy detector on the mic with an adaptive noise floor. No model, nothing downloaded.
+const FRAME = 2048, START_FRAMES = 3, SILENCE_MS = 900, MIN_SPEECH_MS = 400, MAX_MS = 15000, PREROLL = 8, MIN_START = 0.012;
+const log = document.getElementById("log"), go = document.getElementById("go"), stateEl = document.getElementById("state");
+const levelEl = document.getElementById("level"), thrEl = document.getElementById("thr"), sens = document.getElementById("sens");
+let messages = [], ctx, stream, source, proc, state = "off", floor = 0.01, above = 0, preroll = [], rec = [], silentMs = 0, recMs = 0;
+
+const LABEL = { off: "متوقف", listening: "أسمعك... تكلم", recording: "أسجّل كلامك", thinking: "ساهر يفكر ويجهّز صوته...", speaking: "ساهر يتكلم", paused: "موقوف مؤقتاً" };
+function setState(s, extra) {
+  state = s; stateEl.textContent = LABEL[s] + (extra ? " " + extra : "");
+  stateEl.className = s === "listening" ? "listening" : s === "recording" ? "recording" : (s === "thinking" || s === "speaking") ? "busy" : "";
+  go.textContent = s === "off" ? "ابدأ المحادثة" : s === "paused" ? "كمّل" : "إيقاف مؤقت";
+}
+function add(cls, text) {
+  const d = document.createElement("div"); d.className = cls; d.textContent = text;
+  log.appendChild(d); log.scrollTop = log.scrollHeight; return d;
+}
+
+async function startMic() {
+  ctx = new AudioContext();
+  stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 } });
+  source = ctx.createMediaStreamSource(stream);
+  proc = ctx.createScriptProcessor(FRAME, 1, 1);
+  proc.onaudioprocess = onFrame;
+  source.connect(proc); proc.connect(ctx.destination);
+}
+
+function onFrame(e) {
+  const x = e.inputBuffer.getChannelData(0), frameMs = 1000 * x.length / ctx.sampleRate;
+  let s = 0; for (let i = 0; i < x.length; i++) s += x[i] * x[i];
+  const rms = Math.sqrt(s / x.length), thr = Math.max(MIN_START, floor * +sens.value);
+  levelEl.style.width = Math.min(100, rms / 0.15 * 100) + "%"; thrEl.style.left = Math.min(100, thr / 0.15 * 100) + "%";
+  if (state !== "listening" && state !== "recording") return;  // mic ignored while Saher thinks or speaks
+  const frame = new Float32Array(x);
+  if (state === "listening") {
+    if (rms < thr) floor = Math.max(0.002, floor * 0.95 + rms * 0.05);
+    preroll.push(frame); if (preroll.length > PREROLL) preroll.shift();
+    above = rms > thr ? above + 1 : 0;
+    if (above >= START_FRAMES) { rec = preroll.slice(); preroll = []; silentMs = 0; recMs = rec.length * frameMs; setState("recording"); }
+    return;
+  }
+  rec.push(frame); recMs += frameMs;
+  silentMs = rms < Math.max(floor * 1.8, MIN_START * 0.7) ? silentMs + frameMs : 0;
+  if (silentMs >= SILENCE_MS || recMs >= MAX_MS) {
+    const parts = rec; rec = [];
+    if (recMs - silentMs < MIN_SPEECH_MS) { setState("listening"); return; }  // a click or cough, not speech
+    send(parts, silentMs);
+  }
+}
+
+function to16k(parts, rate) {
+  const n = parts.reduce((a, p) => a + p.length, 0), all = new Float32Array(n);
+  let o = 0; for (const p of parts) { all.set(p, o); o += p.length; }
+  const ratio = rate / 16000, out = new Int16Array(Math.floor(n / ratio));
+  for (let i = 0; i < out.length; i++) {
+    const x = i * ratio, j = Math.floor(x), f = x - j, s = all[j] * (1 - f) + (all[j + 1] || 0) * f;
+    out[i] = Math.max(-1, Math.min(1, s)) * 32767;
+  }
+  return out;
+}
+function b64(int16) {
+  const bytes = new Uint8Array(int16.buffer); let s = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  return btoa(s);
+}
+function decode(pcmB64) {
+  const raw = atob(pcmB64), n = raw.length / 2, out = new Float32Array(n);
+  for (let i = 0; i < n; i++) { let v = raw.charCodeAt(2 * i) | (raw.charCodeAt(2 * i + 1) << 8); if (v >= 32768) v -= 65536; out[i] = v / 32768; }
+  return out;
+}
+
+async function send(parts, hangMs) {
+  const sent = performance.now();
+  setState("thinking");
+  const pcm = to16k(parts, ctx.sampleRate);
+  const you = add("msg user", "…"), bot = add("msg assistant", ""), info = add("times", "");
+  let heard = "", reply = "", rate = 48000, chunks = [], genS = 0, firstChunkAt = null, streaming = false, playAt = 0, playStart = null, mode = "";
+  const schedule = a => {
+    const buf = ctx.createBuffer(1, a.length, rate); buf.getChannelData(0).set(a);
+    const src = ctx.createBufferSource(); src.buffer = buf; src.connect(ctx.destination);
+    const at = Math.max(ctx.currentTime + 0.05, playAt); src.start(at); playAt = at + buf.duration;
+    if (playStart === null) playStart = performance.now() + (at - ctx.currentTime) * 1000;
+  };
+  try {
+    const res = await fetch("/turn", { method: "POST", body: JSON.stringify({ pcm16: b64(pcm), messages }) });
+    const reader = res.body.getReader(), dec = new TextDecoder(); let rest = "";
+    for (;;) {
+      const { value, done } = await reader.read(); if (done) break;
+      rest += dec.decode(value, { stream: true });
+      let k; while ((k = rest.indexOf("\n")) >= 0) {
+        const e = JSON.parse(rest.slice(0, k)); rest = rest.slice(k + 1);
+        if (e.type === "transcript") { heard = e.text; you.textContent = heard || "(ما سمعت شي)"; }
+        else if (e.type === "text") { bot.textContent = e.text; }
+        else if (e.type === "reply") { reply = e.text; bot.textContent = reply + (e.cut ? "  ✂" : ""); }
+        else if (e.type === "audio") {
+          rate = e.sample_rate; const a = decode(e.pcm16); genS += a.length / rate;
+          if (firstChunkAt === null) firstChunkAt = performance.now();
+          if (streaming) { schedule(a); continue; }
+          chunks.push(a);
+          // Stream only if Fasee7 is clearly ahead of real time; otherwise wait for the whole reply so it plays without gaps.
+          const wall = (performance.now() - firstChunkAt) / 1000;
+          if (genS >= 1.0 && wall > 0 && genS / wall >= 1.2) { streaming = true; mode = "streamed"; chunks.forEach(schedule); chunks = []; setState("speaking"); }
+          else setState("thinking", `(جهزت ${genS.toFixed(1)} ث من الصوت)`);
+        }
+        else if (e.type === "error") { bot.textContent = "صار خطأ: " + e.error; }
+        else if (e.type === "done") {
+          if (!streaming && chunks.length) {
+            const n = chunks.reduce((a, c) => a + c.length, 0), all = new Float32Array(n); let o = 0;
+            for (const c of chunks) { all.set(c, o); o += c.length; }
+            mode = "full reply, then played"; schedule(all); setState("speaking");
+          }
+          const t = e.times, f = v => v == null ? "-" : (v / 1000).toFixed(2) + "s";
+          info.textContent = `transcribed ${f(t.transcribed)} · first text ${f(t.first_text)} · sentence ${f(t.sentence)} · first audio chunk ${f(t.first_chunk)} · playable audio ${f(t.audio_ready)}` +
+            `\naudio ${t.audio_s ?? "-"}s · ${mode || "no audio"} · heard first sound ${playStart ? ((playStart - sent) / 1000).toFixed(2) + "s" : "-"} after the page sent your speech (+${(hangMs / 1000).toFixed(1)}s silence wait)`;
+        }
+      }
+      log.scrollTop = log.scrollHeight;
+    }
+    if (heard && reply) messages.push({ role: "user", content: heard }, { role: "assistant", content: reply });
+    if (!bot.textContent) bot.remove();
+  } catch (err) { bot.textContent = "صار خطأ: " + err; }
+  // Keep the mic closed until Saher has finished speaking, plus a short tail so the room echo dies down.
+  const waitMs = Math.max(0, (playAt - ctx.currentTime) * 1000) + 400;
+  setTimeout(() => { if (state === "thinking" || state === "speaking") { preroll = []; above = 0; setState("listening"); } }, waitMs);
+}
+
+go.onclick = async () => {
+  if (state === "off") { try { await startMic(); setState("listening"); } catch (err) { stateEl.textContent = "ما قدرت أفتح المايك: " + err; } }
+  else if (state === "paused") setState("listening");
+  else if (state === "listening" || state === "recording") { rec = []; setState("paused"); }
+};
+document.getElementById("reset").onclick = () => { messages = []; log.innerHTML = ""; };
+document.getElementById("quit").onclick = async () => { await fetch("/quit", { method: "POST" }); stream && stream.getTracks().forEach(t => t.stop()); document.body.innerHTML = "<main><h1>تم إيقاف التجربة</h1></main>"; };
+</script>
+</body>
+</html>

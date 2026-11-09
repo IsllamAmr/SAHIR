@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:12:49.3751499Z",
+  "message": {
+   "role": "assistant",
+   "content": "الدرعية مكان جيد، إن شاء الله تجد السوق مشغول و العرايس حلوين. توّي تروح تشتري حاجة معينة؟"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2149009100,
+  "load_duration": 9300000,
+  "prompt_eval_count": 617,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 204391000,
+  "eval_count": 38,
+  "eval_duration": 1928660000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:12:53.2259093Z",
+  "message": {
+   "role": "assistant",
+   "content": "في السوق نفسه有不少餐馆，你可以在那边找找。还有一些老店，比如“الدرعية القديمة”，味道不错。"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1793219200,
+  "load_duration": 6491900,
+  "prompt_eval_count": 673,
+  "prompt_eval_cached_count": 654,
+  "prompt_eval_duration": 233367000,
+  "eval_count": 30,
+  "eval_duration": 1547935000
+ }
+]

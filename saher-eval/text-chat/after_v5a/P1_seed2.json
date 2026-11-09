@@ -1,0 +1,70 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:07.0020682Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، اسمي ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 615059200,
+  "load_duration": 30763000,
+  "prompt_eval_count": 603,
+  "prompt_eval_cached_count": 602,
+  "prompt_eval_duration": 72657000,
+  "eval_count": 8,
+  "eval_duration": 498416000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:09.1945801Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي مقلوبة دجاج أو رز بالدجاج. أو تقدر تسوي شكشوكة أو مسقعة. كلها وصفات سهلة وسريعة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2190948600,
+  "load_duration": 24930900,
+  "prompt_eval_count": 625,
+  "prompt_eval_cached_count": 610,
+  "prompt_eval_duration": 287391000,
+  "eval_count": 27,
+  "eval_duration": 1867830000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:12.176582Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي مقلوبة بالباذنجان أو الكوسا. أو تقدر تسوي برياني باللحم أو الدجاج بدون رز. فيه وصفات كثير تقدر تسويها بدون رز. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2959815100,
+  "load_duration": 22753800,
+  "prompt_eval_count": 669,
+  "prompt_eval_cached_count": 651,
+  "prompt_eval_duration": 449425000,
+  "eval_count": 34,
+  "eval_duration": 2478753000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:14.8505601Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي كبسة باللحم أو الدجاج بدون رز. أو تقدر تسوي مندي باللحم أو الدجاج. فيه وصفات كثير تقدر تسويها بدون رز. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2670822800,
+  "load_duration": 24379900,
+  "prompt_eval_count": 718,
+  "prompt_eval_cached_count": 702,
+  "prompt_eval_duration": 311196000,
+  "eval_count": 32,
+  "eval_duration": 2320798000
+ }
+]

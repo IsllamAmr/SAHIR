@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:12:06.758564Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت عشان أتأكد، لكن شوفه من موقع الفيفا الرسمي أو من تطبيقهم. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2124290700,
+  "load_duration": 24932700,
+  "prompt_eval_count": 545,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 290561000,
+  "eval_count": 21,
+  "eval_duration": 1799075000
+ }
+]

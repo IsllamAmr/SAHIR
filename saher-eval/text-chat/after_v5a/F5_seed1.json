@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:47:13.4400861Z",
+  "message": {
+   "role": "assistant",
+   "content": " أقدر أستمع لك وأساعدك بكل سرور. بس ما أقدر أضمن لك السرية التامة، لأن أي أحد يستخدم الجهاز ممكن يشوف الصفحة. تقدر تقول اللي تبيه وأنا حاضر أساعدك. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3106573800,
+  "load_duration": 24702800,
+  "prompt_eval_count": 608,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 308456000,
+  "eval_count": 39,
+  "eval_duration": 2763653000
+ }
+]

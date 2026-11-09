@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:30:29.3514842Z",
+  "message": {
+   "role": "assistant",
+   "content": "الدرعية مكانها جمييل، التاريخ فيها كتير. لو كان الجو حلو، تجبي معك كسوة وترى المواقع الأثرية."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2229519200,
+  "load_duration": 13850100,
+  "prompt_eval_count": 458,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 236925000,
+  "eval_count": 40,
+  "eval_duration": 1971572000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:30:34.2545225Z",
+  "message": {
+   "role": "assistant",
+   "content": "في الدرعية محلات تانية تانية. بس لو تبي مكان شهير، مطعم \"الدرعية\" عند القلعة مكانه جمييل، وشوف فيه تشكيلة من الأطباق السعودية."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2836534800,
+  "load_duration": 8054400,
+  "prompt_eval_count": 516,
+  "prompt_eval_cached_count": 497,
+  "prompt_eval_duration": 225199000,
+  "eval_count": 53,
+  "eval_duration": 2595551000
+ }
+]

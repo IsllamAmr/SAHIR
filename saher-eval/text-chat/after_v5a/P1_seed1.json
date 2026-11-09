@@ -1,0 +1,70 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:01.1868735Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، اسمي ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 802343200,
+  "load_duration": 24086200,
+  "prompt_eval_count": 603,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 272924000,
+  "eval_count": 8,
+  "eval_duration": 495230000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:02.7767088Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو فول بالطحينة أو صينية دجاج بالخضار. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1576045600,
+  "load_duration": 32971100,
+  "prompt_eval_count": 625,
+  "prompt_eval_cached_count": 610,
+  "prompt_eval_duration": 295150000,
+  "eval_count": 18,
+  "eval_duration": 1236950000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:04.8224606Z",
+  "message": {
+   "role": "assistant",
+   "content": " إذا ما عندك رز، تقدر تسوي شكشوكة أو فول بالطحينة أو صينية دجاج بالخضار. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2044075500,
+  "load_duration": 22409100,
+  "prompt_eval_count": 660,
+  "prompt_eval_cached_count": 642,
+  "prompt_eval_duration": 439268000,
+  "eval_count": 23,
+  "eval_duration": 1572142000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:06.3839495Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي مقلقل لحم أو كبسة لحم بدون أرز أو كبسة دجاج. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1558940200,
+  "load_duration": 25546000,
+  "prompt_eval_count": 698,
+  "prompt_eval_cached_count": 682,
+  "prompt_eval_duration": 292914000,
+  "eval_count": 18,
+  "eval_duration": 1229046000
+ }
+]

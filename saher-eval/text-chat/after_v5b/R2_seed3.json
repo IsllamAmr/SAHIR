@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:52:19.3994826Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبين تسوين؟ ممكن أساعدك في شيء؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1240174900,
+  "load_duration": 30196900,
+  "prompt_eval_count": 668,
+  "prompt_eval_cached_count": 667,
+  "prompt_eval_duration": 91926000,
+  "eval_count": 13,
+  "eval_duration": 1103626000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:52:20.9605124Z",
+  "message": {
+   "role": "assistant",
+   "content": " طيب، وش تقدر تسوي بالبيت؟ ممكن اقتراحاتك؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1558562300,
+  "load_duration": 60821200,
+  "prompt_eval_count": 696,
+  "prompt_eval_cached_count": 680,
+  "prompt_eval_duration": 395659000,
+  "eval_count": 13,
+  "eval_duration": 1088337000
+ }
+]

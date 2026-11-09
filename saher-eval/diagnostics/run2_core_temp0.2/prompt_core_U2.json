@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:43:14.9898034Z",
+ "message": {
+  "role": "assistant",
+  "content": "كافيه الريان زين، حلو里面的文字应该是中文，不符合规则，已删除。咖啡厅环境不错，适合聊天。"
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 1886079900,
+ "load_duration": 8739000,
+ "prompt_eval_count": 549,
+ "prompt_eval_cached_count": 532,
+ "prompt_eval_duration": 246975000,
+ "eval_count": 30,
+ "eval_duration": 1626557000
+}

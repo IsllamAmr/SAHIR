@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:14:54.0251225Z",
+  "message": {
+   "role": "assistant",
+   "content": "خليك هادئ، حاول تفكر في الأفكار الصغيرة بتاعتك. كل واحد منك تقدر تبدأ بيه. مثلاً، لو كان عندي مشروع صغير، بس ما يكلمني على الناس. الحين ممكن تبدأ بخطوات صغيرة، تدري تزيد. وأبشر، كل شي يبدأ بسماح لنفسك تبدأ."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4964504200,
+  "load_duration": 10082500,
+  "prompt_eval_count": 549,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 238072000,
+  "eval_count": 91,
+  "eval_duration": 4709409000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:15:00.2057644Z",
+  "message": {
+   "role": "assistant",
+   "content": "يمكنك تبدأ بتعلم مهارة جديدة، مثلاً الطبخ أو الرسم. أو تقرأ كتاب جديد أو تشاهد فيلم. أو حتى تنظف البيت وتحافظ على نظافته. كلها أشياء تقدر تبدأ بيها من البيت. وأبشر، كل شي بدأ بخطوة صغيرة."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4134188300,
+  "load_duration": 11287800,
+  "prompt_eval_count": 660,
+  "prompt_eval_cached_count": 639,
+  "prompt_eval_duration": 235968000,
+  "eval_count": 75,
+  "eval_duration": 3881345000
+ }
+]

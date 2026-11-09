@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:15:48.1558576Z",
+  "message": {
+   "role": "assistant",
+   "content": "خليك هادئ، حاول تفكر في الأفكار الصغيرة بتاعتك. كل واحد منك تقدر تبدأ بيه. من فضلك تقولي لي فكرة واحدة، أبشر."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2749671300,
+  "load_duration": 10761200,
+  "prompt_eval_count": 549,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 232251000,
+  "eval_count": 48,
+  "eval_duration": 2502187000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:15:53.5376517Z",
+  "message": {
+   "role": "assistant",
+   "content": "أكيد، حضرتك تقدر تتعلم الطبخ أو تجرب ألعاب يدوية زي الخياطة أو الرسم. أو حتى تقرأ كتاب جديد أو تشاهد فيلم. الهدف هو تجربة حاجة جديدة تقدر تحبها."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3323968400,
+  "load_duration": 7341700,
+  "prompt_eval_count": 617,
+  "prompt_eval_cached_count": 596,
+  "prompt_eval_duration": 241125000,
+  "eval_count": 59,
+  "eval_duration": 3068914000
+ }
+]

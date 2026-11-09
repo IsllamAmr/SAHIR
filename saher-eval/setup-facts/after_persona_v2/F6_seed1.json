@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:06:01.9258266Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت عشان أتأكد الحين، لكن آخر تصنيف كان في نوفمبر 2022. عشان تتأكد من التصنيف الحالي، شيك من موقع الفيفا الرسمي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3009967400,
+  "load_duration": 24570200,
+  "prompt_eval_count": 557,
+  "prompt_eval_cached_count": 546,
+  "prompt_eval_duration": 294370000,
+  "eval_count": 35,
+  "eval_duration": 2683304000
+ }
+]

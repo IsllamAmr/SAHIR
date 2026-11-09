@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:46.0144653Z",
+  "message": {
+   "role": "assistant",
+   "content": " فكرة ممتازة. الدرعية فيها أماكن تاريخية وثقافية كثيرة تقدر تستمتع فيها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1886914500,
+  "load_duration": 68488700,
+  "prompt_eval_count": 607,
+  "prompt_eval_cached_count": 606,
+  "prompt_eval_duration": 105064000,
+  "eval_count": 18,
+  "eval_duration": 1691127000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:50.4448202Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطاعم كثيرة في الدرعية تقدر تختار منها. فيه مطعم \"أنوار الرياض\" اللي يقدم أطباق سعودية تقليدية، ومطعم \"البتيلة\" اللي يقدم أطباق شرق أوسطية. تقدر تبحث أكثر وتختار اللي يناسبك. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4428927800,
+  "load_duration": 28570600,
+  "prompt_eval_count": 640,
+  "prompt_eval_cached_count": 624,
+  "prompt_eval_duration": 361892000,
+  "eval_count": 49,
+  "eval_duration": 4027226000
+ }
+]

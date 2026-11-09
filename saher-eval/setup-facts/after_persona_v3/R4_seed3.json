@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:12:42.9661739Z",
+  "message": {
+   "role": "assistant",
+   "content": " ابدأ بتحضير المكونات، نظف اللحم أو الدجاج، اطبخ الأرز، وسوي البهارات في قدر الضغط. بعدين حط اللحم أو الدجاج فوق الأرز، وغطه كويس، واضغط على زر التشغيل. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3791615100,
+  "load_duration": 24776300,
+  "prompt_eval_count": 551,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 417219000,
+  "eval_count": 44,
+  "eval_duration": 3340660000
+ }
+]

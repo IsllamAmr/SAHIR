@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:43:24.8848206Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا ساهر، دايمًا جاهز لخدمتك. وش تبي أساعدك فيه؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1749420200,
+  "load_duration": 24766400,
+  "prompt_eval_count": 556,
+  "prompt_eval_cached_count": 544,
+  "prompt_eval_duration": 201591000,
+  "eval_count": 17,
+  "eval_duration": 1109384000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:44:16.9771769Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبي بالضبط؟ عندك أسبوعين، لازم تذاكر كل المواد. ابدأ بالأساسيات، مثل استيعاب المقروء. بعدين ركز على استيعاب المسموع. حاول تذاكر كل يوم ساعتين على الأقل. وإن شاء الله، بتنجح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3778426300,
+  "load_duration": 24513800,
+  "prompt_eval_count": 656,
+  "prompt_eval_cached_count": 642,
+  "prompt_eval_duration": 301172000,
+  "eval_count": 47,
+  "eval_duration": 3442613000
+ }
+]

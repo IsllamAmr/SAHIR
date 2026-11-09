@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:42:20.5350277Z",
+  "message": {
+   "role": "assistant",
+   "content": " زين، ممكن تتأكد من استهلاكك وتشوف وش اللي يبيلها خفض؟ ممكن كمان تسكر الأجهزة اللي ما تستخدمها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2129538400,
+  "load_duration": 23428700,
+  "prompt_eval_count": 383,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 283653000,
+  "eval_count": 28,
+  "eval_duration": 1816430000
+ }
+]

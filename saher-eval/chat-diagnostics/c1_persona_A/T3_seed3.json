@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:13:00.3116519Z",
+  "message": {
+   "role": "assistant",
+   "content": "أبدأ بالخطوات الأساسية. أولاً، ا chuẩnِّع الزيت في قدر كبير وضيفي البصل والثوم حتى يذبلوا. بعد ذلك، أضيفي اللحم المقطع إلى شرائح واتركيه يطهى قليلاً. ثم ضيفي البهارات والتوابل واتبعي الوصفة بالترتيب. إن شاء الله تنجحين!"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5014842000,
+  "load_duration": 12211100,
+  "prompt_eval_count": 619,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 340619000,
+  "eval_count": 92,
+  "eval_duration": 4654526000
+ }
+]

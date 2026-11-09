@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:44:55.7574262Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش صار بالضبط؟ يمكن فيه استهلاك عالي أو خطأ في الفاتورة؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1551198700,
+  "load_duration": 22731200,
+  "prompt_eval_count": 652,
+  "prompt_eval_cached_count": 642,
+  "prompt_eval_duration": 311893000,
+  "eval_count": 16,
+  "eval_duration": 1199814000
+ }
+]

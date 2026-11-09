@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:08:17.4424103Z",
+  "message": {
+   "role": "assistant",
+   "content": " أجل، أقدر أساعدك. أول شي، حدد لك وقت يومي للمذاكرة، ساعتين أو ثلاث كل يوم. ذاكر أسئلة من كتب القدرات أو مواقع موثوقة. حاول تحل الأسئلة بنفسك، وإذا احتجت مساعدة، ابحث عن شرح أو فيديو على الإنترنت. لا تنسى ترتاح بين فترات المذاكرة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5111335100,
+  "load_duration": 32851300,
+  "prompt_eval_count": 714,
+  "prompt_eval_cached_count": 713,
+  "prompt_eval_duration": 85726000,
+  "eval_count": 60,
+  "eval_duration": 4973020000
+ }
+]

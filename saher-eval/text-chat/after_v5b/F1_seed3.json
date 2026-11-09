@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:50:59.8989902Z",
+  "message": {
+   "role": "assistant",
+   "content": " ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 412412000,
+  "load_duration": 38882000,
+  "prompt_eval_count": 662,
+  "prompt_eval_cached_count": 661,
+  "prompt_eval_duration": 93712000,
+  "eval_count": 4,
+  "eval_duration": 262041000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:52:09.3506602Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، أنا بخير. وش عندك؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1010001800,
+  "load_duration": 37061100,
+  "prompt_eval_count": 664,
+  "prompt_eval_cached_count": 663,
+  "prompt_eval_duration": 104062000,
+  "eval_count": 11,
+  "eval_duration": 854397000
+ }
+]

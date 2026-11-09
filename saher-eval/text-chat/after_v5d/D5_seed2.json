@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:08:02.2574896Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا برنامج إلكتروني، ما عندي عطلة ولا وقت فراغ. بس تقدر تسألني عن أي موضوع ثاني، وأنا حاضر أساعدك. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2992552700,
+  "load_duration": 43750500,
+  "prompt_eval_count": 710,
+  "prompt_eval_cached_count": 709,
+  "prompt_eval_duration": 94772000,
+  "eval_count": 27,
+  "eval_duration": 2828152000
+ }
+]

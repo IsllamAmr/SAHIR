@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:40:38.8984583Z",
+ "message": {
+  "role": "assistant",
+  "content": "أبشر، اتصل بالبنك فوراً. ابلغهم عن السرقة واتبع الخطوات التي سيطلبونها منك."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 2109078200,
+ "load_duration": 5554000,
+ "prompt_eval_count": 620,
+ "prompt_eval_cached_count": 508,
+ "prompt_eval_duration": 359292000,
+ "eval_count": 34,
+ "eval_duration": 1737404000
+}

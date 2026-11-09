@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:07:19.9505754Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت عشان أبحث عن نتيجة مباراة الهلال. بس تقدر تشوفها من موقع موثوق أو تطبيق رياضي. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1938106300,
+  "load_duration": 22999800,
+  "prompt_eval_count": 559,
+  "prompt_eval_cached_count": 546,
+  "prompt_eval_duration": 289856000,
+  "eval_count": 23,
+  "eval_duration": 1616908000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:07:25.287816Z",
+  "message": {
+   "role": "assistant",
+   "content": " نعم، أي محادثة بيننا تحفظ على جهازك الين تسكر الصفحة أو تبدأ محادثة جديدة. بس ما أقدر أحفظها للأبد، ممكن تنمسح إذا سويت مسح ذاكرة التخزين المؤقتة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3299914600,
+  "load_duration": 26246300,
+  "prompt_eval_count": 601,
+  "prompt_eval_cached_count": 559,
+  "prompt_eval_duration": 354694000,
+  "eval_count": 40,
+  "eval_duration": 2911116000
+ }
+]

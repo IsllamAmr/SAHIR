@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="شعار ساهر">
+  <title>ساهر</title>
+  <!-- Original mark for Saher ("the one who stays awake"): a watchful eye on a night tile, with an eight-point star as the pupil. -->
+  <defs>
+    <linearGradient id="saherNight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123B4A"/>
+      <stop offset="1" stop-color="#0A2230"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#saherNight)"/>
+  <path d="M10 33 C18 20 46 20 54 33 C46 44 18 44 10 33 Z" fill="none" stroke="#E9DFC7" stroke-width="3.2" stroke-linejoin="round"/>
+  <path d="M15 24 C24 15 40 15 49 24" fill="none" stroke="#C9A25B" stroke-width="2.4" stroke-linecap="round" opacity=".9"/>
+  <g transform="translate(32 33)">
+    <circle r="8.2" fill="#C9A25B"/>
+    <path fill="#0A2230" d="M0-6 L1.6-1.6 L6 0 L1.6 1.6 L0 6 L-1.6 1.6 L-6 0 L-1.6-1.6 Z"/>
+    <path fill="#0A2230" d="M0-6 L1.6-1.6 L6 0 L1.6 1.6 L0 6 L-1.6 1.6 L-6 0 L-1.6-1.6 Z" transform="rotate(45) scale(.72)"/>
+  </g>
+</svg>

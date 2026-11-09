@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:15:33.2924036Z",
+  "message": {
+   "role": "assistant",
+   "content": "الدرعية زين مكان جيد للزيارة. الحين تأكد من التذاكر وال Coronavirus. وأخذ ملابس إضافية عشان الطقس. وأبشر."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2471768400,
+  "load_duration": 6803300,
+  "prompt_eval_count": 552,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 235399000,
+  "eval_count": 43,
+  "eval_duration": 2223056000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:15:38.1766248Z",
+  "message": {
+   "role": "assistant",
+   "content": "في الدرعية محلات تانية للطعام زي مطعم الشعبي ومقهى العجمي. تأكد من الأماكن قبل ما تروح عشان تجد مكان تتعش فيه. وأبشر."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2832400700,
+  "load_duration": 7816000,
+  "prompt_eval_count": 613,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 216518000,
+  "eval_count": 50,
+  "eval_duration": 2603494000
+ }
+]

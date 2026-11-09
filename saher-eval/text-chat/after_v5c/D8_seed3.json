@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:03:53.6878946Z",
+  "message": {
+   "role": "assistant",
+   "content": " أجل، أقدر أساعدك. أول شي، حدد لك جدول يومي، قسم المواد اللي تحتاج تذاكرها، وخذ فترات راحة بينها. حاول تذاكر في مكان هادئ وما فيه تشتيت. ذاكر الأسئلة اللي سبق جربتها، وحاول تحل أسئلة جديدة. إذا احتجت مساعدة، ابحث عن مصادر موثوقة على الإنترنت. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4739026500,
+  "load_duration": 26934800,
+  "prompt_eval_count": 714,
+  "prompt_eval_cached_count": 713,
+  "prompt_eval_duration": 82761000,
+  "eval_count": 62,
+  "eval_duration": 4613264000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:08:45.4513619Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تشتغل من البيت، فيه شغل عن بعد في شركات كثيرة. تقدر تبحث عن وظائف عن بعد في مواقع التوظيف أو تتواصل مع الشركات اللي عندها شغل عن بعد. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3606178100,
+  "load_duration": 24117600,
+  "prompt_eval_count": 561,
+  "prompt_eval_cached_count": 546,
+  "prompt_eval_duration": 402287000,
+  "eval_count": 34,
+  "eval_duration": 3168812000
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:29:54.3996414Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا بفهم حالك. لو تبي تمشي قليلاً أو تسمع موسيقى، قد يساعدك على الاسترخاء قليلاً. وش عندك بالمنزل؟"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2815974800,
+  "load_duration": 6889000,
+  "prompt_eval_count": 455,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 247672000,
+  "eval_count": 48,
+  "eval_duration": 2556479000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:30:00.1805274Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا بعرف شغل البيت ممل. لو تبي تجرب أكل جديد، أو ترتدي ملابس جديدة، أو تشاهد فيلم أو مسلسل، أو حتى تقرأ كتاب جديد. شغل بسيط بيزيد الحماس."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3745997400,
+  "load_duration": 7388900,
+  "prompt_eval_count": 523,
+  "prompt_eval_cached_count": 502,
+  "prompt_eval_duration": 255024000,
+  "eval_count": 60,
+  "eval_duration": 3478592000
+ }
+]

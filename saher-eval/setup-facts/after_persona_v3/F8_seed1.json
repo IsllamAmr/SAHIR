@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:10:15.6347317Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت عشان أبحث عن نتيجة مباراة الهلال أمس. شوفها من تطبيق النادي الرسمي أو من مواقع الأخبار الرياضية. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3301932700,
+  "load_duration": 24990900,
+  "prompt_eval_count": 547,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 483831000,
+  "eval_count": 25,
+  "eval_duration": 2783289000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:10:20.362324Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، كلامك ما يحفظ عندي. كلامه ما يطلع من الجهاز عن طريق هالتطبيق. ما ينحفظ في أي ملف. كلامك بس مفتوح هنا. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2671166300,
+  "load_duration": 22176200,
+  "prompt_eval_count": 591,
+  "prompt_eval_cached_count": 547,
+  "prompt_eval_duration": 407264000,
+  "eval_count": 31,
+  "eval_duration": 2231870000
+ }
+]

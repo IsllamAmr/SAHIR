@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:44:06.3664263Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا ساهر، ذكاء اصطناعي أسولف معك. شغال على جهازك عن طريق برنامج Ollama وموديل ALLaM 7B، مو على سيرفرات شركة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2693278900,
+  "load_duration": 22959900,
+  "prompt_eval_count": 563,
+  "prompt_eval_cached_count": 562,
+  "prompt_eval_duration": 75669000,
+  "eval_count": 37,
+  "eval_duration": 2586438000
+ }
+]

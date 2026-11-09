@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:13:05.2018458Z",
+  "message": {
+   "role": "assistant",
+   "content": "فهمت، الوضع صعب. حاول ترتيب الأفكار وتذكر أن كل يوم يجلب حاجة جديدة. ما قصرت، العبرة من الخروج بالشيء الأفضل من كل موقف."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2810266400,
+  "load_duration": 7869900,
+  "prompt_eval_count": 614,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 212309000,
+  "eval_count": 50,
+  "eval_duration": 2583297000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:13:10.6045256Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا بعرف إن البيت مكان هادئ، احنا مثلا نقدر نشوف فيلم أو نقرأ كتاب جديد. أو لو أنت بتحب الأكل، نقدر نشوف وصفة لطيفة تقدر تطبخها."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3342360400,
+  "load_duration": 7475000,
+  "prompt_eval_count": 684,
+  "prompt_eval_cached_count": 663,
+  "prompt_eval_duration": 342135000,
+  "eval_count": 59,
+  "eval_duration": 2985879000
+ }
+]

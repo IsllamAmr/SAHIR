@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:49:59.1233939Z",
+  "message": {
+   "role": "assistant",
+   "content": " الحين مشغول هنا على جهازك، بس بالويكند ممكن أسولف معك وأساعدك في أي شي تحتاجه. وش تبي تسوي بالويكند؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3125490000,
+  "load_duration": 40590700,
+  "prompt_eval_count": 604,
+  "prompt_eval_cached_count": 603,
+  "prompt_eval_duration": 90809000,
+  "eval_count": 30,
+  "eval_duration": 2948636000
+ }
+]

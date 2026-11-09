@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:05:20.946252Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت وأنا شغال الحين. أقدر أساعدك في أي سؤال أو موضوع تبي تعرفه. وش تبي تعرف عنه؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1956229400,
+  "load_duration": 38851000,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 708,
+  "prompt_eval_duration": 74885000,
+  "eval_count": 25,
+  "eval_duration": 1824783000
+ }
+]

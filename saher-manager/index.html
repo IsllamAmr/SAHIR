@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F2EA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1B22" media="(prefers-color-scheme: dark)">
+<title>ساهر للمدراء</title>
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<style>
+/* Design: "Najdi night & sand". Ink teal for structure, saffron for the one primary action, warm paper for reading.
+   Font: Dubai (installed with Windows), then Segoe UI. No external assets: the app works offline. */
+:root {
+  --paper: #F6F2EA; --panel: #FFFFFF; --panel-2: #FBF8F2; --sunk: #EFE9DD; --line: #E4DCCB; --line-strong: #D3C7AF;
+  --ink: #15262D; --ink-2: #4A5A60; --ink-3: #5A686D;
+  --night: #0F3240; --night-2: #174A5C; --on-night: #F3EEE2; --on-night-2: #A9BEC4;
+  --saffron: #C8932E; --saffron-ink: #2A1C04; --saffron-soft: #F6E8CB;
+  --ok: #2F7D55; --ok-soft: #E2F1E8; --warn: #93600A; --warn-soft: #FBEFD6; --bad: #A53A2B; --bad-soft: #FBE7E2;
+  --mock: #5E45A0; --mock-soft: #ECE6F8; --btn: #0F3240; --btn-hover: #174A5C;
+  --r-lg: 18px; --r-md: 12px; --r-sm: 8px;
+  --shadow-1: 0 1px 2px rgba(21, 38, 45, .05), 0 2px 8px rgba(21, 38, 45, .04);
+  --shadow-2: 0 2px 6px rgba(21, 38, 45, .06), 0 12px 32px rgba(21, 38, 45, .08);
+  --font: "Dubai", "Segoe UI", Tahoma, "Noto Sans Arabic", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0B1B22; --panel: #10252E; --panel-2: #132B35; --sunk: #0D2129; --line: #1F3C47; --line-strong: #2A4E5B;
+    --ink: #E9EEEF; --ink-2: #B2C1C5; --ink-3: #82959B;
+    --night: #071318; --night-2: #12313D; --on-night: #EDE7DA; --on-night-2: #8FA8AF;
+    --saffron: #E0AE4E; --saffron-ink: #1E1403; --saffron-soft: #3A2C10;
+    --ok: #6CCB97; --ok-soft: #12322A; --warn: #EDB95B; --warn-soft: #34270D; --bad: #F0907E; --bad-soft: #3A1B16;
+    --mock: #C4B2F2; --mock-soft: #2A2244; --btn: #1F5A6E; --btn-hover: #27708A;
+    --shadow-1: none; --shadow-2: 0 8px 28px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--paper); color: var(--ink); font: 16px/1.7 var(--font);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+button, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; border: 0; background: none; padding: 0; }
+:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; border-radius: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; inset-inline-start: 12px; top: -60px; background: var(--saffron); color: var(--saffron-ink); padding: 8px 14px; border-radius: var(--r-sm); z-index: 10; }
+.skip:focus { top: 12px; }
+svg.i { width: 18px; height: 18px; flex: none; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- layout ---------- */
+.app { display: grid; grid-template-columns: 300px minmax(0, 1fr); height: 100dvh; }
+aside {
+  background: var(--night); color: var(--on-night); display: flex; flex-direction: column; gap: 22px;
+  padding: 22px 18px calc(18px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain;
+  background-image: radial-gradient(120% 60% at 100% 0%, rgba(200, 147, 46, .14), transparent 60%);
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 46px; height: 46px; border-radius: 50%; }
+.brand h1 { margin: 0; font: 700 1.5rem/1 "Reem Kufi", var(--font); color: #f3ead8; letter-spacing: 0; }
+.brand p { margin: 2px 0 0; color: var(--on-night-2); font-size: .86rem; }
+.greet { border-top: 1px solid rgba(255, 255, 255, .08); padding-top: 18px; }
+.greet strong { display: block; font-size: 1.1rem; font-weight: 600; }
+.greet span { color: var(--on-night-2); font-size: .88rem; }
+
+.cta {
+  width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--saffron); color: var(--saffron-ink); border-radius: 14px; padding: 13px 16px;
+  font-weight: 700; font-size: 1rem; box-shadow: 0 6px 18px rgba(200, 147, 46, .28);
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.cta:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(200, 147, 46, .34); }
+.cta:active { transform: translateY(0); }
+.cta:disabled { opacity: .55; cursor: default; transform: none; box-shadow: none; }
+.cta svg.i { width: 20px; height: 20px; }
+.cta-note { margin: 8px 2px 0; color: var(--on-night-2); font-size: .8rem; }
+
+.side-label { color: var(--on-night-2); font-size: .76rem; font-weight: 600; margin: 0 2px 8px; }
+.source select {
+  width: 100%; background-color: var(--night-2); color: var(--on-night); border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: var(--r-md); padding: 9px 12px; font-size: .9rem;
+}
+.status { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; background: rgba(255, 255, 255, .04); border-radius: 14px; padding: 6px; }
+.status li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; font-size: .9rem; }
+.status .name { flex: 1; min-width: 0; }
+.status .val { color: var(--on-night-2); font-size: .82rem; white-space: nowrap; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--on-night-2); flex: none; box-shadow: 0 0 0 3px rgba(255, 255, 255, .06); }
+.dot.ok { background: #5FD39A; } .dot.bad { background: #F08A78; } .dot.mock { background: #B9A4F0; } .dot.idle { background: #8FA8AF; }
+.promise { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: .86rem; color: var(--on-night-2); }
+.promise li { display: flex; gap: 8px; align-items: flex-start; }
+.promise svg.i { width: 16px; height: 16px; margin-top: 4px; color: #5FD39A; }
+.side-foot { margin-top: auto; display: flex; gap: 8px; }
+.side-btn {
+  flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 10px; border-radius: var(--r-md);
+  background: rgba(255, 255, 255, .06); color: var(--on-night); font-size: .9rem; transition: background-color .15s ease;
+}
+.side-btn:hover { background: rgba(255, 255, 255, .12); }
+.side-btn.quit:hover { background: rgba(240, 138, 120, .18); }
+
+/* ---------- main ---------- */
+.main { display: flex; flex-direction: column; min-width: 0; height: 100dvh; }
+.topbar { display: none; }
+#scroller { flex: 1; overflow-y: auto; overscroll-behavior: contain; scroll-behavior: smooth; }
+#log { max-width: 820px; margin: 0 auto; padding: 32px 28px 16px; display: flex; flex-direction: column; gap: 22px; }
+
+.hero { text-align: center; padding: 6vh 0 8px; display: grid; justify-items: center; gap: 10px; }
+.hero img { width: 76px; height: 76px; border-radius: 50%; box-shadow: var(--shadow-2); }
+.hero h2 { margin: 8px 0 0; font-size: clamp(1.5rem, 2.6vw, 1.95rem); font-weight: 700; text-wrap: balance; }
+.hero p { margin: 0; color: var(--ink-2); max-width: 46ch; text-wrap: pretty; }
+.suggest { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 14px; }
+.chip-btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; background: var(--panel);
+  border: 1px solid var(--line); color: var(--ink); font-size: .92rem; box-shadow: var(--shadow-1);
+  transition: border-color .15s ease, background-color .15s ease, transform .15s ease;
+}
+.chip-btn:hover { border-color: var(--saffron); background: var(--panel-2); transform: translateY(-1px); }
+.chip-btn svg.i { color: var(--saffron); width: 16px; height: 16px; }
+
+.msg { display: flex; gap: 12px; align-items: flex-start; animation: rise .25s ease both; }
+.msg .avatar { width: 34px; height: 34px; border-radius: 50%; flex: none; }
+.msg.user { justify-content: flex-start; flex-direction: row-reverse; }
+.msg.user .avatar { display: none; }
+.msg .text { min-width: 0; padding-top: 4px; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 64ch; }
+.msg.user .text {
+  background: var(--night-2); color: var(--on-night); padding: 10px 16px; border-radius: var(--r-lg); border-start-end-radius: 6px;
+  box-shadow: var(--shadow-1);
+}
+@media (prefers-color-scheme: light) { .msg.user .text { background: var(--night); } }
+.msg .text.err { background: var(--bad-soft); color: var(--bad); padding: 10px 14px; border-radius: var(--r-md); }
+.hint { display: block; color: var(--ink-2); font-size: .88rem; margin-top: 4px; }
+.err .hint { color: inherit; opacity: .85; }
+.typing:empty::before { content: "…"; color: var(--ink-3); }
+.typing::after { content: ""; display: inline-block; width: 7px; height: 1.1em; margin-inline-start: 3px; vertical-align: -3px; background: var(--saffron); border-radius: 2px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes rise { from { transform: translateY(6px); } to { transform: none; } }
+
+/* ---------- inbox digest ---------- */
+.digest { flex: 1; min-width: 0; display: grid; gap: 12px; }
+.digest-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-top: 4px; }
+.digest-head h2 { margin: 0; font-size: 1.1rem; font-weight: 700; }
+.count { font-variant-numeric: tabular-nums; color: var(--ink-2); font-size: .92rem; }
+.progress { flex-basis: 100%; height: 4px; background: var(--sunk); border-radius: 999px; overflow: hidden; }
+.progress > span { display: block; height: 100%; width: 0; background: var(--saffron); border-radius: inherit; transition: width .35s ease; }
+.tag { display: inline-flex; align-items: center; gap: 5px; font-size: .76rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; background: var(--sunk); color: var(--ink-2); white-space: nowrap; }
+.tag.mock { background: var(--mock-soft); color: var(--mock); }
+.tag.high { background: var(--bad-soft); color: var(--bad); }
+.tag svg.i { width: 13px; height: 13px; }
+
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-1);
+  overflow: hidden; animation: rise .25s ease both;
+}
+.card.risky { border-color: color-mix(in srgb, var(--bad) 55%, var(--line)); }
+.card-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: start; padding: 16px 18px 12px; }
+.initials {
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .95rem;
+  color: #fff; flex: none; letter-spacing: 0;
+}
+.who { min-width: 0; }
+.who .from { font-weight: 700; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.who .addr { color: var(--ink-3); font-size: .8rem; direction: ltr; unicode-bidi: isolate; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: end; }
+.when { color: var(--ink-3); font-size: .82rem; white-space: nowrap; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.subject-row { padding: 0 18px 12px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.subject { font-weight: 700; font-size: 1.02rem; color: var(--ink); overflow-wrap: anywhere; unicode-bidi: plaintext; }
+.card-body { border-top: 1px solid var(--line); padding: 14px 18px 16px; display: grid; gap: 12px; background: var(--panel-2); }
+.summary { margin: 0; font-size: 1.02rem; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; unicode-bidi: plaintext; }
+.action {
+  display: flex; gap: 10px; align-items: flex-start; background: var(--saffron-soft); color: var(--ink);
+  border-radius: var(--r-md); padding: 10px 12px; font-size: .95rem;
+}
+.action svg.i { color: var(--saffron); margin-top: 4px; }
+.action b { font-weight: 700; margin-inline-end: 4px; }
+.alerts { display: grid; gap: 6px; }
+.alert { display: flex; gap: 8px; align-items: flex-start; border-radius: var(--r-md); padding: 8px 12px; font-size: .9rem; background: var(--warn-soft); color: var(--warn); }
+.alert.bad { background: var(--bad-soft); color: var(--bad); }
+.alert svg.i { width: 16px; height: 16px; margin-top: 4px; }
+.reply { border: 1px solid var(--line); border-radius: var(--r-md); background: var(--panel); }
+.reply-head { display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 12px; border-bottom: 1px dashed var(--line); }
+.reply-head .label { font-size: .82rem; font-weight: 700; color: var(--ink-2); flex: 1; }
+.copy {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: .85rem; font-weight: 600;
+  background: var(--btn); color: #F3EEE2; transition: background-color .15s ease, transform .15s ease;
+}
+.copy:hover { background: var(--btn-hover); transform: translateY(-1px); }
+.copy.done { background: var(--ok); color: #fff; }
+.copy svg.i { width: 15px; height: 15px; }
+@media (pointer: coarse) { .copy { min-height: 44px; padding-inline: 16px; } .topbar select { min-height: 44px; } }
+.draft { margin: 0; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; unicode-bidi: plaintext; font-size: .97rem; }
+.reply-note { padding: 0 14px 10px; color: var(--ink-3); font-size: .8rem; }
+.muted { color: var(--ink-3); font-size: .9rem; }
+.empty-state { display: flex; gap: 12px; align-items: center; background: var(--ok-soft); color: var(--ok); border-radius: var(--r-lg); padding: 16px 18px; font-weight: 600; }
+.skeleton { display: grid; gap: 8px; }
+.skeleton i { display: block; height: 12px; border-radius: 6px; background: linear-gradient(90deg, var(--sunk), var(--line), var(--sunk)); background-size: 200% 100%; animation: shimmer 1.3s linear infinite; }
+.skeleton i:nth-child(2) { width: 82%; } .skeleton i:nth-child(3) { width: 64%; }
+.skeleton .lbl { font-size: .82rem; color: var(--ink-3); }
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+/* ---------- composer ---------- */
+.composer-wrap { padding: 10px 28px calc(14px + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--paper) 70%, transparent); }
+.composer {
+  max-width: 820px; margin: 0 auto; display: flex; align-items: flex-end; gap: 8px; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 22px; padding: 8px; box-shadow: var(--shadow-2);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.composer:focus-within { border-color: var(--saffron); }
+textarea {
+  flex: 1; min-width: 0; resize: none; border: 0; background: transparent; padding: 9px 10px; min-height: 42px; max-height: 180px;
+  line-height: 1.6; overflow-y: hidden;
+}
+textarea:focus-visible { outline: none; }
+textarea::placeholder { color: var(--ink-3); }
+.icon-btn {
+  width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; flex: none;
+  transition: background-color .15s ease, transform .15s ease, opacity .15s ease;
+}
+.icon-btn svg.i { width: 20px; height: 20px; }
+.send { background: var(--btn); color: #F3EEE2; }
+.send:hover { background: var(--btn-hover); }
+.send:disabled { opacity: .4; cursor: default; }
+.send svg { transform: scaleX(-1); } /* arrow points the reading direction */
+.stop { background: var(--bad-soft); color: var(--bad); }
+.inbox-mini { display: none; background: var(--saffron-soft); color: var(--saffron-ink); }
+@media (prefers-color-scheme: dark) { .inbox-mini { color: var(--saffron); } }
+.foot-note { max-width: 820px; margin: 8px auto 0; text-align: center; color: var(--ink-3); font-size: .78rem; }
+[hidden] { display: none !important; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 860px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  aside { display: none; }
+  .topbar {
+    display: flex; align-items: center; gap: 10px; padding: calc(10px + env(safe-area-inset-top)) 14px 10px;
+    background: var(--night); color: var(--on-night);
+  }
+  .topbar img { width: 34px; height: 34px; border-radius: 50%; }
+  .topbar .t { flex: 1; min-width: 0; line-height: 1.2; }
+  .topbar .t strong { display: block; font-size: 1.08rem; }
+  .topbar .t span { display: flex; align-items: center; gap: 6px; color: var(--on-night-2); font-size: .76rem; white-space: nowrap; overflow: hidden; }
+  .topbar .icon-btn { width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, .07); color: var(--on-night); }
+  .topbar:has(#sourceMini:not([hidden])) #valMini { display: none; }
+  .topbar select { max-width: 120px; background-color: var(--night-2); color: var(--on-night); border: 1px solid rgba(255, 255, 255, .12); border-radius: 10px; font-size: .78rem; padding: 6px 6px; }
+  #log { padding: 18px 14px 10px; gap: 18px; }
+  .hero { padding-top: 3vh; }
+  .hero img { width: 60px; height: 60px; border-radius: 50%; }
+  .msg { gap: 8px; }
+  .msg.saher:has(.digest) > .avatar { display: none; }
+  .card-head { padding: 14px 14px 10px; gap: 10px; grid-template-columns: auto minmax(0, 1fr); }
+  .when { grid-column: 2; padding: 0; }
+  .subject-row { padding: 0 14px 10px; }
+  .card-body { padding: 12px 14px 14px; }
+  .composer-wrap { padding: 8px 10px calc(10px + env(safe-area-inset-bottom)); }
+  .inbox-mini { display: grid; }
+  .foot-note { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#input">انتقل لمربع الكتابة</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M3 13h5l2 3h4l2-3h5"/><path d="M5.5 5h13L21 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.4 7.4a8 8 0 1 0 11.2 0"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4 2.8 19.5h18.4z"/><path d="M12 10v4M12 17h.01"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="m20 11.5-8.1 8.1a5 5 0 0 1-7.1-7.1l8.5-8.5a3.3 3.3 0 0 1 4.7 4.7L9.5 17.2a1.7 1.7 0 0 1-2.4-2.4l7.6-7.6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6 19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+
+<div class="app">
+  <aside aria-label="لوحة ساهر">
+    <div class="brand">
+      <img src="/logo.svg" alt="" width="46" height="46">
+      <div><h1>ساهر</h1><p>مساعد المدير، على جهازك</p></div>
+    </div>
+    <div class="greet"><strong id="greeting">هلا</strong><span id="today"></span></div>
+    <div>
+      <button class="cta" id="inboxBtn" type="button"><svg class="i" aria-hidden="true"><use href="#i-inbox"/></svg>آخر ٥ إيميلات غير مقروءة</button>
+      <p class="cta-note">يلخصها ويقترح ردود تنسخها بنفسك.</p>
+    </div>
+    <div class="source" id="sourceWrap" hidden>
+      <label class="side-label" for="source">مصدر الإيميلات (وضع الاختبار)</label>
+      <select id="source" name="source">
+        <option value="mock:normal">تجريبي: ٥ إيميلات</option>
+        <option value="mock:empty">تجريبي: صندوق فاضي</option>
+        <option value="mock:malicious">تجريبي: إيميلات فيها أوامر خبيثة</option>
+        <option value="mock:not_connected">تجريبي: Outlook غير مربوط</option>
+        <option value="mock:n8n_down">تجريبي: n8n طافي</option>
+        <option value="outlook">Outlook الحقيقي (عن طريق n8n)</option>
+        <option value="gmail">Gmail الحقيقي (عن طريق n8n)</option>
+      </select>
+    </div>
+    <div>
+      <p class="side-label">الحالة</p>
+      <ul class="status" aria-live="polite">
+        <li><span class="dot" id="dotModel"></span><span class="name" translate="no">ALLaM 7B</span><span class="val" id="valModel">…</span></li>
+        <li><span class="dot" id="dotN8n"></span><span class="name" translate="no">n8n</span><span class="val" id="valN8n">…</span></li>
+        <li><span class="dot idle" id="dotOutlook"></span><span class="name" translate="no">Outlook</span><span class="val" id="valOutlook">ينفحص عند الجلب</span></li>
+      </ul>
+    </div>
+    <ul class="promise">
+      <li><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>قراءة فقط: ما يرسل ولا يحذف ولا ينقل ولا يعلّم كمقروء.</span></li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>كل شي يشتغل على جهازك، والمحادثة ما تنحفظ.</span></li>
+    </ul>
+    <div class="side-foot">
+      <button class="side-btn" id="newChat" type="button"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>محادثة جديدة</button>
+      <button class="side-btn quit" id="quit" type="button"><svg class="i" aria-hidden="true"><use href="#i-power"/></svg>إنهاء</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <img src="/logo.svg" alt="" width="34" height="34">
+      <div class="t"><strong>ساهر</strong><span><span class="dot" id="dotMini"></span><span id="valMini">…</span></span></div>
+      <label class="sr-only" for="sourceMini">مصدر الإيميلات</label>
+      <select id="sourceMini" hidden></select>
+      <button class="icon-btn" id="newChatMini" type="button" aria-label="محادثة جديدة"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button>
+      <button class="icon-btn" id="quitMini" type="button" aria-label="إنهاء ساهر"><svg class="i" aria-hidden="true"><use href="#i-power"/></svg></button>
+    </header>
+
+    <main id="scroller" tabindex="-1">
+      <div id="log" aria-live="polite"></div>
+    </main>
+
+    <div class="composer-wrap">
+      <form class="composer" id="form">
+        <button class="icon-btn inbox-mini" id="inboxMini" type="button" aria-label="آخر ٥ إيميلات غير مقروءة"><svg class="i" aria-hidden="true"><use href="#i-inbox"/></svg></button>
+        <label class="sr-only" for="input">رسالتك لساهر</label>
+        <textarea id="input" name="message" rows="1" placeholder="اكتب لساهر… مثلاً: وش عندي إيميلات؟" autocomplete="off" enterkeyhint="send"></textarea>
+        <button class="icon-btn send" id="send" type="submit" aria-label="إرسال"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg></button>
+        <button class="icon-btn stop" id="stop" type="button" aria-label="إيقاف الرد" hidden><svg class="i" aria-hidden="true"><use href="#i-stop"/></svg></button>
+      </form>
+      <p class="foot-note">Enter للإرسال · Shift+Enter لسطر جديد · Esc يوقف الرد. ساهر ممكن يغلط، فراجع أي رد قبل ما ترسله.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+const MODEL = "{{MODEL}}";
+const TEST_MODE = {{TEST_MODE}};
+const $ = (id) => document.getElementById(id);
+const log = $("log"), scroller = $("scroller"), input = $("input");
+let history = [];          // what the model sees: {role, content}
+let busy = null;           // AbortController of the running request
+let generation = 0;        // bumps on "new chat" so late events from an old request are dropped
+
+const ERRORS = {
+  n8n_down: ["n8n مو شغال على الجهاز.", "شغّل start-n8n.bat من مجلد n8n، واستنى دقيقتين، وجرّب مرة ثانية."],
+  n8n_workflow_off: ["سير العمل «Saher - unread emails (read-only)» مو مفعّل في n8n.", "افتح n8n وفعّله (Publish)، أو شغّل import_into_n8n.bat من saher-manager\\n8n."],
+  not_connected: ["Outlook مو مربوط في n8n للحين، أو انتهى تسجيل الدخول.", "افتح http://localhost:5678 ثم Credentials ثم «Outlook - Saher (read only)» واضغط Connect my account."],
+  graph_error: ["مايكروسوفت رفضت طلب قراءة البريد.", "جرّب بعد شوي. إذا تكرر، شيّك على الصلاحيات في n8n."],
+  forbidden: ["n8n رفض الطلب لأن مفتاح ساهر ما تطابق.", "شغّل import_into_n8n.bat من جديد قبل ربط Outlook."],
+  n8n_error: ["صار خطأ في n8n.", "شيّك على نافذة n8n."],
+  model: ["النموذج ما رد.", "تأكد إن Ollama شغال وفيه " + MODEL + "، وجرّب مرة ثانية."],
+  internal: ["صار خطأ داخلي في ساهر.", "جرّب مرة ثانية، وإذا تكرر شيّك على النافذة السوداء."],
+};
+const AVATAR_COLORS = ["#0F5C6E", "#8A5A12", "#5E45A0", "#2F7D55", "#A53A2B", "#3B5BA9", "#7A4E8C", "#1F6F8B"];
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;   // all model and email text goes through textContent, never innerHTML
+  return e;
+}
+function icon(name) {
+  const s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  s.setAttribute("class", "i"); s.setAttribute("aria-hidden", "true");
+  const u = document.createElementNS("http://www.w3.org/2000/svg", "use");
+  u.setAttribute("href", "#i-" + name); s.append(u); return s;
+}
+function avatar() { const i = el("img", "avatar"); i.src = "/logo.svg"; i.alt = ""; i.width = 34; i.height = 34; return i; }
+function nearBottom() { return scroller.scrollHeight - scroller.scrollTop - scroller.clientHeight < 140; }
+function scrollDown(force) { if (force || nearBottom()) scroller.scrollTop = scroller.scrollHeight; }
+function clearHero() { const h = log.querySelector(".hero"); if (h) h.remove(); }
+
+function addMsg(role, text) {
+  clearHero();
+  const m = el("div", "msg " + (role === "user" ? "user" : "saher"));
+  if (role !== "user") m.append(avatar());
+  const t = el("div", "text", text);
+  m.append(t); log.append(m); scrollDown(true);
+  return t;
+}
+function addError(code, detail) {
+  const [what, how] = ERRORS[code] || ERRORS.internal;
+  const t = addMsg("saher", what);
+  t.classList.add("err"); t.append(el("span", "hint", how));
+  if (detail) t.title = detail;
+  return t;
+}
+
+const dateFmt = new Intl.DateTimeFormat("ar-SA-u-ca-gregory", { timeZone: "Asia/Riyadh", weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "2-digit" });
+const dayFmt = new Intl.DateTimeFormat("ar-SA-u-ca-gregory", { timeZone: "Asia/Riyadh", weekday: "long", day: "numeric", month: "long" });
+const rel = new Intl.RelativeTimeFormat("ar-SA", { numeric: "auto" });
+function relTime(s) {
+  const d = new Date(s); if (isNaN(d)) return s;
+  const mins = Math.round((d - Date.now()) / 60000);
+  if (Math.abs(mins) < 60) return rel.format(mins, "minute");
+  const hrs = Math.round(mins / 60);
+  if (Math.abs(hrs) < 24) return rel.format(hrs, "hour");
+  return rel.format(Math.round(hrs / 24), "day");
+}
+function initials(name, addr) {
+  const src = (name || addr || "؟").replace(/[^\p{L}\s]/gu, " ").trim().split(/\s+/);
+  return (src[0]?.[0] || "؟") + (src.length > 1 ? src[src.length - 1][0] : "");
+}
+function colorFor(s) { let h = 0; for (const c of s || "") h = (h * 31 + c.codePointAt(0)) >>> 0; return AVATAR_COLORS[h % AVATAR_COLORS.length]; }
+
+function setBusy(ctrl) {
+  busy = ctrl;
+  $("send").hidden = !!ctrl; $("stop").hidden = !ctrl;
+  $("inboxBtn").disabled = !!ctrl; $("inboxMini").disabled = !!ctrl;
+}
+
+async function stream(path, body, onEvent, ctrl) {
+  const res = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body), signal: ctrl.signal });
+  if (!res.ok) throw Object.assign(new Error("HTTP " + res.status), { code: "internal" });
+  const reader = res.body.getReader(), dec = new TextDecoder();
+  let buf = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buf += dec.decode(value, { stream: true });
+    let i;
+    while ((i = buf.indexOf("\n")) >= 0) {
+      const line = buf.slice(0, i).trim(); buf = buf.slice(i + 1);
+      if (line) onEvent(JSON.parse(line));
+    }
+  }
+}
+
+// ---------- chat ----------
+const INBOX_INTENT = /(جيب|اعرض|ورني|وريني|شوف|لخص|لخّص|وش|ايش|إيش|show|check|summari[sz]e)[^\n]{0,30}(إيميل|ايميل|الإيميلات|الايميلات|إيميلاتي|ايميلاتي|البريد|بريدي|inbox|e-?mails?|unread)/i;
+
+async function send(text) {
+  if (!text || busy) return;
+  if (INBOX_INTENT.test(text)) { addMsg("user", text); return loadInbox(text); }
+  addMsg("user", text);
+  const t = addMsg("saher", ""); t.classList.add("typing");
+  const ctrl = new AbortController(), gen = generation;
+  setBusy(ctrl);
+  let reply = "", failed = false;
+  try {
+    await stream("/turn", { text, messages: history }, (e) => {
+      if (gen !== generation) return;
+      if (e.type === "text") { reply += e.delta; t.textContent = reply; scrollDown(); }
+      else if (e.type === "error") { failed = true; t.closest(".msg").remove(); addError(e.error, e.detail); }
+    }, ctrl);
+  } catch (err) {
+    if (err.name !== "AbortError" && gen === generation) { failed = true; t.closest(".msg").remove(); addError("internal", String(err)); }
+  }
+  if (gen !== generation) return;
+  t.classList.remove("typing");
+  if (!failed && reply.trim()) history.push({ role: "user", content: text }, { role: "assistant", content: reply.trim() });
+  else if (!failed) t.textContent = "(وقفت الرد)";
+  setBusy(null);
+}
+
+// ---------- inbox ----------
+function currentSource() { return TEST_MODE ? $("source").value : "{{MAIL}}"; }
+function setOutlook(state, text) {
+  const d = $("dotOutlook"); d.className = "dot " + state; $("valOutlook").textContent = text;
+}
+
+async function loadInbox(askedText) {
+  if (busy) return;
+  clearHero();
+  const source = currentSource(), isMock = source.startsWith("mock:");
+  const m = el("div", "msg saher"); m.append(avatar());
+  const box = el("section", "digest"); box.setAttribute("aria-label", "الإيميلات غير المقروءة");
+  m.append(box); log.append(m);
+  const head = el("div", "digest-head");
+  const h = el("h2", null, "صندوق الوارد");
+  const count = el("span", "count", "أجيب الإيميلات…");
+  head.append(h, count);
+  if (isMock) { const tg = el("span", "tag mock", "تجريبي (mock) · مو من بريدك"); head.append(tg); }
+  const prog = el("div", "progress"); const bar = el("span"); prog.append(bar); head.append(prog);
+  box.append(head); scrollDown(true);
+
+  const ctrl = new AbortController(), gen = generation;
+  setBusy(ctrl);
+  const cards = {}, results = [];
+  let list = null;
+  try {
+    await stream("/inbox", { source }, (e) => {
+      if (gen !== generation) return;
+      if (e.type === "list") {
+        list = e.emails;
+        setOutlook(isMock ? "mock" : "ok", isMock ? "تجريبي" : "مربوط");
+        if (!list.length) {
+          prog.remove(); count.textContent = "ولا إيميل غير مقروء";
+          const es = el("div", "empty-state"); es.append(icon("check"), el("span", null, "صندوقك نظيف، ما فيه إيميلات غير مقروءة."));
+          box.append(es); return;
+        }
+        count.textContent = "ألخص " + list.length.toLocaleString("ar-SA") + " " + (list.length === 1 ? "إيميل" : list.length === 2 ? "إيميلين" : "إيميلات") + "…";
+        list.forEach((x) => { cards[x.id] = card(x, isMock); box.append(cards[x.id].root); });
+        scrollDown(true);
+      } else if (e.type === "email") {
+        if (cards[e.id]) fillCard(cards[e.id], e);
+        results.push(e);
+        bar.style.width = Math.round(results.length / list.length * 100) + "%";
+        scrollDown();
+      } else if (e.type === "error") {
+        prog.remove();
+        if (["not_connected", "graph_error", "forbidden"].includes(e.error)) setOutlook(isMock ? "mock" : "bad", e.error === "not_connected" ? "غير مربوط" : "خطأ");
+        if (list) Object.values(cards).forEach(c => { if (c.pending && c.pending.isConnected) c.pending.replaceWith(el("p", "muted", "توقف التلخيص.")); });
+        const [what, how] = ERRORS[e.error] || ERRORS.internal;
+        const t = el("div", "text err", what); t.append(el("span", "hint", how));
+        if (isMock && /^mock:(n8n_down|not_connected)$/.test(source)) t.append(el("span", "hint", "(هذي حالة تجريبية mock)"));
+        t.title = e.detail || ""; box.append(t);
+        count.textContent = list ? "توقف" : "ما قدرت أجيبها";
+      } else if (e.type === "done") {
+        prog.remove();
+        if (list && list.length) count.textContent = list.length.toLocaleString("ar-SA") + " غير مقروءة";
+      }
+    }, ctrl);
+  } catch (err) {
+    if (err.name === "AbortError") { prog.remove(); count.textContent = "وقفت التلخيص"; }
+    else if (gen === generation) { prog.remove(); const t = el("div", "text err", ERRORS.internal[0]); t.append(el("span", "hint", ERRORS.internal[1])); box.append(t); }
+  }
+  if (gen !== generation) return;
+  setBusy(null);
+  // Give the chat model the summaries (not the raw emails) so follow-up questions work.
+  const asked = askedText || "وريني آخر الإيميلات غير المقروءة";
+  if (list && results.length) {
+    const digest = results.map((r, i) => {
+      const x = list.find(l => l.id === r.id) || {};
+      return (i + 1) + ") من: " + (x.from_name || x.from_address) + " | العنوان: " + x.subject + " | الملخص: " + r.summary +
+        (r.action ? " | المطلوب: " + r.action : "") + (r.risky ? " | تنبيه: إيميل مشبوه" : "");
+    }).join("\n");
+    history.push({ role: "user", content: asked }, { role: "assistant", content: "هذي ملخصات آخر " + results.length + " إيميلات غير مقروءة" + (isMock ? " (بيانات تجريبية mock)" : "") + ":\n" + digest });
+  } else if (list && !list.length) {
+    history.push({ role: "user", content: asked }, { role: "assistant", content: "ما فيه إيميلات غير مقروءة في الوارد" + (isMock ? " (تجريبي)" : "") + "." });
+  }
+}
+
+function card(x, isMock) {
+  const root = el("article", "card");
+  const head = el("div", "card-head");
+  const av = el("div", "initials", initials(x.from_name, x.from_address)); av.style.background = colorFor(x.from_address || x.from_name); av.setAttribute("aria-hidden", "true");
+  const who = el("div", "who");
+  who.append(el("div", "from", x.from_name || x.from_address || "بدون اسم"));
+  if (x.from_name && x.from_address) who.append(el("span", "addr", x.from_address));
+  const when = el("time", "when", relTime(x.received));
+  when.dateTime = x.received; const full = new Date(x.received); if (!isNaN(full)) when.title = dateFmt.format(full);
+  head.append(av, who, when);
+  const srow = el("div", "subject-row");
+  srow.append(el("span", "subject", x.subject || "(بدون عنوان)"));
+  if (x.importance === "high") { const t = el("span", "tag high", "مهم"); srow.append(t); }
+  if (x.has_attachments) { const t = el("span", "tag"); t.append(icon("clip"), el("span", null, "مرفق")); srow.append(t); }
+  if (isMock) srow.append(el("span", "tag mock", "تجريبي"));
+  const body = el("div", "card-body");
+  const pending = el("div", "skeleton"); pending.append(el("i"), el("i"), el("i"), el("span", "lbl", "ساهر يقرأ…"));
+  body.append(pending);
+  root.append(head, srow, body);
+  root.setAttribute("aria-label", "إيميل من " + (x.from_name || x.from_address));
+  return { root, body, pending };
+}
+
+function fillCard(c, r) {
+  c.pending.remove();
+  if (r.risky) c.root.classList.add("risky");
+  if ((r.warnings || []).length) {
+    const a = el("div", "alerts");
+    r.warnings.forEach(w => { const x = el("div", "alert" + (r.risky ? " bad" : "")); x.append(icon("alert"), el("span", null, w)); a.append(x); });
+    c.body.append(a);
+  }
+  c.body.append(el("p", "summary", r.summary || "ما قدرت ألخصه."));
+  if (r.action) {
+    const a = el("div", "action"); const s = el("span"); s.append(el("b", null, "المطلوب منك:"), document.createTextNode(r.action));
+    a.append(icon("target"), s); c.body.append(a);
+  }
+  if (r.risky) { c.body.append(el("p", "muted", "ما اقترحت رد لهذا الإيميل لأنه مشبوه.")); return; }
+  if (r.automated) { c.body.append(el("p", "muted", "رسالة آلية من عنوان ما يستقبل ردود، فما اقترحت رد.")); return; }
+  if (r.no_reply || !r.reply) { c.body.append(el("p", "muted", r.no_reply ? "ما يحتاج رد، للعلم بس." : "ما طلع رد واضح، اكتبه بنفسك.")); return; }
+  const box = el("div", "reply");
+  const head = el("div", "reply-head");
+  head.append(el("span", "label", "رد مقترح"));
+  const btn = el("button", "copy"); btn.type = "button"; btn.append(icon("copy"), el("span", null, "نسخ"));
+  btn.setAttribute("aria-label", "نسخ الرد المقترح");
+  btn.onclick = async () => {
+    try { await navigator.clipboard.writeText(r.reply); }
+    catch { const t = el("textarea"); t.value = r.reply; document.body.append(t); t.select(); document.execCommand("copy"); t.remove(); }
+    btn.classList.add("done"); btn.lastChild.textContent = "تم النسخ";
+    setTimeout(() => { btn.classList.remove("done"); btn.lastChild.textContent = "نسخ"; }, 1800);
+  };
+  head.append(btn);
+  box.append(head, el("p", "draft", r.reply), el("div", "reply-note", "مسودة: راجع اللي بين [ ] قبل ما ترسلها من Outlook."));
+  c.body.append(box);
+  const al = el("div", "alerts");
+  if (r.check_facts && r.check_facts.length) { const x = el("div", "alert"); x.append(icon("alert"), el("span", null, "مو موجودة في الإيميل، ممكن ساهر اخترعها: " + r.check_facts.join("، "))); al.append(x); }
+  if (r.check_wording && r.check_wording.length) { const x = el("div", "alert"); x.append(icon("alert"), el("span", null, "راجع صيغة المخاطبة: " + r.check_wording.join("، "))); al.append(x); }
+  if (al.childNodes.length) c.body.append(al);
+}
+
+// ---------- page ----------
+function hero() {
+  const h = el("div", "hero");
+  const img = el("img"); img.src = "/logo.svg"; img.alt = ""; img.width = 76; img.height = 76;
+  h.append(img, el("h2", null, greetingText() + "، وش نبدأ فيه؟"),
+    el("p", null, "أجيب لك آخر ٥ إيميلات غير مقروءة وألخصها وأقترح ردود تنسخها بنفسك، وأقدر أسولف معك في أي شي ثاني."));
+  const s = el("div", "suggest");
+  const add = (ic, label, fn) => { const b = el("button", "chip-btn"); b.type = "button"; b.append(icon(ic), el("span", null, label)); b.onclick = fn; s.append(b); };
+  add("inbox", "وش عندي إيميلات؟", () => send("وش عندي إيميلات؟"));
+  add("pen", "ساعدني أكتب اعتذار عن اجتماع", () => send("ساعدني أكتب إيميل قصير ومهذب أعتذر فيه عن اجتماع بكرة"));
+  add("spark", "رتّب أولويات يومي", () => send("عندي اليوم اجتماعين وتقرير لازم أسلمه، كيف أرتب يومي؟"));
+  h.append(s);
+  log.append(h);
+}
+function greetingText() {
+  const hr = Number(new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Riyadh", hour: "numeric", hour12: false }).format(new Date()));
+  return hr < 12 ? "صباح الخير" : "مساء الخير";
+}
+async function refreshStatus() {
+  try {
+    const s = await (await fetch("/status")).json();
+    $("dotModel").className = "dot " + (s.model ? "ok" : "bad"); $("valModel").textContent = s.model ? "جاهز، محلي" : "مو جاهز";
+    $("dotN8n").className = "dot " + (s.n8n ? "ok" : "bad"); $("valN8n").textContent = s.n8n ? "شغال" : "طافي";
+    const ok = s.model && s.n8n;
+    $("dotMini").className = "dot " + (ok ? "ok" : "bad");
+    $("valMini").textContent = !s.model ? "النموذج مو جاهز" : !s.n8n ? "n8n طافي" : "جاهز · قراءة فقط";
+  } catch { /* the server stopped */ }
+}
+function autosize() { input.style.height = "auto"; input.style.height = Math.min(input.scrollHeight, 180) + "px"; input.style.overflowY = input.scrollHeight > 180 ? "auto" : "hidden"; }
+function newChat() { generation++; if (busy) busy.abort(); setBusy(null); history = []; log.textContent = ""; hero(); input.focus(); }
+async function quit() {
+  if (busy) busy.abort();
+  try { await fetch("/quit", { method: "POST" }); } catch {}
+  document.body.innerHTML = '<p style="text-align:center;margin-top:30vh;font-size:1.15rem">سكّرت ساهر. تقدر تسكّر هالصفحة.</p>';
+}
+
+$("form").addEventListener("submit", (ev) => { ev.preventDefault(); const t = input.value.trim(); if (!t || busy) return; input.value = ""; autosize(); send(t); });
+input.addEventListener("keydown", (ev) => { if (ev.key === "Enter" && !ev.shiftKey && !ev.isComposing) { ev.preventDefault(); $("form").requestSubmit(); } });
+input.addEventListener("input", autosize);
+$("stop").onclick = () => busy && busy.abort();
+document.addEventListener("keydown", (ev) => { if (ev.key === "Escape" && busy) busy.abort(); });
+$("inboxBtn").onclick = () => loadInbox();
+$("inboxMini").onclick = () => loadInbox();
+$("newChat").onclick = newChat; $("newChatMini").onclick = newChat;
+$("quit").onclick = quit; $("quitMini").onclick = quit;
+if (TEST_MODE) {
+  $("sourceWrap").hidden = false;
+  const mini = $("sourceMini"); mini.hidden = false; mini.innerHTML = $("source").innerHTML;
+  mini.onchange = () => { $("source").value = mini.value; };
+  $("source").onchange = () => { mini.value = $("source").value; };
+}
+$("greeting").textContent = greetingText();
+$("today").textContent = dayFmt.format(new Date());
+hero(); refreshStatus(); setInterval(refreshStatus, 15000);
+if (matchMedia("(max-width: 860px)").matches) input.placeholder = "اكتب لساهر…";
+if (matchMedia("(pointer: fine)").matches) input.focus();
+</script>
+</body>
+</html>

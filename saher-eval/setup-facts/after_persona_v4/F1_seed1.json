@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:13:12.0415504Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا ساهر، وش تبي تسوي الحين؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1757229300,
+  "load_duration": 25371600,
+  "prompt_eval_count": 556,
+  "prompt_eval_cached_count": 219,
+  "prompt_eval_duration": 666441000,
+  "eval_count": 10,
+  "eval_duration": 721689000
+ }
+]

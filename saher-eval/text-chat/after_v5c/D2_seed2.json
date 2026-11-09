@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:03:21.7608187Z",
+  "message": {
+   "role": "assistant",
+   "content": " فكرة ممتازة، الدرعية فيها أماكن تاريخية وثقافية ممتعة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1505844300,
+  "load_duration": 32624800,
+  "prompt_eval_count": 713,
+  "prompt_eval_cached_count": 712,
+  "prompt_eval_duration": 106298000,
+  "eval_count": 14,
+  "eval_duration": 1345916000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:03:23.9590136Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطعم \"الدرعية زمان\" يقدم أكلات شعبية وتراثية. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2195966300,
+  "load_duration": 42657800,
+  "prompt_eval_count": 742,
+  "prompt_eval_cached_count": 726,
+  "prompt_eval_duration": 450679000,
+  "eval_count": 17,
+  "eval_duration": 1681318000
+ }
+]

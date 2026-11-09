@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:44:33.9615907Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش تبين تسوين؟ أنا هنا عشان أساعدك بأي شي تبين. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1327499700,
+  "load_duration": 22021000,
+  "prompt_eval_count": 562,
+  "prompt_eval_cached_count": 561,
+  "prompt_eval_duration": 83190000,
+  "eval_count": 16,
+  "eval_duration": 1210590000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:44:35.7754533Z",
+  "message": {
+   "role": "assistant",
+   "content": " وش رايك تقرين كتاب أو تشوفين فلم؟ أو ممكن تسوين رياضة خفيفة بالبيت. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1798825100,
+  "load_duration": 21624600,
+  "prompt_eval_count": 593,
+  "prompt_eval_cached_count": 577,
+  "prompt_eval_duration": 276308000,
+  "eval_count": 20,
+  "eval_duration": 1492386000
+ }
+]

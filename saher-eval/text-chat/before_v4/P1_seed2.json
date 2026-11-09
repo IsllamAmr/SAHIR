@@ -1,0 +1,70 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:33.0863531Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، اسمي ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 610580100,
+  "load_duration": 22974900,
+  "prompt_eval_count": 559,
+  "prompt_eval_cached_count": 558,
+  "prompt_eval_duration": 75486000,
+  "eval_count": 8,
+  "eval_duration": 503301000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:35.4433978Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي عريكة أو فول وتميس. أو تقدر تسوي شكشوكة أو بيض عيون. أو تقدر تسوي مقلقل لحم أو دجاج. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2355400100,
+  "load_duration": 22695100,
+  "prompt_eval_count": 581,
+  "prompt_eval_cached_count": 566,
+  "prompt_eval_duration": 260630999,
+  "eval_count": 30,
+  "eval_duration": 2060958999
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:37.9033037Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي كبسة بدوون رز، تستخدم مكرونة أو بطاطس بدل الرز. أو تقدر تسوي مطبق أو مندي بدون رز. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2435307000,
+  "load_duration": 24800900,
+  "prompt_eval_count": 628,
+  "prompt_eval_cached_count": 610,
+  "prompt_eval_duration": 413641000,
+  "eval_count": 29,
+  "eval_duration": 1987522000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:40.1941336Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي شكشوكة أو بيض عيون. أو تقدر تسوي فول وتميس. أو تقدر تسوي مقلقل لحم أو دجاج. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2289161300,
+  "load_duration": 22427900,
+  "prompt_eval_count": 672,
+  "prompt_eval_cached_count": 656,
+  "prompt_eval_duration": 280309000,
+  "eval_count": 27,
+  "eval_duration": 1977069000
+ }
+]

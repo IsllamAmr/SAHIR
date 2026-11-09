@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:51.0917138Z",
+  "message": {
+   "role": "assistant",
+   "content": " فكرة ممتازة. الدرعية فيها أماكن تاريخية وثقافية كثيرة تقدر تستمتع فيها. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1437145400,
+  "load_duration": 61098300,
+  "prompt_eval_count": 713,
+  "prompt_eval_cached_count": 712,
+  "prompt_eval_duration": 77548000,
+  "eval_count": 18,
+  "eval_duration": 1271797000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:07:53.5399235Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطعم اسمه \"الدرعية بالاس\" عندهم أطباق شعبية لذيذة. لكن تأكد من أوقات العمل والحجز قبل ما تروح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2445502800,
+  "load_duration": 30760200,
+  "prompt_eval_count": 746,
+  "prompt_eval_cached_count": 730,
+  "prompt_eval_duration": 335135000,
+  "eval_count": 28,
+  "eval_duration": 2060313000
+ }
+]

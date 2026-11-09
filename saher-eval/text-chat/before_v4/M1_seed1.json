@@ -1,0 +1,53 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:44:59.1469892Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا إسلام، تشرفنا بمعرفتك. وش تبي نتكلم عنه اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1623462300,
+  "load_duration": 27860500,
+  "prompt_eval_count": 559,
+  "prompt_eval_cached_count": 550,
+  "prompt_eval_duration": 294251000,
+  "eval_count": 17,
+  "eval_duration": 1289142000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:00.6681725Z",
+  "message": {
+   "role": "assistant",
+   "content": " اسمك إسلام، قلتها لك قبل شوي. وش تبي تعرف بعد؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1518688900,
+  "load_duration": 26324000,
+  "prompt_eval_count": 588,
+  "prompt_eval_cached_count": 575,
+  "prompt_eval_duration": 307913000,
+  "eval_count": 15,
+  "eval_duration": 1170838000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:02.2554474Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما أقدر أتذكر الأسئلة اللي قبل. وش كان سؤالك اللي قبل؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1585099200,
+  "load_duration": 38771200,
+  "prompt_eval_count": 618,
+  "prompt_eval_cached_count": 602,
+  "prompt_eval_duration": 347062000,
+  "eval_count": 15,
+  "eval_duration": 1186972000
+ }
+]

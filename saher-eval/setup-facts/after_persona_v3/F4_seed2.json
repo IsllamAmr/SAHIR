@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:10:57.2669216Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، ما عندي اتصال بالإنترنت. شغال على جهازك بس. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1397830500,
+  "load_duration": 25869300,
+  "prompt_eval_count": 543,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 217227000,
+  "eval_count": 15,
+  "eval_duration": 1146656000
+ }
+]

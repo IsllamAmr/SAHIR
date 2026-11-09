@@ -1,0 +1,244 @@
+{
+  "id": "saherGmailSentChk1",
+  "name": "Saher - check Sent (read-only)",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "saher-sent-check",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "7b5f0001-0000-4000-8000-000000000001",
+      "name": "Saher asks",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "7b5f0001-bbbb-4000-8000-000000000001"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Only Saher may ask. mid = the Message-ID Saher put in the approved message.\nconst j = $input.first().json;\nconst h = j.headers || {};\nconst mid = String((j.query && j.query.mid) || '').replace(/[<>\\s]/g, '');\nreturn [{ json: { allowed: h['x-saher-key'] === '7cee95018be367a1b631029fccd2e017aeedfe508be7f0d4' && /^saher-[0-9a-f]{16,64}@saher\\.local$/.test(mid), mid } }];"
+      },
+      "id": "7b5f0002-0000-4000-8000-000000000002",
+      "name": "Check Saher key",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c3",
+              "leftValue": "={{ $json.allowed }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7b5f0003-0000-4000-8000-000000000003",
+      "name": "Key OK?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://gmail.googleapis.com/gmail/v1/users/me/messages?maxResults=1&includeSpamTrash=true&q={{ encodeURIComponent('rfc822msgid:' + $json.mid) }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googleOAuth2Api",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "7b5f0004-0000-4000-8000-000000000004",
+      "name": "Search by Message-ID (GET only)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        -100
+      ],
+      "credentials": {
+        "googleOAuth2Api": {
+          "id": "saherGmailRead01",
+          "name": "Gmail - Saher (read only)"
+        }
+      },
+      "onError": "continueErrorOutput",
+      "notes": "Read-only search, existing credential."
+    },
+    {
+      "parameters": {
+        "jsCode": "const r = $input.first().json;\nconst m = (r.messages || [])[0];\nreturn [{ json: { ok: true, found: !!m, id: m ? m.id : '', threadId: m ? m.threadId : '' } }];"
+      },
+      "id": "7b5f0005-0000-4000-8000-000000000005",
+      "name": "Found?",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const e = $input.first().json;\nconst msg = JSON.stringify(e.error || e).slice(0, 300);\nconst notConnected = /credential|token|auth|401|403|consent|refresh|invalid_grant/i.test(msg);\nreturn [{ json: { ok: false, error: notConnected ? 'not_connected' : 'gmail_error', detail: msg } }];"
+      },
+      "id": "7b5f0006-0000-4000-8000-000000000006",
+      "name": "Gmail problem",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "7b5f0007-0000-4000-8000-000000000007",
+      "name": "Reply to Saher",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1100,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\"ok\": false, \"error\": \"forbidden\"}",
+        "options": {
+          "responseCode": 403
+        }
+      },
+      "id": "7b5f0008-0000-4000-8000-000000000008",
+      "name": "Refuse",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        150
+      ]
+    }
+  ],
+  "connections": {
+    "Saher asks": {
+      "main": [
+        [
+          {
+            "node": "Check Saher key",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Saher key": {
+      "main": [
+        [
+          {
+            "node": "Key OK?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Key OK?": {
+      "main": [
+        [
+          {
+            "node": "Search by Message-ID (GET only)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Refuse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search by Message-ID (GET only)": {
+      "main": [
+        [
+          {
+            "node": "Found?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail problem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Found?": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail problem": {
+      "main": [
+        [
+          {
+            "node": "Reply to Saher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {}
+}

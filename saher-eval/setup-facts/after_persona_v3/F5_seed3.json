@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:12:02.5872246Z",
+  "message": {
+   "role": "assistant",
+   "content": " أقدر أساعدك بكل شي إلا الأمور الشخصية اللي ما أقدر أتعامل معها. وش تبي تعرف أو تناقش؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2172959300,
+  "load_duration": 24122900,
+  "prompt_eval_count": 548,
+  "prompt_eval_cached_count": 534,
+  "prompt_eval_duration": 301616000,
+  "eval_count": 23,
+  "eval_duration": 1839229000
+ }
+]

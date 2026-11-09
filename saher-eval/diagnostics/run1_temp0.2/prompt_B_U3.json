@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:41:33.298369Z",
+ "message": {
+  "role": "assistant",
+  "content": "لتحتاج لورق الهوية، ورقة التسجيل التجاري، وربما تصريح من البلدية إذا كان هناك متطلبات خاصة. أبشر وشوفوا الموقع الرسمي للمؤسسة العامة للتجارة لترى التفاصيل الدقيقة."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 3344788700,
+ "load_duration": 9600500,
+ "prompt_eval_count": 663,
+ "prompt_eval_cached_count": 637,
+ "prompt_eval_duration": 269860000,
+ "eval_count": 62,
+ "eval_duration": 3057328000
+}

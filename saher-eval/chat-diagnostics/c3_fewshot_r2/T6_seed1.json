@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:29:12.0940675Z",
+  "message": {
+   "role": "assistant",
+   "content": "بنت خالتك محتاجة تفكر في المهنة اللي تناسبها. لو محتاجة تكتب أو ت diseñر أو تدي دروس، كده خير. وش محتاجة تشتغل بالإنترنت، بس تأكلي من الأول إنها تتعلم أساسيات العمل من البيت."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3748192600,
+  "load_duration": 6183500,
+  "prompt_eval_count": 462,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 240155000,
+  "eval_count": 70,
+  "eval_duration": 3497209000
+ }
+]

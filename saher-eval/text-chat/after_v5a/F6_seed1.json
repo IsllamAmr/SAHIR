@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:47:22.2957472Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي إنترنت أتأكد منه، لكن ممكن تشوفه من موقع الفيفا الرسمي أو من حساب الاتحاد السعودي لكرة القدم. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2412720900,
+  "load_duration": 21891200,
+  "prompt_eval_count": 605,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 267985000,
+  "eval_count": 25,
+  "eval_duration": 2111164000
+ }
+]

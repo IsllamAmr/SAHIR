@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:13:23.9783849Z",
+  "message": {
+   "role": "assistant",
+   "content": "فهمت، الفاتورة زادت كثير؟ أبشر، قد يكون بسبب استخدامك للتيار الكهربائي أكثر من المعتاد. توّي تقدر تراجع استهلاكك قليلاً؟"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2772129200,
+  "load_duration": 8752300,
+  "prompt_eval_count": 615,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 204683000,
+  "eval_count": 50,
+  "eval_duration": 2551202000
+ }
+]

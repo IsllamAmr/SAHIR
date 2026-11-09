@@ -1,0 +1,48 @@
+# ---- Secrets & personal data (never commit) ----
+.env
+*.env
+.env.*
+**/*key*.txt
+**/*secret*
+**/*token*
+**/credentials*.json
+contacts.json
+n8n/data/
+n8n/data-*/
+**/mock_inbox_real*
+
+# ---- n8n runtime (installed app, not our code) ----
+n8n/app/
+*.bak
+*.bak-*
+
+# ---- Python ----
+__pycache__/
+*.pyc
+venv*/
+.venv/
+**/wheels/
+
+# ---- Models & audio (too large; downloaded at setup) ----
+**/models/
+*.onnx
+*.onnx.json
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.wav
+*.mp3
+*.ogg
+*.flac
+
+# ---- Generated output / eval runs ----
+**/eval/runs/
+**/results/
+**/cloud_bench/
+*.log
+workspace/outputs/
+
+# ---- Not part of SAHIR ----
+profile/
+profile_preview.html

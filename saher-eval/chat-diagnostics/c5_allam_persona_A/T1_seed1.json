@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:43:29.6016786Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلابك، بخير الحمد لله. وش تبي توّي؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2299419000,
+  "load_duration": 21909300,
+  "prompt_eval_count": 650,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 1134294000,
+  "eval_count": 14,
+  "eval_duration": 899061000
+ }
+]

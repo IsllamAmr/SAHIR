@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:15:03.8203508Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا بس أجيب رسائل و أقدم معلومات. الحين بس أعمل كده كل يوم."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1543774400,
+  "load_duration": 7171300,
+  "prompt_eval_count": 547,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 180264000,
+  "eval_count": 26,
+  "eval_duration": 1351217000
+ }
+]

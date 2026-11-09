@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:43:29.8746516Z",
+  "message": {
+   "role": "assistant",
+   "content": " أنا ساهر، ذكاء اصطناعي أسولف معك باللهجة السعودية. شغّال على جهازك وموديل ALLaM 7B، ما عندي إنترنت وما أقدر أتأكد من الأخبار أو الأسعار. أقدر أساعدك في الأفكار والسوالف. وش تبي تعرف أكثر؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3951285500,
+  "load_duration": 20484300,
+  "prompt_eval_count": 557,
+  "prompt_eval_cached_count": 550,
+  "prompt_eval_duration": 145238000,
+  "eval_count": 55,
+  "eval_duration": 3777374000
+ }
+]

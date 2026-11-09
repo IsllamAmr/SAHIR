@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T10:41:15.7397586Z",
+  "message": {
+   "role": "assistant",
+   "content": " أبشر، أنا ذكاء اصطناعي وما عندي ويكند أو وقت فراغ. شغلي مستمر 24 ساعة عشان أساعدك في أي وقت. وش تحتاج مني اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3166611200,
+  "load_duration": 22122500,
+  "prompt_eval_count": 383,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 220542000,
+  "eval_count": 37,
+  "eval_duration": 2916201000
+ }
+]

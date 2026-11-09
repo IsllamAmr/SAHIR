@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:13:19.1463186Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا أقترح عليها تجربة العمل عن بعد في مجالات تناسبها، زي التسويق أو الترجمة. وش، توّي تعرفين مجالات تقدر تشتغل فيها من البيت؟"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2833405900,
+  "load_duration": 10191200,
+  "prompt_eval_count": 621,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 237977000,
+  "eval_count": 51,
+  "eval_duration": 2578345000
+ }
+]

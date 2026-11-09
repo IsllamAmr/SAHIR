@@ -1,0 +1,53 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:02.6699292Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا إسلام، أنا ساهر، كيف أقدر أساعدك اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1275712900,
+  "load_duration": 32182000,
+  "prompt_eval_count": 665,
+  "prompt_eval_cached_count": 664,
+  "prompt_eval_duration": 85992000,
+  "eval_count": 14,
+  "eval_duration": 1144198000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:04.0571032Z",
+  "message": {
+   "role": "assistant",
+   "content": " اسمك إسلام، كيف أقدر أساعدك اليوم؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1371596400,
+  "load_duration": 53040100,
+  "prompt_eval_count": 691,
+  "prompt_eval_cached_count": 678,
+  "prompt_eval_duration": 389393000,
+  "eval_count": 11,
+  "eval_duration": 901689000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:05.5834065Z",
+  "message": {
+   "role": "assistant",
+   "content": " كنت تسأل وش اسمك أنا الحين. تذكر؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1523907200,
+  "load_duration": 30318600,
+  "prompt_eval_count": 717,
+  "prompt_eval_cached_count": 701,
+  "prompt_eval_duration": 466858000,
+  "eval_count": 11,
+  "eval_duration": 1006031000
+ }
+]

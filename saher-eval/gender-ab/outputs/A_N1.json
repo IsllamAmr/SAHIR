@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:35:07.6610879Z",
+ "message": {
+  "role": "assistant",
+  "content": "هيا بنا نفكر في حاجة بسيطة ومميزة. ممكن تشتري لها كورس تعلم الطبخ من شيف مشهورة أو كتاب عن الديكور الداخلي. إن شاء الله ت欢喜，你想要了解沙特阿拉伯的白象方言（Najdi方言），我可以帮助你。沙特的白象方言以利雅得（Riyadh）为中心，这种方言在沙特的一些地区非常普遍。如果你需要学习一些日常对话或特定表达，我可以提供帮助。你想从哪里开始呢？比如，你想学一些日常问候的表达吗？"
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 6825599100,
+ "load_duration": 4799500,
+ "prompt_eval_count": 623,
+ "prompt_eval_cached_count": 597,
+ "prompt_eval_duration": 226923000,
+ "eval_count": 127,
+ "eval_duration": 6586780000
+}

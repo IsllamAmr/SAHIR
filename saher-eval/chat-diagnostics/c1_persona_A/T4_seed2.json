@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:12:13.5675169Z",
+  "message": {
+   "role": "assistant",
+   "content": "فهمت، الوضع صعب. أولاً، حاول ترتيب الأفكار واتخذ قراراً صغيراً. ثانيًا، يمكن تطبيق تقنيات الاسترخاء زي التنفس العميق. ما رأيك نحاول طريقة سريعة؟"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3652084200,
+  "load_duration": 12376300,
+  "prompt_eval_count": 614,
+  "prompt_eval_cached_count": 597,
+  "prompt_eval_duration": 230315000,
+  "eval_count": 67,
+  "eval_duration": 3400499000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:12:19.1256959Z",
+  "message": {
+   "role": "assistant",
+   "content": "أنا بعرف إن البيت مكان هادئ، لكن يمكن تجربة ترتيب غرفتك أو تعلم وصفة جديدة فيcooking. أو حتى تمارين رياضية بسيطة زي ركوب الدراجة أو رفع الأثقال بالمنزل."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3516123800,
+  "load_duration": 7179900,
+  "prompt_eval_count": 701,
+  "prompt_eval_cached_count": 680,
+  "prompt_eval_duration": 205513000,
+  "eval_count": 64,
+  "eval_duration": 3294036000
+ }
+]

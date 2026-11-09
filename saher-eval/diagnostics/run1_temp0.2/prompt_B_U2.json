@@ -1,0 +1,17 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-17T08:41:27.8918125Z",
+ "message": {
+  "role": "assistant",
+  "content": "أفضل كافيه في الرياض هو كافيه \"الشام\"، مكانه جيد وبيئة مريحة."
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 1602429300,
+ "load_duration": 9113200,
+ "prompt_eval_count": 654,
+ "prompt_eval_cached_count": 637,
+ "prompt_eval_duration": 206385000,
+ "eval_count": 28,
+ "eval_duration": 1379539000
+}

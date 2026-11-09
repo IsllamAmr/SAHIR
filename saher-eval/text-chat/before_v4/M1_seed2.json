@@ -1,0 +1,53 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:03.9032732Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا إسلام، أنا ساهر، شرفت وسولف معي. وش تبي تعرف أو تناقش؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1628439600,
+  "load_duration": 38339700,
+  "prompt_eval_count": 559,
+  "prompt_eval_cached_count": 558,
+  "prompt_eval_duration": 84574000,
+  "eval_count": 20,
+  "eval_duration": 1492996000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:05.0629671Z",
+  "message": {
+   "role": "assistant",
+   "content": " اسمك إسلام، قلته بنفسك. وش تبي تعرف بعد؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1156899700,
+  "load_duration": 22567900,
+  "prompt_eval_count": 591,
+  "prompt_eval_cached_count": 578,
+  "prompt_eval_duration": 264322000,
+  "eval_count": 13,
+  "eval_duration": 857059000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:45:07.0557356Z",
+  "message": {
+   "role": "assistant",
+   "content": " ما عندي ذاكرة طويلة الأمد، يا إسلام. كل محادثة جديدة تبدأ من الصفر. وش كان سؤالك اللي قبل؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1990435800,
+  "load_duration": 20504900,
+  "prompt_eval_count": 619,
+  "prompt_eval_cached_count": 603,
+  "prompt_eval_duration": 260411999,
+  "eval_count": 25,
+  "eval_duration": 1702690000
+ }
+]

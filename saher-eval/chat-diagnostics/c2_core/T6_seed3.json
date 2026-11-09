@@ -1,0 +1,19 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:16:02.2659627Z",
+  "message": {
+   "role": "assistant",
+   "content": "تقدر تبدأ بالبحث عن شغل مناسب، زي العمل الحر أو التسويق الإلكتروني. وش مهم، تأكد من الوقت اللي بتصرفه علشان ما يتأثر نومها وحياتها الاجتماعية."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2923384300,
+  "load_duration": 7933300,
+  "prompt_eval_count": 556,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 218972000,
+  "eval_count": 52,
+  "eval_duration": 2690404000
+ }
+]

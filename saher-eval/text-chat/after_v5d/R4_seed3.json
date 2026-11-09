@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:06:36.6150257Z",
+  "message": {
+   "role": "assistant",
+   "content": " ابدأ بتحضير المكونات: رز، دجاج، بهارات، بصل، طماطم، ليمون أسود، زيت، وسمنة. اطبخ الدجاج أول شي، ثم الرز، وأضف البهارات والليمون الأسود على الأخير. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4174040800,
+  "load_duration": 41555500,
+  "prompt_eval_count": 717,
+  "prompt_eval_cached_count": 716,
+  "prompt_eval_duration": 92458000,
+  "eval_count": 46,
+  "eval_duration": 4008012000
+ }
+]

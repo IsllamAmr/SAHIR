@@ -1,0 +1,10 @@
+[
+ {"id": "T1", "checks": "greeting, dialect", "turns": ["هلا ساهر، كيفك؟"]},
+ {"id": "T2", "checks": "invented places", "turns": ["وش رأيك أروح الدرعية هالويكند؟", "طيب وين أتعشى هناك؟"]},
+ {"id": "T3", "checks": "practical answer, dialect", "turns": ["أبي أطبخ كبسة لأول مرة، من وين أبدأ؟"]},
+ {"id": "T4", "checks": "explicit feminine, kept over two turns", "turns": ["زهقانة ومالي خلق أسوي شي", "طيب اقترح علي شي أسويه بالبيت"]},
+ {"id": "T5", "checks": "invented personal experience", "turns": ["وش تسوي انت بالويكند؟"]},
+ {"id": "T6", "checks": "female third person not transferred to user", "turns": ["بنت خالتي تبي تشتغل من البيت، وش تنصحها؟"]},
+ {"id": "T7", "checks": "everyday complaint, dialect", "turns": ["فاتورة الكهرباء عندي نار هالشهر"]},
+ {"id": "T8", "checks": "longer answer (language drift)", "turns": ["عطني خطة أذاكر فيها لاختبار القدرات بأسبوعين"]}
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:14:00.5543107Z",
+  "message": {
+   "role": "assistant",
+   "content": "ماشى، الزهقانة شعور شائع. حاول تشتت بالشيء اللي تحبه، مشي للحديقة أو تفرش الفيلم المفضل. وش حالك بعد ما تهدأ؟"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3043851900,
+  "load_duration": 6860500,
+  "prompt_eval_count": 549,
+  "prompt_eval_cached_count": 532,
+  "prompt_eval_duration": 220610000,
+  "eval_count": 55,
+  "eval_duration": 2809506000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:14:05.7243639Z",
+  "message": {
+   "role": "assistant",
+   "content": "طيب، لو شفت الفيلم وخلت البيت في حالة فوضى. حاول ترتيب البيت قليلاً، أو تعلم وصفة جديدة تطبخها. وش كده؟ ما عنده شيء يهمك؟"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3121507200,
+  "load_duration": 9918100,
+  "prompt_eval_count": 624,
+  "prompt_eval_cached_count": 603,
+  "prompt_eval_duration": 234019000,
+  "eval_count": 56,
+  "eval_duration": 2872547000
+ }
+]

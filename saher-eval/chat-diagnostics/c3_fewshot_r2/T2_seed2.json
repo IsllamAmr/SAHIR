@@ -1,0 +1,36 @@
+[
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:29:35.3962894Z",
+  "message": {
+   "role": "assistant",
+   "content": "الدرعية مكانها جمييل، الأسواق التراثية فيها ممتعة. لو تبي تعرف عن حدود الوقت أو التذاكر، تقدر تبحث على الإنترنت حضرتك."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2671994800,
+  "load_duration": 12450900,
+  "prompt_eval_count": 458,
+  "prompt_eval_cached_count": 438,
+  "prompt_eval_duration": 245521000,
+  "eval_count": 47,
+  "eval_duration": 2409514000
+ },
+ {
+  "model": "qwen2.5:7b",
+  "created_at": "2026-10-17T09:29:43.1766652Z",
+  "message": {
+   "role": "assistant",
+   "content": "في الدرعية محلات تقدم طعام شعبي ودولي. لو تبي تجربة محل شعبي، بيتزا الشاورما وشويات مكانها طيبة. لو تبي غربي一点，我建议你去尝试当地的餐馆，比如\"沙玛尔餐厅\"或者\"阿尔巴尼餐厅\"，这些地方的食物既美味又具有地方特色。当然，你也可以在Google上搜索一下，看看其他游客的评价，这样可以找到更多选择。"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5706651100,
+  "load_duration": 7240100,
+  "prompt_eval_count": 523,
+  "prompt_eval_cached_count": 504,
+  "prompt_eval_duration": 223244000,
+  "eval_count": 107,
+  "eval_duration": 5471884000
+ }
+]

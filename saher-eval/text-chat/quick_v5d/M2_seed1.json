@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:04:41.1163813Z",
+  "message": {
+   "role": "assistant",
+   "content": " ممكن تسوي أومليت بالجبن واللحم، أو تشوي بطاطس مع فلفل وبصل، أو تطبخ فوتشيني بالدجاج. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2667543500,
+  "load_duration": 45635100,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 341645000,
+  "eval_count": 29,
+  "eval_duration": 2259912000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:04:43.5454351Z",
+  "message": {
+   "role": "assistant",
+   "content": " لا، أول ما تضغط \"محادثة جديدة\" تروح كل السالفة، وبكرة نبدأ من جديد. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2426659000,
+  "load_duration": 30327100,
+  "prompt_eval_count": 756,
+  "prompt_eval_cached_count": 737,
+  "prompt_eval_duration": 545069000,
+  "eval_count": 24,
+  "eval_duration": 1829475000
+ }
+]

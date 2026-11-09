@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:57:15.7421369Z",
+  "message": {
+   "role": "assistant",
+   "content": " عشان تذاكر لاختبار القدرات، قسم وقتك بين المواد العلمية والنظرية. خصص 3 أيام للرياضيات، 3 أيام للقدرات، و3 أيام للكيمياء. ذاكر كل يوم 4 ساعات. استخدم كتب القدرات والمراجعة. ذاكر مع أصدقاءك. ذاكر كل يوم 4 ساعات. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11121544200,
+  "load_duration": 4840881800,
+  "prompt_eval_count": 670,
+  "prompt_eval_cached_count": 669,
+  "prompt_eval_duration": 249273000,
+  "eval_count": 60,
+  "eval_duration": 4832844000
+ }
+]

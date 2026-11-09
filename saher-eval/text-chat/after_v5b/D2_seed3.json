@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:56:05.9568301Z",
+  "message": {
+   "role": "assistant",
+   "content": " فكرة ممتازة، الدرعية فيها أماكن تاريخية وثقافية كثيرة. تقدر تزور حي الطريف وتتعرف على تاريخ المملكة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9133536300,
+  "load_duration": 3853411100,
+  "prompt_eval_count": 669,
+  "prompt_eval_cached_count": 668,
+  "prompt_eval_duration": 1819058000,
+  "eval_count": 25,
+  "eval_duration": 3437485000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:56:19.8260007Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطاعم كثيرة في الدرعية تقدم أكلات شعبية وحلويات. تقدر تزور مطعم \"أنوار الدرعية\" أو \"مطعم شواطيء الدرعية\". بس لا تنسى تتأكد من أوقات العمل والحجز قبل ما تروح. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 13573095400,
+  "load_duration": 490463500,
+  "prompt_eval_count": 709,
+  "prompt_eval_cached_count": 693,
+  "prompt_eval_duration": 1142407000,
+  "eval_count": 48,
+  "eval_duration": 9132365000
+ }
+]

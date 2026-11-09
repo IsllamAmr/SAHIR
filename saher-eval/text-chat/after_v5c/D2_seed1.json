@@ -1,0 +1,36 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:03:16.7836096Z",
+  "message": {
+   "role": "assistant",
+   "content": " أبشر، الدرعية فيها أماكن تاريخية حلوة. بس تأكد من الطقس قبل، عشان ما تكون فيه أمطار. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2947913600,
+  "load_duration": 43129800,
+  "prompt_eval_count": 713,
+  "prompt_eval_cached_count": 700,
+  "prompt_eval_duration": 436197000,
+  "eval_count": 24,
+  "eval_duration": 2444270000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T21:03:20.2513897Z",
+  "message": {
+   "role": "assistant",
+   "content": " فيه مطعم \"الدرعية\" هناك، يقدم أطباق شعبية. بس فيه خيارات ثانية بعد، تقدر تبحث في قوقل عن مطاعم ثانية. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3464733500,
+  "load_duration": 51251400,
+  "prompt_eval_count": 752,
+  "prompt_eval_cached_count": 736,
+  "prompt_eval_duration": 442601000,
+  "eval_count": 29,
+  "eval_duration": 2945989000
+ }
+]

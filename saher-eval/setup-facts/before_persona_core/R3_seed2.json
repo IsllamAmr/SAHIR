@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T11:04:15.6608618Z",
+  "message": {
+   "role": "assistant",
+   "content": " زين، وش تحب تسوي؟ لو تحب التصميم أو البرمجة، تقدر تبدأ بمشاريع صغيرة على الإنترنت. لو تحب الكتابة، ابدئي بالتدوين. وش عندها خلفية؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2693683600,
+  "load_duration": 24699500,
+  "prompt_eval_count": 388,
+  "prompt_eval_cached_count": 373,
+  "prompt_eval_duration": 211029000,
+  "eval_count": 35,
+  "eval_duration": 2450812000
+ }
+]

@@ -1,0 +1,19 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:47:52.5831173Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، تمام الله يسلمك. وش تبي أساعدك فيه؟ "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1374221000,
+  "load_duration": 24917400,
+  "prompt_eval_count": 602,
+  "prompt_eval_cached_count": 594,
+  "prompt_eval_duration": 292255000,
+  "eval_count": 15,
+  "eval_duration": 1046317000
+ }
+]

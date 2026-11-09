@@ -1,0 +1,70 @@
+[
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:53:58.1551089Z",
+  "message": {
+   "role": "assistant",
+   "content": " هلا بك، اسمي ساهر. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 1772602500,
+  "load_duration": 366043500,
+  "prompt_eval_count": 665,
+  "prompt_eval_cached_count": 664,
+  "prompt_eval_duration": 138949000,
+  "eval_count": 8,
+  "eval_duration": 881014000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:54:02.5885722Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي بيتزا بالخضار أو أومليت بالجبن. أو تقدر تسخن وجبة جاهزة من الثلاجة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4311667800,
+  "load_duration": 472389300,
+  "prompt_eval_count": 687,
+  "prompt_eval_cached_count": 672,
+  "prompt_eval_duration": 672577000,
+  "eval_count": 22,
+  "eval_duration": 3059400000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:54:10.2321603Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي كبسة بالدجاج أو اللحم من غير رز، وتستخدم مكرونة أو بطاطس كبديل. أو تقدر تسوي مقلوبة بالخضار. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7610379600,
+  "load_duration": 731759600,
+  "prompt_eval_count": 726,
+  "prompt_eval_cached_count": 708,
+  "prompt_eval_duration": 1118686000,
+  "eval_count": 30,
+  "eval_duration": 5636226000
+ },
+ {
+  "model": "allam-7b-saher",
+  "created_at": "2026-10-17T20:54:17.7347131Z",
+  "message": {
+   "role": "assistant",
+   "content": " تقدر تسوي سليق بالدجاج أو مرقوق باللحم. أو تقدر تسوي مطبق بالزيتون أو شكشوكة. أو تقدر تسوي سلطة مشكلة. "
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7401278600,
+  "load_duration": 2332852400,
+  "prompt_eval_count": 771,
+  "prompt_eval_cached_count": 755,
+  "prompt_eval_duration": 731616000,
+  "eval_count": 32,
+  "eval_duration": 4261437000
+ }
+]
