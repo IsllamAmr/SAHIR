@@ -81,6 +81,10 @@ start_saher_agent.bat        # opens http://127.0.0.1:8769
 
 Every module has its own README with setup steps, ports and details. Models, voices, virtual environments and all credentials are **not** in this repo: they are downloaded or configured locally.
 
+## 📄 License
+
+The code in this repository is released under the [MIT License](LICENSE). Models, voices and other third-party components are not included and keep their own licenses (for example ALLaM-7B is Apache-2.0 and piper-tts is GPL-3.0).
+
 ---
 
 <div align="center">
